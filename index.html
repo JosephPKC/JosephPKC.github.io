@@ -6,35 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Include css stylesheets and js script sheets here -->
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
     
     <body>
-        <div class="container">
-            <!-- The header stays fixed on top regardless of scrolling -->
-            <!-- Nav-bar will be on the left, and the Contacts will be on the right -->
-            <div class="header">
-                <!-- Nav bar will have nav buttons to Projects (Home), About -->
-                <nav class="nav-bar">
-                
-                </nav>
-                <!-- Contacts include: Email, Github, Linkedin -->
-                <div class="contacts">
-                
-                </div>
-            </div>
-            <!-- Gist is a little about myself -->
-            <div class="gist">
+        <!-- Nav bar will have nav buttons to Projects (Home), About, Contacts -->
+        <nav>
+            <ul class="nav-bar">
+                <li><a href="./index.html" class="active">HOME</a></li>
+                <li><a href="./projects.html">PROJECTS</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <!-- Gist is a little about myself & contacts -->
+        <div class="gist">
 
-            </div>
-            <!-- Project list will be a dynamically-made ol, that has continuous scrolling -->
-            <div class="project-list">
-            
-            </div>
-            <!-- What to put in the footer -->
-            <!-- I can put the contacts here again, but will need to remove the contacts from the top-bar, and put it above or below the gist -->
-            <div class="footer">
-            
-            </div>
         </div>
     </body>
 </html>
