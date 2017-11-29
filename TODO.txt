@@ -1,2 +1,8 @@
 1. Move Resume to About instead of Contacts
 2. Organize FontAwesome to imports folder
+3. Add icon appear on hover (from the bottom) for the nav bar buttons.
+	-Home: home
+	-Projects
+	-About: child, male
+	-Contact
+4. Add attribution for FontAwesome at the footer of every page, html, and css pages. http://fontawesome.io/license/
