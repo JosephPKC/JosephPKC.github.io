@@ -1,0 +1,2 @@
+1. Move Resume to About instead of Contacts
+2. Organize FontAwesome to imports folder
