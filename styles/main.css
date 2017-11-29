@@ -1,49 +1,8 @@
-.nav-bar li .active {
-    background-color: #4CAF50;
-}
-
-.nav-bar li a {
-/*    background-color: gray;*/
-    color: white;
-    display: block;
-    font-family: "Roboto", sans-serif;
-    font-size: 26px;
-    font-weight: 30px;
-/*    margin: 1%;*/
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: center;
-}
-
-
-.nav-bar li a:hover:not(.active) {
-    background-color: #4CAF50;
-    box-shadow: inset 0 0 0 6px #333;
-    transition: all 0.5s ease;
-}
-
-.nav-bar li a:hover {
-    background-color: #4CAF50;
-    box-shadow: inset 0 0 0 6px #333;
-    transition: all 0.75s ease;
-}
-
-.nav-bar li {
-    float: left;
-}
-
-.nav-bar {
-    background-color: #333;
-    border: 1px solid #111;
-    left: 0;
-    list-style-type: none;
+footer div {
+    bottom: 0;
     margin: 0;
-    overflow: hidden;
     padding: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    position: absolute;
 }
 
 nav {
@@ -59,12 +18,115 @@ nav {
     width: 50%;
 }
 
-footer div {
-    bottom: 0;
+.nav-bar {
+    background-color: #333;
+    border: 1px solid #111;
+    left: 0;
+    list-style-type: none;
     margin: 0;
+    overflow: hidden;
     padding: 0;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
+
+.nav-bar li {
+    float: left;
+}
+
+.nav-bar li .active {
+    background-color: #4CAF50;
+}
+
+.nav-bar li a {
+    color: white;
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-size: 26px;
+    font-weight: 30px;
+    padding: 10px 30px 10px 35px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: center;
+}
+
+.nav-bar li a:hover {
+    background-color: #4CAF50;
+    box-shadow: inset 0 0 0 6px #333;
+    transition: all 0.75s ease;
+}
+
+.nav-bar li a:hover:not(.active) {
+    background-color: #4CAF50;
+    box-shadow: inset 0 0 0 6px #333;
+    transition: all 0.5s ease;
+}
+
+.text-hover:hover {
+    box-shadow: inset 0 0 5px 10px #4CAF50;
+    transition: all 0.5s ease;
+}
+
+.text-hover-big:hover {
+    box-shadow: inset 0 0 5px 13px #4CAF50;
+    transition: all 0.5s ease;
+}
+
+.home:before {
+    bottom: -30px;
+    content: "\f015";
+    font-family: FontAwesome;
+    left: 8px;
+    position: absolute;
+    transition: all 0.75s ease;
+}
+
+.home:hover:before {
+    bottom: 13px;
+}
+
+.projects:before {
+    bottom: -30px;
+    content: "\f187";
+    font-family: FontAwesome;
+    font-size: 25px;
+    left: 148px;
+    position: absolute;
+    transition: all 0.75s ease;
+}
+
+.projects:hover:before {
+    bottom: 13px;
+}
+
+.about:before {
+    bottom: -30px;
+    content: "\f183";
+    font-family: FontAwesome;
+    left: 345px;
+    position: absolute;
+    transition: all 0.75s ease;
+}
+
+.about:hover:before {
+    bottom: 13px;
+}
+
+.contact:before {
+    bottom: -30px;
+    content: "\f10b";
+    font-family: FontAwesome;
+    left: 495px;
+    position: absolute;
+    transition: all 0.75s ease;
+}
+
+.contact:hover:before {
+    bottom: 13px;
+}
+
+
 /*
 
 .text-hover:before {
@@ -80,15 +142,6 @@ footer div {
 }
 */
 
-.text-hover:hover {
-    box-shadow: inset 0 0 5px 10px #4CAF50;
-    transition: all 0.5s ease;
-}
-
-.text-hover-big:hover {
-    box-shadow: inset 0 0 5px 13px #4CAF50;
-    transition: all 0.5s ease;
-}
 
 /*
 body {
@@ -101,4 +154,12 @@ body {
 @media screen and (max-width: 600px) {
     .nav-bar li {float: none;}
     .body-container {top: 200px;}
+    .home:before {top: 12px; left: -30px;}
+    .home:hover:before {top: 12px; left: 80px;}
+    .projects:before {top: 65px; left: -30px;}
+    .projects:hover:before {top: 65px; left: 80px;}
+    .about:before {top: 118px; left: -30px;}
+    .about:hover:before {top: 118px; left: 80px;}
+    .contact:before {top: 171px; left: -30px;}
+    .contact:hover:before {top: 171px; left: 80px;}
 }

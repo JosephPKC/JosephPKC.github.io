@@ -6,17 +6,17 @@
     width: 50%;
 }*/
 
-.contact p {
+.contact-info p {
     font-family: "Roboto", sans-serif;
 }
 
-.contact ul li {
+.contact-info ul li {
     font-family: "Roboto", sans-serif;
     list-style-type: none;
     padding: 10px;
 }
 
-.contact ul li a {
+.contact-info ul li a {
     background-color: #333;
     border-radius: 5px;
     color: white;
@@ -68,15 +68,4 @@
     left: 53px;
 }
 
-.resume:before {
-    font-family: FontAwesome;
-    content: "\f1ea";
-    position: absolute;
-    left: -10px;
-    transition: all 1s ease;
-}
-
-.resume:hover:before {
-    left: 52px;
-}
 

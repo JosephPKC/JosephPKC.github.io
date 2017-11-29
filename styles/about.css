@@ -1,0 +1,11 @@
+.resume:before {
+    font-family: FontAwesome;
+    content: "\f0f6";
+    position: absolute;
+    left: -10px;
+    transition: all 1s ease;
+}
+
+.resume:hover:before {
+    left: 52px;
+}
