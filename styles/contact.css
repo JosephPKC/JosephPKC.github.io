@@ -1,0 +1,32 @@
+/*
+.contact {
+    margin: auto;
+    position: relative;
+    top: 100px;
+    width: 50%;
+}*/
+
+.contact p {
+    font-family: "Roboto", sans-serif;
+}
+
+.contact ul li {
+    font-family: "Roboto", sans-serif;
+    list-style-type: none;
+    padding: 10px;
+}
+
+.contact ul li a {
+    background-color: #333;
+    border-radius: 1px;
+    color: white;
+    font-size: 20px;
+    padding: 1px;
+    text-align: justify;
+    text-decoration: none;
+}
+
+.contact ul li a:hover {
+    box-shadow: inset 0 0 0 13px #4CAF50;
+    transition: all 0.5s ease;
+}
