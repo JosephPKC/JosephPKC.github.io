@@ -100,4 +100,5 @@ body {
 
 @media screen and (max-width: 600px) {
     .nav-bar li {float: none;}
+    .body-container {top: 200px;}
 }
