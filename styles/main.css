@@ -74,56 +74,65 @@ nav {
 }
 
 .home:before {
-    bottom: -30px;
     content: "\f015";
     font-family: FontAwesome;
-    left: 8px;
+    left: 5px;
+    opacity: 0;
     position: absolute;
+    top: 13px;
     transition: all 0.75s ease;
 }
 
 .home:hover:before {
-    bottom: 13px;
+    left: 10px;
+    opacity: 1;
 }
 
 .projects:before {
-    bottom: -30px;
     content: "\f187";
     font-family: FontAwesome;
     font-size: 25px;
-    left: 148px;
+    left: 143px;
+    opacity: 0;
     position: absolute;
+    top: 13px;
     transition: all 0.75s ease;
 }
 
 .projects:hover:before {
-    bottom: 13px;
+    left: 148px;
+    opacity: 1;
 }
 
 .about:before {
-    bottom: -30px;
     content: "\f183";
     font-family: FontAwesome;
-    left: 345px;
+    left: 340px;
+    opacity: 0;
     position: absolute;
+    top: 13px;
     transition: all 0.75s ease;
 }
 
 .about:hover:before {
-    bottom: 13px;
+    left: 345px;
+    opacity: 1;
 }
 
 .contact:before {
-    bottom: -30px;
     content: "\f10b";
     font-family: FontAwesome;
-    left: 495px;
+    font-size: 30px;
+    left: 490px;
+    opacity: 0;
     position: absolute;
+    top: 10px;
     transition: all 0.75s ease;
 }
 
 .contact:hover:before {
-    bottom: 13px;
+    left: 495px;
+    opacity: 1;
 }
 
 
