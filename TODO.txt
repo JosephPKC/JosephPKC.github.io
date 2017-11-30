@@ -1,10 +1,6 @@
-1. Move Resume to About instead of Contacts
+
 2. Organize FontAwesome to imports folder
-3. Add icon appear on hover (from the bottom) for the nav bar buttons.
-	-Home: home
-	-Projects: briefcase, archive, folder
-	-About: child, male
-	-Contact: phone
 4. Add attribution for FontAwesome at the footer of every page, html, and css pages. http://fontawesome.io/license/
-5. Change the resume's icon from newspaper to file-text or file-o
 6. Try to organize the css selectors and properties so that its DRY
+
+Site needs some flair and polish. Find some design elements from other sites and "copy" them.
