@@ -4,3 +4,19 @@
 6. Try to organize the css selectors and properties so that its DRY
 
 Site needs some flair and polish. Find some design elements from other sites and "copy" them.
+
+PROJECTS page
+1. A div to hold all of the projects, or the projects grid
+2. Each project is stored as a project tab div. This div is clickable, and has hover animations.
+3. The project tab has the name, techs, description, and image.
+4. Only the name and image appears.
+5. On hover, the top of the tab extends, along with the name, and in between appears the techs and description. The tab is also bordered, and has a shadow.
+6. So the techs and description will have to be the content in css.
+7. Use js to read a json file.
+8. Use the read json to generate tabs for each project. Also load add the techs/des to the css selectors.
+9. Add the list of tabs to the empty grid div.
+10. Add media queries so that the grid reshapes to fit the window. (Begin with ~4 cols, and shrink down to 1 when needed.)
+11. Wrap the project tab divs in a link to the project page.
+
+12. Reformatting notes: Use css grid to have responsive layouts instead.
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout

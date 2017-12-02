@@ -1,43 +1,26 @@
-.resume {
-    background-color: #333;
-    border-radius: 30px;
-    color: white;
-    font-size: 30px;
-    padding: 1px 45px 1px 20px;
-    text-align: justify;
-    text-decoration: none;
-/*    transform-style: preserve-3d;*/
-}
-
-.resume:before {
+/* Resume Button */
+#resume:before {
     content: "\f0f6";
-    left: -55px;
     font-family: FontAwesome;
     font-size: 25px;
+    left: -13px;
+    opacity: 0;
     position: relative;
-    top: -2px;
-    transition: all 1s ease;
+    transition: all 0.75s ease;
 }
 
-.resume:hover:before {
-    left: -5px;
+#resume:hover:before {
+    left: -8px;
+    opacity: 1;
 }
 
-/*
-.resume:after {
-    background: #4CAF50;
-    border-radius: 30px;
-    content: "\f0f6";
-    font-family: FontAwesome;
-    left: 0px;
-    position: absolute;
-    top: -100%;
-    transform-origin: left bottom;
-    transform: rotateX(90deg);
-    width: 100%;
+/* Body styles */
+article h1 {
+    font-size: 45px;
+}
+article h1, h2, p {
+    padding: 10px 0;
 }
 
-.resume:hover {
-    transform-origin: center bottom;
-    transform: rotateX(-90deg) translateY(100%);
-}*/
+
+

@@ -6,27 +6,65 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Include css stylesheets and js script sheets here -->
+        <link rel="stylesheet" type="text/css" href="styles/reset.css">
         <link rel="stylesheet" type="text/css" href="styles/main.css">
-        <link rel="stylesheet" type="text/css" href="styles/splash.css">
+        <link rel="stylesheet" type="text/css" href="styles/projects.css">
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
     </head>
-    
     <body>
-        <!-- Nav bar will have nav buttons to Projects (Home), About, Contacts -->
-        <nav>
-            <ul class="nav-bar">
-                <li><a href="./index.html" class="home">HOME</a></li>
-                <li><a href="./projects.html" class="projects active">PROJECTS</a></li>
-                <li><a href="./about.html" class="about">ABOUT</a></li>
-                <li><a href="./contact.html" class="contact">CONTACT</a></li>
-            </ul>
-        </nav>
-
+        <div class="wrapper">
+            <header id="header">
+                <p id="header-name">JOSEPH PARK</p>
+            </header>
+            <nav id="nav">
+                <ul>
+                    <li><a id="about" href="./index.html">ABOUT</a></li>
+                    <li><a id="projects" class="active" href="./projects.html">PROJECTS</a></li>
+                    <li><a id="contact" href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div id="body">
+                <a class="tab" id="disco" href="">
+                    <div>
+                        <p id="name">Disco</p>
+                        <p id="tech">Python, Discord</p>
+                        <p id="des">A chat bot for Discord.</p>
+                        <img src="icons/gmail.png">
+                    </div>
+                </a>
+                <a class="tab" id="disco" href="">
+                    <div>
+                        <p id="name">Disco</p>
+                        <p id="tech">Python, Discord</p>
+                        <p id="des">A chat bot for Discord.</p>
+                        <img src="icons/gmail.png">
+                    </div>
+                </a>
+                <a class="tab" id="disco" href="">
+                    <div>
+                        <p id="name">Disco</p>
+                        <p id="tech">Python, Discord</p>
+                        <p id="des">A chat bot for Discord.</p>
+                        <img src="icons/gmail.png">
+                    </div>
+                </a>
+                <a class="tab" id="disco" href="">
+                    <div>
+                        <p id="name">Disco</p>
+                        <p id="tech">Python, Discord</p>
+                        <p id="des">A chat bot for Discord.</p>
+                        <img src="icons/gmail.png">
+                    </div>
+                </a>
+                <br>
+            </div>
+            <footer id="footer">
+                <div id="font-awesome-attr">
+                    <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
+                </div>
+            </footer>
+        </div>
     </body>
-<!--
-    <footer>
-        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-    </footer>
--->
 </html>

@@ -6,35 +6,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Include css stylesheets and js script sheets here -->
+        <link rel="stylesheet" type="text/css" href="styles/reset.css">
         <link rel="stylesheet" type="text/css" href="styles/main.css">
-        <link rel="stylesheet" type="text/css" href="styles/splash.css">
+        <link rel="stylesheet" type="text/css" href="styles/about.css">
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
     </head>
-    
     <body>
-        <!-- Nav bar will have nav buttons to Projects (Home), About, Contacts -->
-        <nav>
-            <ul class="nav-bar">
-                <li><a href="./index.html" class="home active">HOME</a></li>
-                <li><a href="./projects.html" class="projects">PROJECTS</a></li>
-                <li><a href="./about.html" class="about">ABOUT</a></li>
-                <li><a href="./contact.html" class="contact">CONTACT</a></li>
-            </ul>
-        </nav>
-        <!-- Gist is a little about myself & contacts -->
-        <div class="gist body-container">
-            <h1>Hello.</h1>
-            <p class="my-name">My name is Joseph Park.</p>
-            <p>I am a recent graduate from University of California, Irvine, graduating magna cum laude with a B.S. in computer science.</p>
-            <p>If you want to learn more about me: <a href="./about.html" class="text-hover">About Me</a>.</p>
-            <p>If you are interested in what I have worked on: <a href="./projects.html" class="text-hover">Projects</a>.</p>
-            <p>If you wish to get in touch with me: <a href="./contact.html" class="text-hover">Contact</a>.</p>
+        <div class="wrapper">
+            <header id="header">
+                <p id="header-name">JOSEPH PARK</p>
+            </header>
+            <nav id="nav">
+                <ul>
+                    <li><a id="about" class="active" href="./index.html">ABOUT</a></li>
+                    <li><a id="projects" href="./projects.html">PROJECTS</a></li>
+                    <li><a id="contact" href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <article id="body">
+                <div id="gist" class="body">
+                    <h1>Hello.</h1>
+                    <h2>My name is Joseph Park.</h2>
+                    <p>I am a recent graduate from UCI, graduating magna cum laude with a B.S. in computer science.</p>
+                    <p>I have worked on many different projects, including multiplayer games and chat bots. Check out the Projects tab to learn more.</p>
+                    <p>I have studied a variety of topics in school, including cryptography, game development, data management, and networking.</p>
+                    <p>My passions include gaming, shows, writing, music, and most importantly, coding.</p>
+                    <p>Check out my resume below.</p>
+                    <a class="button-large" id="resume" href="./resume.pdf" >RESUME</a>
+                    <br>
+                </div>
+            </article>
+            <footer id="footer">
+                <div id="font-awesome-attr">
+                    <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
+                </div>
+            </footer>
         </div>
     </body>
-<!--
-    <footer>
-        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-    </footer>
--->
 </html>

@@ -6,44 +6,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Include css stylesheets and js script sheets here -->
+        <link rel="stylesheet" type="text/css" href="styles/reset.css">
         <link rel="stylesheet" type="text/css" href="styles/main.css">
         <link rel="stylesheet" type="text/css" href="styles/contact.css">
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
     </head>
-    
-    <body>
-        <!-- Nav bar will have nav buttons to Projects (Home), About, Contacts -->
-        <nav>
-            <ul class="nav-bar">
-                <li><a href="./index.html" class="home">HOME</a></li>
-                <li><a href="./projects.html" class="projects">PROJECTS</a></li>
-                <li><a href="./about.html" class="about">ABOUT</a></li>
-                <li><a href="./contact.html" class="contact active">CONTACT</a></li>
-            </ul>
-        </nav>
-        <div class="contact-info body-container">
-            <p>You can reach me via any of these outlets. Also, feel free to check out my Linkedin and Github.</p>
-            <ul>
-                <li>
-                    <a href="mailto:josephpkc@gmail.com" class="text-hover-big email">
-                        EMAIL
-                    </a>
-                    :&nbsp;josephpkc@gmail.com
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/josephpkc" class="text-hover-big linkedin">
-                        LINKEDIN
-                    </a>
-                    :&nbsp;linkedin.com/in/josephpkc
-                </li>
-                <li>
-                    <a href="https://www.github.com/JosephPKC" class="text-hover-big github">
-                        GITHUB
-                    </a>
-                    :&nbsp;github.com/JosephPKC
-                </li>
-            </ul>
+    <body>    
+        <div class="wrapper">
+            <header id="header">
+                <p id="header-name">JOSEPH PARK</p>
+            </header>
+            <nav id="nav">
+                <ul>
+                    <li><a id="about" href="./index.html">ABOUT</a></li>
+                    <li><a id="projects" href="./projects.html">PROJECTS</a></li>
+                    <li><a id="contact" class="active"  href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="body" id="body">
+                <p>CONTACT ME:</p>
+                <p id="email">josephpkc@gmail.com</p>
+                <p>You can also contact me through these:</p>
+                <a class="button-small" id="linkedin" href="https://www.linkedin.com/in/josephpkc">LINKEDIN</a>
+                <br>
+                <a class="button-small" id="github" href="https://www.github.com/JosephPKC">GITHUB</a>
+                <br>
+            </div>
+            <footer id="footer">
+                <div id="font-awesome-attr">
+                    <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
+                </div>
+            </footer>
         </div>
     </body>
 </html>
