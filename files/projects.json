@@ -2,9 +2,49 @@
     "disco-bot": {
         "name": "Disco Bot",
         "techs": [
-            "Python", "Discod API", "LoL API", "lolwatcher.py"
+            "Discord API", "LoL API", "Python"
         ],
-        "des": "A discord LoL chat bot.",
+        "des": "Discord LoL chat bot.",
         "img": "images/disco-bot.png"
+    },
+    "ruinstone": {
+        "name": "Ruinstone",
+        "techs": [
+            "C#", "Unity3D"
+        ],
+        "des": "3D online-multiplayer spell-fighting game.",
+        "img": "images/ruinstone.png"
+    },
+    "unfeel-tournament": {
+        "name": "Unfeel Tournament",
+        "techs": [
+            "C#", "Unity3D"
+        ],
+        "des": "2D local-multiplayer brawl game.",
+        "img": "images/unfeel-tournament.png"
+    },
+    "math-comp": {
+        "name": "Hand-written Math",
+        "techs": [
+            "Google Cloud Vision API", "Python", "Synaptics API", "Wolfram Alpha API"
+        ],
+        "des": "Hand-written mathematical equation calculator.",
+        "img": "images/hand-written-math.png"
+    },
+    "search-engine": {
+        "name": "Space-Time Search Engine",
+        "techs": [
+            "Beautiful Soup", "Magic", "NLTK", "Python", "Sqlite3"
+        ],
+        "des": "Inverted indexed local search engine.",
+        "img": "images/search-engine.png"
+    },
+    "riptide": {
+        "name": "Riptide",
+        "techs": [
+            "Keras", "Python", "Scikit"
+        ],
+        "des": "Random Forests and Neural Networks trained on rainfall data.",
+        "img": "images/riptide.png"
     }
 }
