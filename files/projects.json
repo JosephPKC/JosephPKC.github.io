@@ -1,0 +1,10 @@
+{
+    "disco-bot": {
+        "name": "Disco Bot",
+        "techs": [
+            "Python", "Discod API", "LoL API", "lolwatcher.py"
+        ],
+        "des": "A discord LoL chat bot.",
+        "img": "images/disco-bot.png"
+    }
+}
