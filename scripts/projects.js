@@ -10,7 +10,7 @@ $(document).ready(function() {
         //Key is name
             createTab(key, val['name'], val['techs'].join(", "), val['des'], val['img']);
         })
-        jQuery('<br/>').appendTo('#' + body);
+//        jQuery('<br/>').appendTo('#body');
     }).fail(function(json) {
         console.log("Error grabbing json.");
     });
