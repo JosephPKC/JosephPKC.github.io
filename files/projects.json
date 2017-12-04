@@ -2,49 +2,196 @@
     "disco-bot": {
         "name": "Disco Bot",
         "techs": [
-            "Discord API", "LoL API", "Python"
+            "Discord API", "LoL API", "Pycharm", "Python"
         ],
         "des": "Discord LoL chat bot.",
-        "img": "images/disco-bot.png"
+        "img": "images/disco-bot.png",
+        "type": "personal",
+        "start": {
+            "month": "Aug",
+            "year": "2017"
+        },
+        "finish": null
     },
     "ruinstone": {
         "name": "Ruinstone",
         "techs": [
-            "C#", "Unity3D"
+            "C#", "Unity3D", "Visual Studio"
         ],
         "des": "3D online-multiplayer spell-fighting game.",
-        "img": "images/ruinstone.png"
+        "img": "images/ruinstone.png",
+        "type": "personal",
+        "start": {
+            "month": "Mar",
+            "year": "2017"
+        },
+        "finish": {
+            "month": "May",
+            "year": "2017"
+        }
     },
     "unfeel-tournament": {
         "name": "Unfeel Tournament",
         "techs": [
-            "C#", "Unity3D"
+            "C#", "Unity3D", "Visual Studio"
         ],
         "des": "2D local-multiplayer brawl game.",
-        "img": "images/unfeel-tournament.png"
+        "img": "images/unfeel-tournament.png",
+        "type": "school",
+        "start": {
+            "month": "Sep",
+            "year": "2016"
+        },
+        "finish": {
+            "month": "Dec",
+            "year": "2016"
+        }
     },
     "math-comp": {
         "name": "Hand-written Math",
         "techs": [
-            "Google Cloud Vision API", "Python", "Synaptics API", "Wolfram Alpha API"
+            "Google Cloud Vision API", "Pycharm", "Python", "Synaptics API", "Wolfram Alpha API"
         ],
         "des": "Hand-written mathematical equation calculator.",
-        "img": "images/hand-written-math.png"
+        "img": "images/hand-written-math.png",
+        "type": "hackathon",
+        "start": {
+            "month": "Feb",
+            "year": "2017"
+        },
+        "finish": {
+            "month": "Feb",
+            "year": "2017"
+        }
     },
     "search-engine": {
-        "name": "Space-Time Search Engine",
+        "name": "Space-Time",
         "techs": [
-            "Beautiful Soup", "Magic", "NLTK", "Python", "Sqlite3"
+            "NLTK", "Pycharm", "Python", "Sqlite3"
         ],
         "des": "Inverted indexed local search engine.",
-        "img": "images/search-engine.png"
+        "img": "images/search-engine.png",
+        "type": "school",
+        "start": {
+            "month": "May",
+            "year": "2017"
+        },
+        "finish": {
+            "month": "Jun",
+            "year": "2017"
+        }
     },
     "riptide": {
         "name": "Riptide",
         "techs": [
-            "Keras", "Python", "Scikit"
+            "Keras", "Pycharm", "Python", "Scikit"
         ],
         "des": "Random Forests and Neural Networks trained on rainfall data.",
-        "img": "images/riptide.png"
+        "img": "images/riptide.png",
+        "type": "school",
+        "start": {
+            "month": "Mar",
+            "year": "2017"
+        },
+        "finish": {
+            "month": "Mar",
+            "year": "2017"
+        }
+    },
+    "greek-lexicon": {
+        "name": "Greek Lexicon",
+        "techs": [
+            "Pycharm", "Python", "Sqlite3"
+        ],
+        "des": "Database utility for classical greek vocabulary.",
+        "img": "images/greek-lexicon.png",
+        "type": "personal",
+        "start": {
+            "month": "Jan",
+            "year": "2017"
+        },
+        "finish": null
+    },
+    "monster-sudoku": {
+        "name": "Monster Sudoku",
+        "techs": [
+            "C++", "QtCreator"
+        ],
+        "des": "NxN Sudoku solver.",
+        "img": "images/monster-sudoku.png",
+        "type": "school",
+        "start": {
+            "month": "Jan",
+            "year": "2016"
+        },
+        "finish": {
+            "month": "Mar",
+            "year": "2016"
+        }
+    },
+    "predator-prey": {
+        "name": "Predator-Prey",
+        "techs": [
+            "C++", "QtCreator", "Qt OpenGL"
+        ],
+        "des": "Visualized Predator-Prey system.",
+        "img": "images/predator-prey.png",
+        "type": "school",
+        "start": {
+            "month": "Apr",
+            "year": "2014"
+        },
+        "finish": {
+            "month": "May",
+            "year": "2014"
+        }
+    },
+    "quick-charades": {
+        "name": "Quick Charades",
+        "techs": [
+            "Android SDK", "Android Studio", "Java"
+        ],
+        "des": "Mobile picture-guessing game prototype.",
+        "img": "images/quick-charades.png",
+        "type": "school",
+        "start": {
+            "month": "Nov",
+            "year": "2014"
+        },
+        "finish": {
+            "month": "Jan",
+            "year": "2015"
+        }
+    },
+    "ultron": {
+        "name": "Ultron",
+        "techs": [
+            "C++", "QtCreator", "Sqlite3"
+        ],
+        "des": "English language processor.",
+        "img": "images/ultron.png",
+        "type": "school",
+        "start": {
+            "month": "Apr",
+            "year": "2015"
+        },
+        "finish": {
+            "month": "May",
+            "year": "2015"
+        }
+    },
+    "dnd-5e-lookup": {
+        "name": "DnD Lookup",
+        "techs": [
+            "C#", "Sqlite3", "Unity3D", "Visual Studio"
+        ],
+        "des": "Database lookup for DnD 5e.",
+        "img": "images/dnd-5e.png",
+        "type": "personal",
+        "start": {
+            "month": "Jul",
+            "year": "2017"
+        },
+        "finish": null
     }
 }
