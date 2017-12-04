@@ -23,4 +23,8 @@ article h1, h2, p {
 }
 
 
-
+@media screen and (max-width: 480px) {
+    #resume:before {
+        font-size: 15px;
+    }
+}
