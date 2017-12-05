@@ -152,7 +152,7 @@ nav ul li a:hover:not(.active) {
 /* Body styles */
 .body {
     border-bottom: double #DCD0C0;
-    margin: auto;
+    margin: 0 auto;
     max-width: 1500px;
     position: relative;
     top: 50px;

@@ -2,7 +2,7 @@
     "disco-bot": {
         "name": "Disco Bot",
         "techs": [
-            "Discord API", "LoL API", "Pycharm", "Python"
+            "Discord API", "LoL API", "Python"
         ],
         "des": "Discord LoL chat bot.",
         "img": "images/disco-bot.png",
@@ -16,7 +16,7 @@
     "dnd-5e-lookup": {
         "name": "DnD Lookup",
         "techs": [
-            "C#", "Sqlite3", "Unity3D", "Visual Studio"
+            "C#", "Sqlite3", "Unity3D"
         ],
         "des": "Database lookup for DnD 5e.",
         "img": "images/dnd-5e.png",
@@ -30,7 +30,7 @@
     "greek-lexicon": {
         "name": "Greek Lexicon",
         "techs": [
-            "Pycharm", "Python", "Sqlite3"
+            "Python", "Sqlite3"
         ],
         "des": "Database utility for classical greek vocabulary.",
         "img": "images/greek-lexicon.png",
@@ -44,7 +44,7 @@
     "search-engine": {
         "name": "Space-Time",
         "techs": [
-            "NLTK", "Pycharm", "Python", "Sqlite3"
+            "NLTK", "Python", "Sqlite3"
         ],
         "des": "Inverted indexed local search engine.",
         "img": "images/search-engine.png",
@@ -61,7 +61,7 @@
     "riptide": {
         "name": "Riptide",
         "techs": [
-            "Keras", "Pycharm", "Python", "Scikit"
+            "Keras", "Python", "Scikit"
         ],
         "des": "Random forests and neural networks trained on rainfall data.",
         "img": "images/riptide.png",
@@ -78,7 +78,7 @@
     "ruinstone": {
         "name": "Ruinstone",
         "techs": [
-            "C#", "Unity3D", "Visual Studio"
+            "C#", "Unity3D"
         ],
         "des": "3D online-multiplayer spell-fighting game.",
         "img": "images/ruinstone.png",
@@ -95,7 +95,7 @@
     "math-comp": {
         "name": "Hand-Written Math",
         "techs": [
-            "Google Cloud Vision API", "Pycharm", "Python", "Synaptics API", "Wolfram Alpha API"
+            "Google Cloud Vision API", "Python", "Synaptics API", "Wolfram Alpha API"
         ],
         "des": "Hand-written mathematical equation calculator.",
         "img": "images/hand-written-math.png",
@@ -112,7 +112,7 @@
     "unfeel-tournament": {
         "name": "Unfeel Tournament",
         "techs": [
-            "C#", "Unity3D", "Visual Studio"
+            "C#", "Unity3D"
         ],
         "des": "2D local-multiplayer brawl game.",
         "img": "images/unfeel-tournament.png",
@@ -129,7 +129,7 @@
     "monster-sudoku": {
         "name": "Monster Sudoku",
         "techs": [
-            "C++", "QtCreator"
+            "C++"
         ],
         "des": "NxN sudoku solver.",
         "img": "images/monster-sudoku.png",
@@ -146,7 +146,7 @@
     "ultron": {
         "name": "Ultron",
         "techs": [
-            "C++", "QtCreator", "Sqlite3"
+            "C++", "Sqlite3"
         ],
         "des": "English language processor.",
         "img": "images/ultron.png",
@@ -163,7 +163,7 @@
     "quick-charades": {
         "name": "Quick Charades",
         "techs": [
-            "Android SDK", "Android Studio", "Java"
+            "Android SDK", "Java"
         ],
         "des": "Mobile picture-guessing game prototype.",
         "img": "images/quick-charades.png",
@@ -180,7 +180,7 @@
     "predator-prey": {
         "name": "Predator-Prey",
         "techs": [
-            "C++", "QtCreator", "Qt OpenGL"
+            "C++", "Qt OpenGL"
         ],
         "des": "Visualized predator-prey system.",
         "img": "images/predator-prey.png",

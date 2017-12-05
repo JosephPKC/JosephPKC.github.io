@@ -1,3 +1,7 @@
+#body {
+    padding: 0;
+}
+
 #heading {
     border-bottom: 3px double #DCD0C0; 
     height: 70px;
@@ -47,7 +51,6 @@
     position: relative;
     transition: all 0.75s ease;
 }
-
 #github:hover:before {
     left: -10px;
     opacity: 1;
@@ -119,4 +122,19 @@
 
 #up-next a {
     margin: 0 auto;
+}
+
+.body p, .body h1, .body ul {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+#content a {
+    background: #DCD0C0;
+    text-decoration: none;
+}
+
+#content a:hover {
+    background: #C0B283;
+    transition: all 0.75s ease;
 }
