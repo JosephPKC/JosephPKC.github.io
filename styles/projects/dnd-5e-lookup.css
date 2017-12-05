@@ -3,15 +3,19 @@
 }
 
 #i2 {
-    height: 250px;
+    height: 200px;
 }
 
 #i3 {
-    height: 350px;
+    height: 250px;
 }
 
 #i4 {
-    height: 150px;
+    height: 450px;
+}
+
+#i5 {
+    height: 600px;
 }
 
 #body ul {
