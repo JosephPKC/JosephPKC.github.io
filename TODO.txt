@@ -10,15 +10,24 @@ TODO:
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 
 
+- After doing the above, we can do a redesign of the website using CSS Grid + Flex. This should make life easier, and we can choose different color schemes and themes. (Maybe re-think the hover animations)
+- We should do this AFTER finishing REV 2 of the website, so that when we do the redesign of REV 3, we already know what the content is going to be.
 
-1. Redesign of the portfolio
-2. Notes:
+Ideas: 
+-New color scheme, something a bit poppier, sharper, and stand-out-ish.
+-New fonts, maybe something a bit more modern.
+-New hover animations, less clunky and laggy (especially on mobile)
+-Remove Contacts, and have Contacts at the footer/header of each page.
+-Begin at the Projects page, and have a little intro (1-2 lines) at the top.
+-Have objects and buttons pop out more, add better highlighting (other than just changing background color)
+-For the projects, have more misc pictures to show at the end (like in a row)
+-Add some GIFs of usage for each project.
+-Have better looking buttons
+-Collapse the nav bar into a dropdown
+-Don't make things too big, like the nav bar, or buttons. Smaller is sometimes better.
+-We can use JS to dynamically create stuff, relating to the projects, and other highly-mutable things.
+-We can have a landing page, that is just buttons (no nav bar, or header). Completely separate from the other pages.
+-Pick a strong theme. This should lend itself with the colors, fonts, layouts, and any backgrounds.
+-Don't have too much dead space.
 
-
-Projects page:
--NAME
--Date Range
--Brief Description, including what kind of project it was, how many team members, what the product does, what we used.
--How to use/install/get
--What I did: What i made, tested, used, techs used, participated in, etc.
--Journey: From conception to designing to building to testing to headaches to the end (probably not necessary)
+Inspiration: jonathanpatterson.com
