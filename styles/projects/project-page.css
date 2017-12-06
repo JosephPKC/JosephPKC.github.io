@@ -139,7 +139,7 @@
     transition: all 0.75s ease;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     #heading h1 {
         float: none;
         padding: 0;
