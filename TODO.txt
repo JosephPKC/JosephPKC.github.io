@@ -1,11 +1,10 @@
 TODO:
-- Organize files into respective folders (except for the htmls)
 - Beautify the pages. Add some backgrounds, images, flair, colors, etc. (But don't clutter; keep it clean)
-- Add in the rest of the projects for json, and their images.
 - Create project html pages and place in projects folder.
 - Fix responsive layouts, for mobile resolutions. 
 - Add resume
 - Add more to description in about
+- Make the next (add the descriptor) project, the name of project, date, and techs (add this in) dynamic- use a js script to add these things to each project page from the json.
 
 12. Reformatting notes: Use css grid to have responsive layouts instead.
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
@@ -14,4 +13,12 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_commo
 
 1. Redesign of the portfolio
 2. Notes:
-	- Projects will be a grid of tabs. Each tab will have the name and an image/gif. On hover, it will shadow a border, extend upwards, and display techs and description.
+
+
+Projects page:
+-NAME
+-Date Range
+-Brief Description, including what kind of project it was, how many team members, what the product does, what we used.
+-How to use/install/get
+-What I did: What i made, tested, used, techs used, participated in, etc.
+-Journey: From conception to designing to building to testing to headaches to the end (probably not necessary)

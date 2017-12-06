@@ -257,8 +257,8 @@ nav ul li a:hover:not(.active) {
     }
     
     .anchor-top i {
-        font-size: 40px;
-        left: 7px;
-        top: 5px;
+        font-size: 45px;
+        left: 6px;
+        top: 2px;
     }
 }
