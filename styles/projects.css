@@ -87,21 +87,21 @@
 
 /* 3: 1370, 2: 897, 1: 480px*/
 /* 3 cols */
-@media screen and (max-width: 1370px) {
+@media screen and (max-width: 1400px) {
     #body {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 /*2 cols*/
-@media screen and (max-width: 897px) {
+@media screen and (max-width: 900px) {
     #body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* 1 col */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
     #body {
         grid-template-columns: 1fr;
     }

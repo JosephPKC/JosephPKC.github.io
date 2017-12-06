@@ -44,32 +44,6 @@
     opacity: 1;
 }
 
-.contact-info p {
-    font-family: "Roboto", sans-serif;
-}
-
-.contact-info ul li {
-    font-family: "Roboto", sans-serif;
-    list-style-type: none;
-    padding: 10px;
-}
-
-.contact-info ul li a {
-    background-color: #333;
-    border-radius: 5px;
-    color: white;
-    font-size: 20px;
-    padding: 1px 5px 1px 25px;
-    text-align: justify;
-    text-decoration: none;
-}
-
-
-.contact ul li a:hover {
-    box-shadow: inset 0 0 0 13px #4CAF50;
-    transition: all 0.5s ease;
-}
-
 @media screen and (max-width: 480px) {
     .body p {
         font-size: 15px;

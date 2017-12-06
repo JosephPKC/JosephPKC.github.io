@@ -250,4 +250,15 @@ nav ul li a:hover:not(.active) {
         padding: 13px 15px 13px 10px;
         width: 120px;
     }
+    
+    .anchor-top {
+        height: 50px;
+        width: 50px;
+    }
+    
+    .anchor-top i {
+        font-size: 45px;
+        left: 6px;
+        top: 2px;
+    }
 }

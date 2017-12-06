@@ -138,3 +138,31 @@
     background: #C0B283;
     transition: all 0.75s ease;
 }
+
+@media screen and (max-width: 800px) {
+    #heading h1 {
+        float: none;
+        padding: 0;
+        position: relative;
+        text-align: center;
+        top: -10px;
+    }
+    
+    #heading p {
+        float: none;
+        padding: 0;
+        text-align: center;
+        top: -10px;
+    }
+    
+    #sub-heading p {
+        float: none;
+        padding: 0;
+        text-align: center;
+    }
+    
+    #sub-heading a {
+        float: none;
+        margin: 0 auto;
+    }
+}
