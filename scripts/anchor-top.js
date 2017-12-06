@@ -10,6 +10,7 @@ jQuery(document).ready(function() {
             jQuery('.anchor-top').fadeOut(duration);
         }
     });
+    
     jQuery('.anchor-top').click(function(event) {
         event.preventDefault();
         jQuery('html, body').animate({scrollTop: 0}, duration);

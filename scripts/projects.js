@@ -2,9 +2,9 @@ jQuery(document).ready(function() {
     //Open json file
     //Read json file into an object
     //For each entry in the object, create a tab and append it
-    console.log("Grabbing json file");
+//    console.log("Grabbing json file");
     $.getJSON("assets/projects.json", function(json) {
-        console.log("Got json file.");
+//        console.log("Got json file.");
     }).done(function(json) {
         $.each(json, function(key, val) {
         //Key is name
