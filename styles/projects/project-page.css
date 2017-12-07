@@ -10,9 +10,8 @@
 
 #heading h1 {
     float: left;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 600;
-    padding: 0px 30px;
 }
 
 #heading p {
@@ -129,14 +128,21 @@
     max-width: 1000px;
 }
 
-#content a {
+#intro a, #content a, #footing a {
     background: #DCD0C0;
     text-decoration: none;
 }
 
-#content a:hover {
+#intro a:hover, #content a:hover, #footing a:hover {
     background: #C0B283;
     transition: all 0.75s ease;
+}
+
+#body ul, #footing ul {
+    left: 50px;
+    list-style-type: disc;
+    padding: 5px 0;
+    position: relative;
 }
 
 @media screen and (max-width: 800px) {

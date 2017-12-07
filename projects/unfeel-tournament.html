@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="../styles/reset.css">
         <link rel="stylesheet" type="text/css" href="../styles/main.css">
         <link rel="stylesheet" type="text/css" href="../styles/projects/project-page.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/greek-lexicon.css">
+        <link rel="stylesheet" type="text/css" href="../styles/projects/unfeel-tournament.css">
         <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
@@ -30,36 +30,107 @@
             </nav>
             <div class="body" id="body">
                 <div id="heading">
-                    <h1></h1>
-                    <p> - Current</p>
+                    <h1>Unfeel Tournament</h1>
+                    <p>Sep 2016 - Dec 2016</p>
                 </div>
                 <div id="sub-heading">
-                    <p>, <strong>In Development</strong></p>
-                    <a class="button-small" id="github" href="">Github Link</a>
+                    <p>School, Game, <strong>Completed</strong></p>
+                    <a class="button-small" id="github" href="https://github.com/UnfeelTournament/UnfeelTournament">Github Link</a>
                 </div>
                 <div id="intro">
-                    <h1>What is ?</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    <h1>What is Unfeel Tournament?</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Unfeel Tournament is a 2D multiplayer fighting game. Players control one of four emotions, and must pick up weapons and items scattered throughout the level to defeat the others and be the last emotion standing. Check out the <a href="https://unfeeltournament.github.io/">game</a>.</p>
                 </div>
                 <!--- content is generally where project pages diverge -->
                 <div id="content">
                     <h1>Development</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                    
-                    <img id="i1" src="../images/-i1.png">
-                    <p class="caption"></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Unfeel Tournament was made for a game development course in UCI (COMP SCI 113). My team and I came up with this idea of emotions, Angry, Happy, Sad, Worried, fighting for control over a person's feelings. The last emotion standing would end up being the emotion that person feels. The emotions begin at a landscape, representing the natural world (and space), and utilize weapons scattered throughout to fight for control. The goal of this game, was to create a fast-paced, simple, and fun multiplayer experience. Unfeel Tournament was made in <a href="https://www.unity3d.com">Unity3D</a> and C#.</p>
+                    <br>
+                    <img id="i3" src="../images/unfeel-tournament-i3.png">
+                    <p class="caption">The story of the game.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The main menu includes a background that shows all four emotions. From the main menu, you can choose to play a game, look at the controls, or check out the team.</p>
+                    <br>
+                    <img id="i1" src="../images/unfeel-tournament-i1.png">
+                    <p class="caption">The main menu.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;To accommodate four player local multiplayer, we added Xbox 360 controller support. Two players would use the keyboard + mouse, and two others would use controllers (or extra keyboards).</p>
+                    <br>
+                    <img id="i2" src="../images/unfeel-tournament-i2.png">
+                    <p class="caption">The controls.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;When you begin a game, you must first decide on the game settings: number of lives, number of players, and duration. Each player begins with the number of lives chosen, and once a player loses all of their lives, they are dead. The game ends when the game time has elapsed the duration chosen. Once the game ends by time, the player with the most kills is chosen as a winner. Otherwise, the game ends when there is only one player left alive, and that player is chosen as a winner.</p>
+                    <br>
+                    <img id="i4" src="../images/unfeel-tournament-i4.png">
+                    <p class="caption">The game settings: 7 lives, 4 players, and 5 min. duration.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Once the game settings are chose, each player takes turns choosing an emotion. Only one of each emotion can appear. Emotions have no impact on gameplay.</p>
+                    <br>
+                    <img id="i5" src="../images/unfeel-tournament-i5.png">
+                    <p class="caption">The character selection. Happy and Sad have already been chosen. Player 3 can choose from Angry and Worried.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Finally, after the characters are selected, the level must be chosen. The game comes with 4 different levels- each with its own theme: Mountain, Graveyard, Snowy, Space.</p>
+                    <br>
+                    <img id="i6" src="../images/unfeel-tournament-i6.png">
+                    <p class="caption">The level selection. The snowy level has been chosen.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The players now enter the game, and can start playing. There are specific spawn points for items, and each spawn point has its own selection of items that can spawn. Certain items have a higher chance of spawning. Players pick up items, and use them. If it is a weapon, the player equips that weapon and replacing their previously wewapon. Otherwise, the player immediately gains the effects of that item for a short time.</p>
+                    <br>
+                    <img id="i7" src="../images/unfeel-tournament-i7.png">
+                    <p class="caption">Happy and Sad both have weapons equipped. Worried is gravely injured, while Angry is waiting patiently.</p>
+                    <br>
+                    <img id="i8" src="../images/unfeel-tournament-i8.png">
+                    <p class="caption">Poor Worried, Happy shooting a bubble shotung on one side, and Sad with a baseball bat on the other.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;There are a number of different weapons and items:</p>
+                    <ul>
+                        <li><strong>Bubble Gun</strong> - A regular gun that fires bubbles.</li>
+                        <li><strong>Assault Bubble Gun</strong> - A bubble gun with a much faster fire rate.</li>
+                        <li><strong>Bubble Shotgun</strong> - A shotgun that fires 5 bubbles in a cone. </li>
+                        <li><strong>Bubble Sniper</strong> - A very long-range bubble gun that fires high-damaging bubbles.</li>
+                        <li><strong>Mega Bubble Launcher</strong> - A launcher that fires a large, explosive bubble in an arc.</li>
+                        <li><strong>Bubble Thrower</strong> - A weapon that fires a stream of tiny bubbles.</li>
+                        <li><strong>Baseball Bat</strong> - A regular, ol' baseball bat.</li>
+                        <li><strong>Cake</strong> - Increases your health, and makes you bigger.</li>
+                        <li><strong>Star</strong> - Makes you move faster, and jump higher.</li>
+                    </ul>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Once the game has ended, the players enter the results screen, showing the stats and the winner.</p>
+                    <br>
+                    <img id="i9" src="../images/unfeel-tournament-i9.png">
+                    <p class="caption">The game ended early, so Happy wins with his/her 1 kill over all of the other players.</p>
+                    <br>
+                    <img id="i10" src="../images/unfeel-tournament-i10.png">
+                    <p class="caption">Happy's ending. Each emotion has their own ending.</p>
+                    <br>
+                    <img id="i12" src="../images/unfeel-tournament-i12.png">
+                    <p class="caption">The fifth ending, where no one wins.</p>
+                    <br>
+                    <img id="i11" src="../images/unfeel-tournament-i11.png">
+                    <p class="caption">The mountain level. Worried holds the Mega Bubble Launcher.</p>
+                    <br>
+                    <img id="i13" src="../images/unfeel-tournament-i13.png">
+                    <p class="caption">The graveyard level. Happy wields the Bubble Sniper, and fire at Sad.</p>
+                    <br>
+                    <img id="i14" src="../images/unfeel-tournament-i14.png">
+                    <p class="caption">The space level. Sad, equipped with the Bubble Thrower equipped, attacks Angry mid-jump.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The character models and animations were created from a single texture from <a href="http://bevouliin.com">bevouliin.com</a>. The item and bubble textures, the map textures, the sfx, and the music were also retrieved from royalty-free assets online.</p>
                 </div>
                 <div id="footing">
-<!--
-                    <h1>Contributers</h1>
+                    <h1>The Team</h1>
                     <ul>
-                        <li>Few friends that helped test the bot on my Discord server.</li>
+                        <li><strong>Joseph Park (Me)</strong> - technical manager, programmer</li>
+                        <li><strong>Kevin Permana</strong>: <a href="https://github.com/kagekyaa">Github</a> <a href="https://www.linkedin.com/in/kpermana">Linkedin</a> - programmer, weapons design</li>
+                        <li><strong>Jasmine Nguyen</strong>: <a href="https://github.com/Jasminesaur">Github</a> <a href="https://www.linkedin.com/in/jnjasmine">Linkedin</a> - designer, project manager</li>
+                        <li><strong>Alexia Bareno</strong>: <a href="https://github.com/alexiabareno">Github</a> <a href="https://www.linkedin.com/in/alexiabareno">Linkedin</a> - design manager, sfx, music</li>
+                        <li><strong>Raymond Lam</strong>: <a href="https://github.com/raytwelve">Github</a> <a href="https://www.linkedin.com/in/raymondlam1">Linkedin</a> - general manager, story</li>
+                        <li><strong>Kaung Tun</strong>: <a href="https://github.com/av0idk">Github</a> - quality manager, level design</li>                    
                     </ul> 
--->
                     <div id="up-next">
                         <p>NEXT</p>
-                        <p id="next-project">Space-Time</p>
-                        <a class="button-small" href="./search-engine.html">Next</a>
+                        <p id="next-project">Monster Sudoku</p>
+                        <a class="button-small" href="./monster-sudoku.html">Next</a>
                     </div>
                     
                 </div>
