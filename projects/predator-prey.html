@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="../styles/reset.css">
         <link rel="stylesheet" type="text/css" href="../styles/main.css">
         <link rel="stylesheet" type="text/css" href="../styles/projects/project-page.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/greek-lexicon.css">
+        <link rel="stylesheet" type="text/css" href="../styles/projects/predator-prey.css">
         <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
@@ -30,36 +30,60 @@
             </nav>
             <div class="body" id="body">
                 <div id="heading">
-                    <h1></h1>
-                    <p> - Current</p>
+                    <h1>Predator-Prey</h1>
+                    <p>Apr 2014 - May 2014</p>
                 </div>
                 <div id="sub-heading">
-                    <p>, <strong>In Development</strong></p>
-                    <a class="button-small" id="github" href="">Github Link</a>
+                    <p>School, Simulation, <strong>Completed</strong></p>
+                    <a class="button-small" id="github" href="https://github.com/JosephPKC/PredatorPreySystem">Github Link</a>
                 </div>
                 <div id="intro">
-                    <h1>What is ?</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    <h1>What is Predator-Prey?</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Predator-Prey is a GUI simulation of a made-up predator-prey environment. This was made as the final project for a C++ course at PCC (CS 3A). The Predator-Prey world comprises of several different creatures, and simply displays the creatures as they follow their own rules of living and interacting.</p>
                 </div>
                 <!--- content is generally where project pages diverge -->
                 <div id="content">
                     <h1>Development</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                    
-                    <img id="i1" src="../images/-i1.png">
-                    <p class="caption"></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Predator-Prey was made in C++ using <a href="http://doc.qt.io/qtcreator/">Qt Creator</a> and <a href="http://doc.qt.io/qt-5/qtopengl-index.html"> Qt OpenGL</a>. This project's world is inhabited by many different creatures:</p>
+                    <br>
+                    <ul>
+                        <li><strong>Prey</strong> - Generic creatures that do not hunt other creatures. They are instead the basis of all life in this world. They simply eat grass from the ground when they are hungry, and breed regularly.</li>
+                        <li><strong>Predator</strong> - Generic predator that hunts prey creatures. Whenever they are hungry, they kill a nearby prey creature.</li>
+                        <li><strong>Hunter</strong> - An apex predator. They hunt all creatures, even their own kind. Just like predators, they kill a nearby creature when hungry.</li>
+                        <li><strong>Infected</strong> - A special creature that has its own rules. They do not hunger nor breed. Instead, they infect other creatures and assimilate them into their own kind. As a result, they tend to spread quite rapidly, only kept in check by Hunters.</li>
+                    </ul>
+                    <br>
+                    <img id="i1" src="../images/predator-prey-i1.png">
+                    <p class="caption">The world without infection. Green creatures are prey, red are preadtors, and blue are hunters. Notice how hunters are the lowest of the three in terms of population. This is primarily due to the fact that they are just as willing to kill each other as they are any other creature.</p>
+                    <br>
+                    <img id="i2" src="../images/predator-prey-i2.png">
+                    <p class="caption">The world with infection (infected are in grey). Infections start out small, but grow rapidly until it peaks and stabilizes.</p>
+                    <br>
+                    <img id="i3" src="../images/predator-prey-i3.png">
+                    <p class="caption">The infection is beginning to spread, more than 8x its initial size in just over 200 steps.</p>
+                    <br>
+                    <img id="i4" src="../images/predator-prey-i4.png">
+                    <p class="caption">The peak of infection. More than 20x its initial size in about 600 steps.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Predator-Prey keeps track of the states of each creature in a specialized class that wraps a 2d array. At each step, it tells each creature that a time step has passed, and each creature performs its duties of move, eat, breed, and die.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Predator-Prey also keeps some useful stats, such as the number of each creature, as well as, the percentage of each creature population. It also lets you toggle on/off infections at any moment.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;One of the more interesting parts of this project was balancing the inherent stats of each creature. This includes the time it takes to eat, breed, die, and their initial populations. Having one creature be too strong leads to them dominating the world, and if that creature was a predator of some kind, eventually leads to the collapse of the environment, as all of the prey die out. Thus, having a strong prey population is essential to the survival of the ecosystem. Also, ensuring that the infection rate isn't too high is essential. When you do achieve a balance, you end up with this wave-like pattern as the prey population shrinks and then expands, with the predator shrink and expansion just out of sync.</p>
+                    <br>
+                    <img id="g1" src="../images/predator-prey-g1.gif">
+                    <p class="caption">A typical scenario in the Predator-Prey world. Notice that as the predator population increases, the prey population decreases. Then when the prey population reaches a low, the predator population decreases. This results in an increase in the prey population. Note: Forgive the low quality. The capture software I used was having issues.</p>
+                    <br>
                 </div>
                 <div id="footing">
-<!--
-                    <h1>Contributers</h1>
+                    <h1>The Team</h1>
                     <ul>
-                        <li>Few friends that helped test the bot on my Discord server.</li>
-                    </ul> 
--->
+                        <li><strong>Joseph Park (Me)</strong> - designer, programmer</li>
+                    </ul>
                     <div id="up-next">
                         <p>NEXT</p>
-                        <p id="next-project">Space-Time</p>
-                        <a class="button-small" href="./search-engine.html">Next</a>
+                        <p id="next-project">Predator-Prey</p>
+                        <a class="button-small" href="./predator-prey.html">Next</a>
                     </div>
                     
                 </div>
