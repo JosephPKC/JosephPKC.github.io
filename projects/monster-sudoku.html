@@ -30,38 +30,53 @@
             </nav>
             <div class="body" id="body">
                 <div id="heading">
-                    <h1></h1>
-                    <p> - Current</p>
+                    <h1>Monster Sudoku</h1>
+                    <p>Jan 2016 - Mar 2016</p>
                 </div>
                 <div id="sub-heading">
-                    <p>, <strong>In Development</strong></p>
-                    <a class="button-small" id="github" href="">Github Link</a>
+                    <p>School, Sudoku Solver, <strong>Completed</strong></p>
+                    <a class="button-small" id="github" href="https://github.com/JosephPKC/MonsterSudoku">Github Link</a>
                 </div>
                 <div id="intro">
-                    <h1>What is ?</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    <h1>What is Monster Sudoku?</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Monster Sudoku is an NxN sudoku solver made for an artificial intelligence course at UCI (COMP SCI 171). The solver uses a variety search heuristics to improve performance (especially on larger puzzles), and employs <a href="https://en.wikipedia.org/wiki/Backtracking">backtracking search</a> to solve.</p>
                 </div>
                 <!--- content is generally where project pages diverge -->
                 <div id="content">
                     <h1>Development</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                    
-                    <img id="i1" src="../images/-i1.png">
-                    <p class="caption"></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Monster Sudoku was created in C++ using <a href="http://doc.qt.io/qtcreator/">Qt Creator</a>. It can generate random puzzles based on size and number of pre-filled cells, or accept puzzles from file input. It will then try to solve the puzzles, using backtracking search, until it either finds a solution, or decides there is no solution.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The solver stores the puzzle in a custom data structure that encapsulates a 2d array. The solver then works through the puzzle, via backtracking search. The solver also utilizes many different heuristics to improve performance. This includes:</p>
+                    <br>
+                    <ul>
+                        <li><strong>Minimum Remaining Values</strong> - Helps decide which cell to try to solve next. The cell with the smallest domain, or the minimum remaining values has a higher chance of choosing the correct value, and can remove impossible values early on.</li>
+                        <li><strong>Least Constraining Value</strong> - Helps decide which value to choose for a cell. If this value constrains the least number of cells by being chosen, then it is less likely to fail and cause a backtrack.</li>
+                        <li><strong>Degrees Heuristic</strong> - Again helps decide which cell to solve next. Choosing the cell that has the highest number of constraints on other unassigned cells helps reduce the domains of those cells.</li>
+                        <li><strong>Arc Consistency</strong> - Ensures that impossible or illegal values are removed from cells before trying to solve another cell. </li>
+                        <li><strong>Forward Checking</strong> - Determine the effect of a value assignment to a cell by checkings its neighbors and constraints.</li>
+                    </ul>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The solver first checks and maintains arc consistency when given a puzzle. Puzzles begin with some of the cells already solved. This means that the solver can reduce domains of the solved cells neighbors to reduce the search space. Afterwards, it decides on a cell to try and solve using the Minimum Remaining Values heuristic. If there is more than one cell that has the smallest domain, the ties are broken via the Degrees heuristic. If there are still ties, then the first one is chosen.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;If the chosen cell has a domain size of 1, then the answer is simple: choose the remaining value. However, if there is more than one value in the domain (most likely case), then the solver decides on which one to try using the Least Constraining Value heuristic.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Once a value is chosen, the solver records this action and that depth its in, and maintains arc consistency by propagating through the cell's neighbors, and ensuring that there are no illegal values in their domains. For each value that needs to be removed, the solver records that action as well. Once finished, the solver chooses another cell to solve. If there are no other cells left, then the solver checks to make sure each cell has an assigned value. If each cell does have an assigned value, the solver has found a solution and ends. however, if at least one cell does not have a value, then the solver must backtrack.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;To backtrack, the solver goes through each recorded action in that depth, and inverts the action. The solver then marks the chosen value for the cell as illegal, and chooses the next best value following the heuristics. If the solver cannot backtrack any further, the solver ends with no solution.</p>
+                    <br>
+                    <h1>Closing Thoughts</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The solve algorithm could have definitely been better. For larger puzzles, where n >= 12, the solver potentially took hours to solve. Inefficient and slow algorithms for the heuristics and search are to blame. One of the more obvious improvements that could have been made was to pre-process the degrees of each cell, and simply modify them as needed, instead of calculating them at every iteration.</p>
                 </div>
                 <div id="footing">
-<!--
-                    <h1>Contributers</h1>
+                    <h1>The Team and Contributers</h1>
                     <ul>
-                        <li>Few friends that helped test the bot on my Discord server.</li>
-                    </ul> 
--->
+                        <li><strong>Joseph Park (Me)</strong> - designer, programmer</li>
+                    </ul>
                     <div id="up-next">
                         <p>NEXT</p>
-                        <p id="next-project">Space-Time</p>
-                        <a class="button-small" href="./search-engine.html">Next</a>
+                        <p id="next-project">Ultron</p>
+                        <a class="button-small" href="./ultron.html">Next</a>
                     </div>
-                    
                 </div>
             </div>
             <footer id="footer">

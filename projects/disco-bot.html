@@ -45,33 +45,33 @@
                 <div id="content">
                     <h1>Development</h1>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;The bot is made with Python 2.7. To utilize Discord's API, I used <a href="https://www.github.com/Rapptz/discord.py">Discord.py</a>, a python library that wraps Discord's API. For the LoL-specific commands, I used another wrapper library called <a href="https://www.github.com/Pandamacia/LoLWatcher">lolwatcher</a> to access specific data, including player information, and game information. I was also planning on using lolwatcher to access static game data, like champions and items, but found it much easier to directly access Riot's static data JSON <a href="https://developer.riotgames.com/static-data.html">files</a>. I downloaded necessary files, parsed the json, and uploaded the data to the text channels.</p>
-                    
+                    <br>
                     <img id="i1" src="../images/disco-bot-i1.png">
                     <p class="caption">The stats and abilities of the champion, Aurelion Sol.</p>
-                    
+                    <br>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;I also have the bot grab the splash art and the skin art for the champion. The bot downloads the image from Riot Game's static data portal, crops the image, and uploads it to the text channel, using <a href="http://www.pythonware.com/products/pil">pil</a> and <a href="https://www.pypi.python.org/pypi/python-resize-image">resizeimage</a>.</p>
-                    
+                    <br>
                     <img id="i2" src="../images/disco-bot-i2.png">
                     <p class="caption">The splash art for Aurelion Sol.</p>
-                    
+                    <br>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;To get specific champion statistics, like playrate, winrate, and top champions of certain roles, I used a wrapper library, <a href="https://www.github.com/solomidnet/championgg-api-python">py_gg</a>, to get champion data from <a href="https://www.champion.gg">champion.gg</a>.</p>
-                    
+                    <br>
                     <img id="i3" src="../images/disco-bot-i3.png">
                     <p class="caption">The top 15 supports, sorted by winrate. You can also see pickrates and banrates.</p>
-                    
+                    <br>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;LoL isn't the only thing Disco bot can do. It also has basic music functionalities. Disco bot keeps a linked list of music queued (for easier swapping, removing from the middle of the list, and inserting), and always plays the song at the head. You can queue up songs from youtube or soundcloud, change the volume, pause and skip songs, and get information on the song.</p>
-                    
+                    <br>
                     <img id="i4" src="../images/disco-bot-i4.png">
                     <p class="caption">Queueing and playing "Something Just Like This." </p>
-                    
+                    <br>
                     <h1>Current Status</h1>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;Currently, the bot is in development. It has very basic functionality, and can only perform a few commands. It has:</p>
                     <ul>
-                        <li>Basic music functionality: play, queue, pause, and skip songs.</li>
-                        <li>Basic LoL player search: search a player to get statistics, like winrate, rank, and games played.</li>
-                        <li>Basic LoL static data search: search a champion or item to get in-game data or statistics.</li>
+                        <li><strong>Basic music functionality</strong>: play, queue, pause, and skip songs.</li>
+                        <li><strong>Basic LoL player search</strong>: search a player to get statistics, like winrate, rank, and games played.</li>
+                        <li><strong>Basic LoL static data search</strong>: search a champion or item to get in-game data or statistics.</li>
                     </ul>
-                    
+                    <br>
                     <h1>Planned Features</h1>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;Disco bot is early in development, and there are many more features planned:</p>
                     <ul>
@@ -79,12 +79,13 @@
                         <li>More LoL commands, including game modes, champion builds, etc.</li>
                         <li>Ability to get updates on current games.</li>
                     </ul>
+                    <br>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;I am also planning on creating a database to store certain "non-changing" data, like champion names and ids, to limit the number of API calls and downloads. This, along with caching, should help improve performance for certain commands.</p>
                 </div>
                 <div id="footing">
-                    <h1>Contributers</h1>
+                    <h1>The Team and Contributers</h1>
                     <ul>
-                        <li>Few friends that helped test the bot on my Discord server.</li>
+                        <li><strong>Joseph Park (Me)</strong> - designer, programmer</li>
                     </ul> 
                     <div id="up-next">
                         <p>NEXT</p>
