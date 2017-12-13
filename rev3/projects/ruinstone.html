@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Joseph Park | Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Include css stylesheets and js script sheets here -->
+        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="../styles/main.css">
+        <link rel="stylesheet" type="text/css" href="../styles/projects/project-page.css">
+        <link rel="stylesheet" type="text/css" href="../styles/projects/ruinstone.css">
+        <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+        <script src="../scripts/anchor-top.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header id="header">
+                <p id="header-name">JOSEPH PARK</p>
+            </header>
+            <nav id="nav">
+                <ul>
+                    <li><a id="about" href="./../index.html">ABOUT</a></li>
+                    <li><a id="projects" class="active" href="./../projects.html">PROJECTS</a></li>
+                    <li><a id="contact" href="./../contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="body" id="body">
+                <div id="heading">
+                    <h1>Ruinstone</h1>
+                    <p>Mar 2017 - May 2017</p>
+                </div>
+                <div id="sub-heading">
+                    <p>Personal, Game, <strong>Completed</strong></p>
+                    <a class="button-small" id="github" href="https://github.com/exdunn/ruinstone">Github Link</a>
+                </div>
+                <div id="intro">
+                    <h1>What is Ruinstone?</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Ruinstone is a 3D online fighting game. You play as a wizard with 4 chosen spells and fight other wizards in an arena, until only one wizard remains. Check out the <a href="https://exdunn.itch.io/ruinstone">game</a>.</p>
+                </div>
+                <!--- content is generally where project pages diverge -->
+                <div id="content">
+                    <h1>Development</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Ruinstone was born when a friend of mine, Alex Dunn, asked if I wanted to work on a game together. He had an idea of a multiplayer game, based off a Warcraft 3 custom game he used to play, about wizards fighting each other with spells. We then went to work designing and creating this game. We got a few more friends and people along the way to help us out. All of the contributers and team members can be found at the bottom of the page. Ruinstone was developed in <a href="https://www.unity3d.com">Unity3D</a> and C#, and can be divided into these parts: <strong>players</strong>, <strong>spells</strong>, <strong>the lobby</strong>, and <strong>the UI</strong>.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The players control wizards, who each have a selection of spells at their disposal. They have in-game stats, like health and movement speed- each of which can be affected by spells in some way. The player controller and data models were worked on primarily by Alex Dunn, and the model and animations were created by Christian Sydow. The player controls his/her character in a moba-like style- right click on the ground to move there. The camera was top-down, at an isometric angle, and followed the character. The players were to move around, dodging enemy spells, and positioning themselves to cast spells themselves. To cast a spell, the player would press the wanted spell's hotkey, and left click somewhere within range. Some spells went off automatically without needing to left click.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The arena the players played on was created by Christian Sydow. It is a fairly simple map, with a slight elevation in the center, and four pillars surrounding it. The music that plays during the game was made by Cyrus Fiete.</p>
+                    <br>
+                    <img id="i4" src="../images/ruinstone-i4.png">
+                    <p class="caption">The Quark spell.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The spells were a combination of data models and controllers, each working independently of one another. My primary job was creating the spells, the spell creation system, and the spell behaviours. Each spell consisted of a data model (i.e. its stats), and several abstract methods: cast, precast, and cooldown. With each spell came a projectile. The projectile handled the movement of the spell from the caster towards some destination. Some projectiles were simple- launch a projectile from the player in a straight line, like the fireball spell. Others were a bit more complex. The meteor spell had a projectile fall from above the cameras towards the point the player chose, which then causes a large explosion upon impact. There were also some spells that did not have any projectiles. These instead had an extra status effect, which was added to the target player and executed.In simplest words, every spell consisted of two parts: the initial cast (the what), and the delivery method (the how). The initial cast determines what is created- either a projectile or a status. The delivery will send the spell's effect to the target, and will execute that effect.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;When a player decides that a spell is to be cast, the game polls the player for a location in the game. This location is used differently depending on the type of spell. For linear spells like the Fireball, the location is used to compute the direction the spell travels. For ground target spells like the Meteor, the location is the point the effect occurs. For direct target spells, the location needs to be a valid object or player. Furthermore, for most spells, the location must also be within range of the player.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The spell visuals, models, particles, and sfx were all from <a href="https://www.assetstore.unity3d.com/en/#!/content/36250">Magic Missiles</a>. </p>
+                    <br>
+                    <img id="i3" src="../images/ruinstone-i3.png">
+                    <p class="caption">The Fireball spell.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The lobby is how players are able to play with each other. We used <a href="https://www.photonengine.com/en/PUN">Photon</a> to handle the networking. When starting a game, the player either searches for an open lobby, or creates one. The player can then begin the game when he/she is satisfied with the number of players. During the game, each client's controllers sends data on the positions of the player and projectiles, any stats for the players, and any metadata through Photon to all of the other clients. This data is then used by the game's controller to tell players when they have been hit, or killed, or affected by some status.</p>
+                    <br>
+                    <img id="i7" src="../images/ruinstone-i7.png">
+                    <p class="caption">The lobby with 2 players.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The UI was made primarily from Unity assets. The main menu's background was made by Christian Sydow, and the music by Cyrus Fiete. From the main menu, you can create a lobby, join an existing lobby, or customize your spell book.</p>
+                    <br>
+                    <img id="i1" src="../images/ruinstone-i1.png">
+                    <p class="caption">The main menu.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;In the spell book, you are shown 9 different spells. You can choose any four to use in your games. Selecting a spell also gives a small description of the spell.</p>
+                    <br>
+                    <img id="i2" src="../images/ruinstone-i2.png">
+                    <p class="caption">Selecting spells in the spell book.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The in-game UI shows your health, in the form of a health globe on the left, and the spells you have prepared. A spell on cooldown is indicated as such.</p>
+                    <br>
+                    <img id="i6" src="../images/ruinstone-i6.png">
+                    <p class="caption">The health globe, and the four spells.</p>
+                    <br>
+                    <h1>End Result and Concluding Thoughts</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The game, towards the end of development, was submitted to the <a href="http://occs.ieee.org/gamesig/"> IEEE GameSIG 2017 Showcase</a>, a presentation where many different groups of people demo the game they have made. We made it as a semi-finalist.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Overall, the game ended up looking pretty decent. This was our first time working on a networked game, and trying to make all of these systems work resulted in many headaches. However, in the end we managed to get a solid working game- although we had to cut out many features we planned for initially due to time constraints.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;If we ever come back to this in the future, I would love to implement more interesting spells and some of the features that were originally planned.</p>
+                </div>
+                <div id="footing">
+                    <h1>Contributers and Members</h1>
+                    <ul>
+                        <li><strong>Joseph Park (Me)</strong> - game designer, programmer</li>
+                        <li><strong>Alex Dunn</strong>: <a href="https://github.com/exdunn">Github</a> <a href="https://www.linkedin.com/in/alex-dunn-46766554">Linkedin</a> - game designer, programmer, 2d artist</li>
+                        <li><strong>Christian Sydow</strong>: <a href="https://github.com/swert7662">Github</a> <a href="https://www.linkedin.com/in/christian-sydow-38334050">Linkedin</a> - 3d artist</li>
+                        <li><strong>Kevin Permana</strong>: <a href="https://github.com/kagekyaa">Github</a> <a href="https://www.linkedin.com/in/kpermana">Linkedin</a> - sound programmer</li>
+                        <li><strong>Cyrus Fiete</strong> - sfx, music</li>
+                        <li><strong>Camille Dunn</strong> - video content creator</li>
+                        <li><strong>John Grefiel</strong> - QA</li>
+                        <li><strong>David Wu</strong>: <a href="https://github.com/Secret-Asian-Man">Github</a> <a href="https://www.linkedin.com/in/david-wu-545b95112">Linkedin</a> - QA</li>
+                    </ul> 
+                    <div id="up-next">
+                        <p>NEXT</p>
+                        <p id="next-project">Riptide</p>
+                        <a class="button-small" href="./riptide.html">Next</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <footer id="footer">
+                <a class="anchor-top" href="#">
+                    <i class="fa fa-arrow-circle-up"></i>
+                </a>
+                <div id="font-awesome-attr">
+                    <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

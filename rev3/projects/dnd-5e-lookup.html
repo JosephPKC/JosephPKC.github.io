@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Joseph Park | Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Include css stylesheets and js script sheets here -->
+        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="../styles/main.css">
+        <link rel="stylesheet" type="text/css" href="../styles/projects/project-page.css">
+        <link rel="stylesheet" type="text/css" href="../styles/projects/dnd-5e-lookup.css">
+        <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+        <script src="../scripts/anchor-top.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header id="header">
+                <p id="header-name">JOSEPH PARK</p>
+            </header>
+            <nav id="nav">
+                <ul>
+                    <li><a id="about" href="./../index.html">ABOUT</a></li>
+                    <li><a id="projects" class="active" href="./../projects.html">PROJECTS</a></li>
+                    <li><a id="contact" href="./../contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="body" id="body">
+                <div id="heading">
+                    <h1>DnD Lookup</h1>
+                    <p>Jul 2017 - Current</p>
+                </div>
+                <div id="sub-heading">
+                    <p>Personal, Database, <strong>In Development</strong></p>
+                    <a class="button-small" id="github" href="">Github Link</a>
+                </div>
+                <div id="intro">
+                    <h1>What is DnD Lookup?</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;DnD Lookup is a database utility program that lets you search up monsters, items, spells, classes, and races for Dungeons and Dragons 5e. It is made with user experience, and information clarity in mind. It presents all relevant information for the searched topic in boxes, with all related information grouped together. It shows any related searches, and lets you filter and sort the results.</p>
+                </div>
+                <!--- content is generally where project pages diverge -->
+                <div id="content">
+                    <h1>Development</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The idea for this program came to me when playing Dungeons and Dragons, and finding it difficult to flip through the books and pdfs (even with the built-in pdf search) to find a particular spell or monster. I wanted the user interface of the program to be the most important aspect, so I decided on building it in <a href="https://www.unity3d.com">Unity3D</a> and C#.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The program stores monsters, items, spells, and other data in an sqlite3 database, using <a href="https://www.sqlitestudio.pl">SQLiteStudio</a>, and later <a href="https://www.jetbrains.com/datagrip">DataGrip</a>. In Unity, I created scripts to help insert data into the database (much easier than inserting in SQLiteStudio or DataGrip).</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The user interface was made entirely with Unity assets, and <a href="https://www.dafont.com/dalelands.font">Dalelands font</a>. The user interface consists of <strong>(1) a search bar</strong>, <strong>(2) filters</strong>, <strong>(3) results list</strong>, and <strong>(4) data display</strong>. </p>
+                    <br>
+                    <img id="i1" src="../images/dnd-5e-lookup-i1.png">
+                    <p class="caption">The interface. You can see all of the major parts of the program.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The search bar also includes a drop-down menu which lets you choose what type of data you are searching for (i.e. monster). Entering nothing will list all data of that type.</p>
+                    <br>
+                    <img id="i2" src="../images/dnd-5e-lookup-i2.png">
+                    <p class="caption">The search bar. You can select between a variety of data types.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The filters change depending on the type of data. For example, monsters can be filtered by type, size, or by their challenge rating range. On the other hand, items would be filtered by type, rarity, and value. You can select one or more filters, or you can select the all filter.</p>
+                    <br>
+                    <img id="i3" src="../images/dnd-5e-lookup-i3.png">
+                    <p class="caption">The filters. Selecting all while select all filters of that category, or de-select all.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The results list is two-part: a sort by section, and the list. The sort by lets you choose how the results are listed. Like the filters, the sorting parameters depend on the data type. The results list will display all relevant data that matches your search parameters. Depending on the data type, additional, important information is listed along with their names (useful for quick glances). Selecting on one of the items in the list will fully display that item on the right-hand side.</p>
+                    <br>
+                    <img id="i4" src="../images/dnd-5e-lookup-i4.png">
+                    <p class="caption">The result list. Above the list is the sort by section. You can see at a quick glance all important information for each item in the list. For monsters, this would be the name, type, and challenge rating.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The data display displays all information of the selected item in the result list, organized and grouped by category. </p>
+                    <br>
+                    <img id="i5" src="../images/dnd-5e-lookup-i5.png">
+                    <p class="caption">The display. You can see all information pertaining to the selected item. For mosnters, this would be the stats, features, and actions.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The program was designed with the MVC model in mind. The models (database) holds all of the data needed to function, and the controllers query the database, storing returned data into customized data structures for the views to display to the user. When a user types a query into the search bar, the program performs select queries into the database through a database controller. Then the database controller returns a data structure holding the information to another controller. That controller updates the views for the user to see.</p>
+                    <br>
+                    <h1>Current Status</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The program is nowhere near finished. At the moment, only the monster portion is implemented. However, the database retrieval and displays are fully implemented, and the only tasks required are data type-specific ones, like spell tables, spell data, spell filters, and the spell display layouts.</p>
+                    <br>
+                    <h1>Planned Features</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The following are planned, and will eventually be implemented (You can skip this part if you have no interest in DnD 5e):</p>
+                    <ul>
+                        <li><strong>Backgrounds:</strong> their description, traits, and features.</li>
+                        <li><strong>Classes:</strong> their description, features, archetypes, and builds.</li>
+                        <li><strong>Conditions:</strong> their effects.</li>
+                        <li><strong>Features:</strong> their effects, classes, and requirements.</li>
+                        <li><strong>Items:</strong> their description, effects, and rarities.</li>
+                        <li><strong>Races:</strong> their description, traits, subraces, and builds.</li>
+                        <li><strong>Spells:</strong> their description, classes, types, and stats.</li>
+                    </ul>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Almost everything from the SRD is planned to be included, as well, as the ability to create your own backgrounds, classes, items, races, etc. I also need a more creative name. Any suggestions?</p>
+                </div>
+                <div id="footing">
+                    <h1>The Team and Contributers</h1>
+                    <ul>
+                        <li><strong>Joseph Park (Me)</strong> - designer, programmer</li>
+                    </ul> 
+                    <div id="up-next">
+                        <p>NEXT</p>
+                        <p id="next-project">Greek Lexicon</p>
+                        <a class="button-small" href="./greek-lexicon.html">Next</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <footer id="footer">
+                <a class="anchor-top" href="#">
+                    <i class="fa fa-arrow-circle-up"></i>
+                </a>
+                <div id="font-awesome-attr">
+                    <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

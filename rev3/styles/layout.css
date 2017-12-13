@@ -1,0 +1,148 @@
+#header {
+    grid-area: header;
+}
+
+#about {
+    grid-area: about;
+}
+
+#projects {
+    grid-area: projects;
+}
+
+#contact {
+    grid-area: contact;
+}
+
+#footer {
+    grid-area: footer;
+}
+
+#header-icon {
+    grid-area: header-icon;
+}
+
+#nav-bar {
+    grid-area: nav-bar;
+}
+
+#title-card {
+    grid-area: title-card;
+}
+
+#footer-text {
+    grid-area: footer-text;
+}
+
+#anchor-top {
+    grid-area: anchor-top;
+}
+
+#contact-icons {
+    grid-area: contact-icons;
+}
+
+#name {
+    grid-area: name;
+}
+
+#tech {
+    grid-area: tech;
+}
+
+#des {
+    grid-area: des;
+}
+
+.tab img {
+    grid-area: img;
+}
+
+#project-tags {
+    grid-area: proj-tags;
+}
+
+#sub-techs-wrapper {
+    grid-area: proj-techs;
+}
+
+#sub-heading a {
+    grid-area: link;
+}
+
+#content-nav-bar {
+    grid-area: nav-bar;
+}
+
+#heading {
+    grid-area: heading;
+}
+
+#sub-heading {
+    grid-area: sub-heading;
+}
+
+#body {
+    grid-area: body;
+}
+
+#footing {
+    grid-area: footing;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:
+        "header"
+        "title-card"
+        "blank"
+        "about"
+        "projects"
+        "contact"
+        "footer";
+}
+
+#header {
+    display: grid;
+    grid-gap: 0;
+    grid-template-areas:
+        "header-icon"
+        "nav-bar";
+}
+
+#footer {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:
+        "anchor-top"
+        "contact-icons"
+        "footer-text";
+}
+
+#tab-grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+}
+
+.tab {
+    display: grid;
+    grid-gap: 0;
+    grid-template-areas:
+        "name"
+        "img";
+}
+
+.proj-wrapper {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:
+        "header"
+        "content-nav"
+        "heading"
+        "sub-heading"
+        "body"
+        "footing"
+        "footer";
+}
