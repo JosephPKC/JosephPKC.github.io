@@ -1,0 +1,269 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    color: #062F4F;
+    font-size: 20px;
+}
+
+h2 {
+    color: #1E392A;
+}
+
+h3 {
+    color: #3CC47C;
+}
+
+p, a, li {
+    font-family: "Montserrat", sans-serif;
+}
+
+p, li {
+    color: #696969;
+}
+
+a {
+    color: #565656;
+}
+
+/* Entire body */
+.wrapper { 
+    display: flex;
+    flex-direction: column;
+}
+.wrapper div {
+    flex: 1;
+}
+
+/* Header */
+#header {
+    border-bottom: 4px double #3CC47C;
+    padding: 5px;
+}
+
+#header-icon p{
+    color: #0B3C5D;
+    display: flex;
+    font-size: 28px;
+    font-weight: 550;
+    justify-content: flex-start;
+    padding: 0 15px;
+}
+
+#nav-bar {
+    align-items: center;
+    align-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+#nav-bar a {
+    text-align: left;
+    width: 30%;
+}
+
+nav a {
+    border-left: 1px solid #3CC47C;
+    color: #1E392A;
+    padding: 0 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.pulse:hover {
+    animation: pulse 1s ease 0s alternate infinite none running;
+}
+
+@keyframes pulse {
+    0% {
+        color: #565656;
+    }
+    100% {
+        color: #3CC47C;
+    }
+}
+/* Content */
+#title-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    text-align: center;
+}
+
+#title-card span {
+    color: #373737;
+    font-weight: 750;
+}
+
+#blank {
+/*    height: 150px;*/
+}
+
+#content {
+    border-bottom: 4px double #3CC47C;
+    margin: 0 auto;
+    width: 85%;
+}
+
+#content article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    text-align: center;
+}
+
+#content article h2 {
+    border-bottom: 2px solid #3CC47C;
+    margin: 0 auto;
+    width: 200px;
+}
+
+#skills div {
+    margin: 0 auto;
+}
+
+#skills div ul li {
+    text-align: left;
+}
+
+#content #skills #skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#tab-grid {
+/*    padding: 0 30px 0 30px;*/
+}
+
+.tab {
+    text-decoration: none;
+}
+
+.tab #name {
+    font-weight: 900;
+}
+
+.tab #tech, .tab #des {
+    opacity: 0;
+}
+
+.tab #tech {
+    font-size: 10px;
+    font-style: italic;
+}
+
+.tab #des {
+    grid-area: des;
+    font-size: 12px;
+}
+
+.tab img {
+    width: 100%;
+}
+
+@keyframes tab-pulse {
+    0% {
+        box-shadow: 0 0 40px 10px #3CC47C;
+    }
+    
+    100% {
+        box-shadow: 0 0 40px 10px #1E392A;
+    }
+}
+
+.tab:hover {
+    animation: tab-pulse 1s ease 0s alternate infinite none running;
+    transition: all 0.3s ease;
+}
+
+
+.tab:hover #tech, .tab:hover #des{
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+
+
+#contact p span {
+    color: #373737;
+    font-weight: 750;
+}
+
+/* Footer */
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#footer-text {
+    font-size: 9px;
+    padding-bottom: 30px;
+}
+
+#anchor-top {
+    bottom: 5px;
+    margin: 0 auto;
+    position: fixed;
+    right: 0;
+    width: 125px;
+}
+
+#anchor-top a {
+    z-index: 100;
+}
+
+#contact-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#contact-icons i {
+    color: #1E392A;
+}
+
+#contact-icons i:hover {
+    color: #3CC47C;
+    transition: all 0.7s ease;
+}
+
+.button {
+    background-color: #1E392A;
+    border-radius: 5px;
+    color: white;
+    margin: 0 auto;
+    padding: 5px;
+    text-decoration: none;
+    width: 100px;
+}
+
+.button:hover {
+    animation: ghost-pulse 1s ease 0s alternate infinite none running;
+    background-color: white;
+    box-shadow: inset 0 0 0 3px #3CC47C;
+    color: black;
+    font-weight: 1000;
+    transition: all 1s ease;
+}
+
+@keyframes ghost-pulse {
+    0% {
+        background-color: white;
+        box-shadow: inset 0 0 0 3px #3CC47C;
+        color: black;
+        font-weight: 1000;
+    }
+    
+    100% {
+        background-color: #1E392A;
+        box-shadow: 0 0;
+/*        box-shadow: inset 0 0 0 3px #3CC47C;*/
+        color: white;
+    }
+}

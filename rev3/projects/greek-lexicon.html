@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Joseph Park | Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Include css stylesheets and js script sheets here -->
+        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="../styles/main.css">
+        <link rel="stylesheet" type="text/css" href="../styles/projects/project-page.css">
+        <link rel="stylesheet" type="text/css" href="../styles/projects/greek-lexicon.css">
+        <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+        <script src="../scripts/anchor-top.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header id="header">
+                <p id="header-name">JOSEPH PARK</p>
+            </header>
+            <nav id="nav">
+                <ul>
+                    <li><a id="about" href="./../index.html">ABOUT</a></li>
+                    <li><a id="projects" class="active" href="./../projects.html">PROJECTS</a></li>
+                    <li><a id="contact" href="./../contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="body" id="body">
+                <div id="heading">
+                    <h1>Greek Lexicon</h1>
+                    <p>Jan 2017 - Current</p>
+                </div>
+                <div id="sub-heading">
+                    <p>Personal, Database, <strong>In Development</strong></p>
+                    <a class="button-small" id="github" href="">Github Link</a>
+                </div>
+                <div id="intro">
+                    <h1>What is Greek Lexicon?</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Greek Lexicon is a database utility program to help users find out information about some classical Greek word. Users enter a Greek word, and it will display information like definition and forms.</p>
+                </div>
+                <!--- content is generally where project pages diverge -->
+                <div id="content">
+                    <h1>Development</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;This idea began when I was having trouble looking up vocabulary words during sentence translations for class. Even after putting all of the vocabulary into Excel spreadsheets, it still took quite some time to find out what the stem for the word was, look up the definition and the form, and translate it. That's when I decided to make this program, to help me study and complete my homework. Unfortunately, I ended up finishing the Greek class before this program.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Greek Lexicon is made purely in Python 2.7, with the database in Sqlite3 via <a href="https://www.sqlitestudio.pl">SQLiteStudio</a>. I chose Sqlite3 for the database was purely for the portability.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Greek Lexicon is a command-line program, and supports a variety of commands. The most of these is the info command. This will return information on the greek word the user typed in. The info command takes a few parameters, the first being the greek word. The other parameters are optional: -v, -d, -u. The -v parameter for info makes it so that the returned information is detailed, and not just the gist. The -d parameter also forces the definition of the word to be returned as well. Finally, the -u parameter will ignore all accent and breathing marks for the words.</p>
+                    <br>
+                    <img id="i1" src="../images/greek-lexicon-i1.png">
+                    <p class="caption">The first command had all three optional parameters. Notice that it is more detailed than the second, and include the definition. Also, notice that the first Greek word was unaccented, while the second one is.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The information stored in the database is retrieved via text file. When an update command is issued to the Lexicon, the database manager script will open and read the file, and insert any words not already in the database.</p>
+                    <br>
+                    <img id="i2" src="../images/greek-lexicon-i2.png">
+                    <p class="caption">The text file that loads into the database. This is for παιδεύω, the classical Greek word for teach.</p>
+                    <br>
+                    <h1>Current Status</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Currently, Greek Lexicon can store and retrieve verbs, nouns, adjectives, pronouns, and participles. It cannot store or retrieve irregular words. At the moment, only a few words are actually stored in the database (this is the tedious part).</p>
+                    <br>
+                    <h1>Planned Features</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The biggest hurdle for Greek Lexicon's completion is the vocabulary. To help with that, I am planning on adding support for other ways of inserting into the database. This includes via Excel (since I already have a large Excel spreadsheet of most of the words), and via scraping the textbook pdf.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;I am also planning on implementing some heuristics algorithms to try to predict the endings and stems of words, in order to speed up the vocabulary insertions.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Finally, probably the most ambitious part, is the sentence translations. This will be quite difficult as order of words is not as important in Greek, but certain meanings change quite drastically based on context.</p>
+                </div>
+                <div id="footing">
+                    <h1>The Team and Contributers</h1>
+                    <ul>
+                        <li><strong>Joseph Park (Me)</strong> - designer, programmer</li>
+                    </ul> 
+                    <div id="up-next">
+                        <p>NEXT</p>
+                        <p id="next-project">Space-Time</p>
+                        <a class="button-small" href="./search-engine.html">Next</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <footer id="footer">
+                <a class="anchor-top" href="#">
+                    <i class="fa fa-arrow-circle-up"></i>
+                </a>
+                <div id="font-awesome-attr">
+                    <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
