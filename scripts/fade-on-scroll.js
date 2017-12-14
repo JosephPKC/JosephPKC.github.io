@@ -1,4 +1,7 @@
 jQuery(document).ready(function() {
+    if(jQuery(window).width() < 641) {
+        return false;
+    }
     getElements().each(function() {
         if(isInView(jQuery(this).offset().top + jQuery(this).outerHeight())) {
 //            jQuery(this).animate({'opacity':'1'}, 500);

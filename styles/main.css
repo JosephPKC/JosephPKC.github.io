@@ -256,10 +256,6 @@ nav a:hover {
     transition: all 0.7s ease;
 }
 
-.fade, .fade-li > li, .fade-art > h1, .fade-art > h2, .fade-art > h3, .fade-art > p, .tab, .fade-img > a, .fade-img > p {
-    opacity: 0;
-}
-
 .button {
     background-color: #1E392A;
     border-radius: 5px;
