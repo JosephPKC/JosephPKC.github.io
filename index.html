@@ -1,50 +1,119 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Joseph Park | Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Include css stylesheets and js script sheets here -->
-        <link rel="stylesheet" type="text/css" href="styles/reset.css">
-        <link rel="stylesheet" type="text/css" href="styles/main.css">
-        <link rel="stylesheet" type="text/css" href="styles/about.css">
-        <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
-    </head>
-    <body>
-        <div class="wrapper">
-            <header id="header">
-                <p id="header-name">JOSEPH PARK</p>
-            </header>
-            <nav id="nav">
-                <ul>
-                    <li><a id="about" class="active" href="./index.html">ABOUT</a></li>
-                    <li><a id="projects" href="./projects.html">PROJECTS</a></li>
-                    <li><a id="contact" href="./contact.html">CONTACT</a></li>
-                </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1, maximum-scale=1">
+    <title>Joseph Park | Portfolio</title>
+    
+    <!-- Font Imports -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <link href="assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- CSS Styles -->
+    <link href="styles/main.css"  type="text/css" rel="stylesheet">
+    <link href="styles/layout.css" type="text/css" rel="stylesheet">
+    <link href="styles/responsive.css" type="text/css" rel="stylesheet">
+    
+    <!-- JS Scripts -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="scripts/load-projects.js"></script>
+    <script src="scripts/anchor-top.js"></script>
+    <script src="scripts/nav-scrolls.js"></script>
+    <script src="scripts/project-load-on-click.js"></script>
+    <script src="scripts/back-to-projects.js"></script>
+    <script src="scripts/fade-on-scroll.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header id="header">
+            <div id="header-icon">
+                <p>JOSEPH PARK</p>
+            </div>
+            <nav id="nav-bar">
+                <a class="pulse" id="nav-about" href="#about">About</a>
+                <a class="pulse" id="nav-skills" href="#skills">Skills</a>
+                <a class="pulse" id="nav-projects" href="#projects">Projects</a>
+                <a class="pulse" id="nav-contact" href="#contact">Contact</a>
             </nav>
-            <article id="body">
-                <div id="gist" class="body">
-                    <h1>Hello.</h1>
-                    <h2>My name is Joseph Park.</h2>
-                    <p>I am a recent graduate from UCI, graduating magna cum laude with a B.S. in computer science.</p>
-                    <p>I have worked on many different projects, including multiplayer games and chat bots. Check out the Projects tab to learn more.</p>
-                    <p>I have studied a variety of topics in school, including cryptography, game development, data management, and networking.</p>
-                    <p>My passions include gaming, shows, writing, music, and most importantly, coding.</p>
-                    <p>Check out my resume below.</p>
-                    <a class="button-large" id="resume" href="./assets/resume.pdf" target="_blank">RESUME</a>
-                    <br>
+        </header>
+        <div id="content">
+            <div id="blank"></div>
+            <div id="title-card">
+                <h1 class="fade">DESIGN | CODE</h1>
+                <p class="fade">I am <span>Joseph Park</span>, a programmer, designer, and gamer.</p>
+            </div>
+            <article class="fade-art" id="about">
+                <h2>About Me</h2>
+                <p>My name is Joseph Park. I am a graduate from UCI with a B.S. in computer science.</p>
+                <p>I graduated magna cum laude with a major GPA of 3.888 and dean's honors.</p>
+                <p>I have studied a variety of topics in computer science, including artificial intelligence, machine learning, data management, networking,  and more.</p>
+                <p>I have worked on many different projects, including video games, chat bots, database programs, and more.</p>
+                <p>I am experienced in Unity3D, C++, C#, Python, and more.</p>
+                <p class="fade" id="resume-intro">Check out my résumé below.</p>
+                <a class="button ghost-pulse fade" target="_new" href="assets/files/resume.pdf">Resume</a>
+            </article>
+            <article id="skills">
+                <h2 class="fade">Skills</h2>
+                <div id="skills-wrapper">
+                    <div id="langs">
+                        <h3 class="fade">Languages & Programs:</h3>
+                        <ul class="fade-li">
+                            <li>C++</li>
+                            <li>C#</li>
+                            <li>HTML/CSS</li>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>Ruby</li>
+                            <li>Ruby on Rails</li>
+                            <li>SQLite</li>
+                            <li>Unity3D</li>
+                        </ul>
+                    </div>
+                    <div id="other">
+                        <h3 class="fade">Other:</h3>
+                        <ul class="fade-li">
+                            <li>Database Management</li>
+                            <li>Game Development</li>
+                            <li>Software Design</li>
+                            <li>Software Development</li>
+                            <li>Software Testing</li>
+                        </ul>
+                    </div>
                 </div>
             </article>
-            <footer id="footer">
-<!--                <p style="text-align:center; right: 5px; font-size: 30px; bottom: 0px; position: absolute;">Note the site is a work in progress.</p>-->
-                <div id="font-awesome-attr">
-                    <p>Revision 2.0</p>
-                    <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
+            <article class="fade-art" id="projects">
+                <h2>Projects</h2>
+                <p>Projects, sorted by date:</p>
+                <!-- Insert Projects here -->
+                <div id="tab-grid">
+                
                 </div>
-            </footer>
+            </article>
+            <article class="fade-art" id="contact">
+                <h2>Contact Me</h2>
+                <h3>Want to chat?</h3>
+                <p id="contact-text">Contact me via <span>josephpkc@gmail.com</span>.</p>
+            </article>
         </div>
-    </body>
+        <footer id="footer">
+            <div id="anchor-top">
+                <a class="button ghost-pulse" href="">
+                    ↑ Back to Top
+                </a>
+            </div>
+            <div id="contact-icons">
+                <a target="_new" href="https://www.linkedin.com/in/josephpkc">
+                    <i class="fa fa-linkedin-square fa-2x fade" aria-hidden="true"></i>
+                </a>
+                <a target="_new" href="https://www.github.com/JosephPKC">
+                    <i class="fa fa-github-square fa-2x fade" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div id="footer-text">
+                <p class="fade">Font Awesome by Dave Gandy - http://fontawesome.io</p>
+            </div>
+        </footer>
+    </div>
+</body>
 </html>

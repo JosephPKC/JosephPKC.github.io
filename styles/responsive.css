@@ -60,7 +60,7 @@
     }
     
     #content article h2 {
-        font-size: 20px;
+        font-size: 30px;
     }
     
     #content article .caption {
@@ -79,9 +79,6 @@
         padding-bottom: 0;
     }
     
-    .content-nav {
-        
-    }
     
     #heading {
         flex-direction: row;
@@ -100,29 +97,34 @@
     #sub-heading {
         align-items: baseline;
         flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+/*        flex-wrap: wrap;*/
+        justify-content: center;
     }
     
     #sub-heading #project-tags {
-        margin-right: auto;
-        order: 1;
-        padding: 0 15px;
+/*        margin-right: auto;*/
+/*        order: 1;*/
+/*        padding: 0 15px;*/
         
     }
     
     #sub-heading a {
-        margin: 0 15px 0 20%;
-        order: 2;
+        margin: 0 15px 0 0;
+/*        order: 2;*/
     }
     
     #sub-heading #project-techs-wrapper {
-        flex: 1 0 100%;
-        order: 3;
+/*        flex: 1 0 100%;*/
+/*        order: 3;*/
     }
     
     #body p {
         text-align: justify;
+    }
+    
+    .multi-list {
+        flex-direction: row;
+        justify-content: space-around;
     }
 }
 

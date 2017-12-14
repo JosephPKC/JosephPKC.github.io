@@ -1,105 +1,192 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Joseph Park | Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Include css stylesheets and js script sheets here -->
-        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
-        <link rel="stylesheet" type="text/css" href="../styles/main.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/project-page.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/disco-bot.css">
-        <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-        <script src="../scripts/anchor-top.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1, maximum-scale=1">
+    <title>JP | Disco Bot</title>
+    
+    <!-- Font Imports -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <link href="../assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- CSS Styles -->
+    <link href="../styles/main.css"  type="text/css" rel="stylesheet">
+    <link href="../styles/layout.css" type="text/css" rel="stylesheet">
+    <link href="../styles/project.css" type="text/css" rel="stylesheet">
+    <link href="../styles/responsive.css" type="text/css" rel="stylesheet">
+    
+    <!-- JS Scripts -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="../scripts/anchor-top.js"></script>
+    <script src="../scripts/nav-scrolls.js"></script>
+    <script src="../scripts/load-project-info.js"></script>
+    <script src="../scripts/fade-on-scroll.js"></script>
+</head>
     <body>
-        <div class="wrapper">
+        <div class="proj-wrapper">
             <header id="header">
-                <p id="header-name">JOSEPH PARK</p>
-            </header>
-            <nav id="nav">
-                <ul>
-                    <li><a id="about" href="./../index.html">ABOUT</a></li>
-                    <li><a id="projects" class="active" href="./../projects.html">PROJECTS</a></li>
-                    <li><a id="contact" href="./../contact.html">CONTACT</a></li>
-                </ul>
+            <div id="header-icon">
+                <p>JOSEPH PARK</p>
+            </div>
+            <nav id="content-nav-bar">
+                <a class="pulse" id="nav-about" href="#about">About</a>
+                <a class="pulse" id="nav-use" href="#use">Usage</a>
+                <a class="pulse" id="nav-dev" href="#dev">Development</a>
+                <a class="pulse" id="nav-future" href="#future">Future</a>
+                <a class="pulse" id="nav-team" href="#team">Team</a>
+                <a class="pulse" id="to-projects" href="../index.html#to-projects">← More Projects</a>
             </nav>
-            <div class="body" id="body">
-                <div id="heading">
-                    <h1>Disco Bot</h1>
-                    <p>Aug 2017 - Current</p>
+            </header>
+            <div id="content">
+                <div class="fade-art" id="heading">
+                    <h1 class="project-name"></h1>
+                    <p></p>
                 </div>
-                <div id="sub-heading">
-                    <p>Personal, Bot, <strong>In Development</strong></p>
-                    <a class="button-small" id="github" href="">Github Link</a>
+                <div class="fade-art" id="sub-heading">
+                    <p id="project-tags"></p>
+                    <p id="project-techs"></p>
+                    <a class="button ghost-pulse fade" id="github" href="">Github Link</a>
+                    <br>
                 </div>
-                <div id="intro">
-                    <h1>What is Disco Bot?</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Disco bot is a Discord bot made in Python. Its purpose is to help users in LoL-related tasks, such as, finding current games, getting player info, or just finding the best champions in a role. </p>
-                </div>
-                <!--- content is generally where project pages diverge -->
-                <div id="content">
-                    <h1>Development</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The bot is made with Python 2.7. To utilize Discord's API, I used <a href="https://www.github.com/Rapptz/discord.py">Discord.py</a>, a python library that wraps Discord's API. For the LoL-specific commands, I used another wrapper library called <a href="https://www.github.com/Pandamacia/LoLWatcher">lolwatcher</a> to access specific data, including player information, and game information. I was also planning on using lolwatcher to access static game data, like champions and items, but found it much easier to directly access Riot's static data JSON <a href="https://developer.riotgames.com/static-data.html">files</a>. I downloaded necessary files, parsed the json, and uploaded the data to the text channels.</p>
-                    <br>
-                    <img id="i1" src="../images/disco-bot-i1.png">
-                    <p class="caption">The stats and abilities of the champion, Aurelion Sol.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;I also have the bot grab the splash art and the skin art for the champion. The bot downloads the image from Riot Game's static data portal, crops the image, and uploads it to the text channel, using <a href="http://www.pythonware.com/products/pil">pil</a> and <a href="https://www.pypi.python.org/pypi/python-resize-image">resizeimage</a>.</p>
-                    <br>
-                    <img id="i2" src="../images/disco-bot-i2.png">
-                    <p class="caption">The splash art for Aurelion Sol.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;To get specific champion statistics, like playrate, winrate, and top champions of certain roles, I used a wrapper library, <a href="https://www.github.com/solomidnet/championgg-api-python">py_gg</a>, to get champion data from <a href="https://www.champion.gg">champion.gg</a>.</p>
-                    <br>
-                    <img id="i3" src="../images/disco-bot-i3.png">
-                    <p class="caption">The top 15 supports, sorted by winrate. You can also see pickrates and banrates.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;LoL isn't the only thing Disco bot can do. It also has basic music functionalities. Disco bot keeps a linked list of music queued (for easier swapping, removing from the middle of the list, and inserting), and always plays the song at the head. You can queue up songs from youtube or soundcloud, change the volume, pause and skip songs, and get information on the song.</p>
-                    <br>
-                    <img id="i4" src="../images/disco-bot-i4.png">
-                    <p class="caption">Queueing and playing "Something Just Like This." </p>
-                    <br>
-                    <h1>Current Status</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Currently, the bot is in development. It has very basic functionality, and can only perform a few commands. It has:</p>
-                    <ul>
-                        <li><strong>Basic music functionality</strong>: play, queue, pause, and skip songs.</li>
-                        <li><strong>Basic LoL player search</strong>: search a player to get statistics, like winrate, rank, and games played.</li>
-                        <li><strong>Basic LoL static data search</strong>: search a champion or item to get in-game data or statistics.</li>
-                    </ul>
-                    <br>
-                    <h1>Planned Features</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Disco bot is early in development, and there are many more features planned:</p>
-                    <ul>
-                        <li>Updated music funcionality, inlcuding playlists.</li>
-                        <li>More LoL commands, including game modes, champion builds, etc.</li>
-                        <li>Ability to get updates on current games.</li>
-                    </ul>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;I am also planning on creating a database to store certain "non-changing" data, like champion names and ids, to limit the number of API calls and downloads. This, along with caching, should help improve performance for certain commands.</p>
-                </div>
-                <div id="footing">
-                    <h1>The Team and Contributers</h1>
-                    <ul>
-                        <li><strong>Joseph Park (Me)</strong> - designer, programmer</li>
-                    </ul> 
-                    <div id="up-next">
-                        <p>NEXT</p>
-                        <p id="next-project">DnD Lookup</p>
-                        <a class="button-small" href="./dnd-5e-lookup.html">Next</a>
+                <!-- content -->
+                <article class="fade-art" id="body">
+                    <h2 id="about">About</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is a chat bot made for <a class="pulse" target="_new" href="https://discordapp.com/">Discord</a>, specializing in information and statistics on Riot Games' <a class="pulse" target="_new" href="https://play.na.leagueoflegends.com/en_US">League of Legends</a>. Users can play music from Youtube and Soundcloud, search for LoL player statistics and information, search for LoL in-game data, and search for LoL game statistics. Disco Bot uses various APIs and libraries to grab LoL data and upload it to the Discord text channels.</p>
+        
+                    <h2 id="use">Usage</h2>
+                    <h3>Basic Usage and Commands</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;To use <span class="project-name"></span>, you must first invite the bot to your Discord server. Run <span class="project-name"></span> via command line, and then <span class="project-name"></span> will be up and running. Users can enter commands, pre-pended with "\." The commands are as follows:</p>
+                    
+                    <div class="multi-list">
+                        <ul class="fade-li">
+                            <li><span>play, queue</span>: Queues up a given Youtube or Soundcloud url or search query.</li>
+                            <li><span>volume, vol</span>: Changes the volume of the music player.</li>
+                            <li><span>skip, next</span>: Starts a vote to skip the current song. Majority is needed to skip, unless the song requester  requested to skip.</li>
+                            <li><span>pause</span>: Pauses the current song.</li>
+                            <li><span>stop, leave</span>: Stops the music player, and removes all songs from the current playlist.</li>
+                            <li><span>list, songs</span>: Lists all of the songs currently in queue.</li>
+                            <li><span>current, song</span>: Displays info on the current song.</li>
+                            <li><span>summoner</span>: Searches for a given LoL player name, and displays information on the player.</li>
+                            <li><span>mastery</span>: Searches for a given LoL player name, and displays his/her mastery pages. Note: Deprecated.</li>
+                            <li><span>champion</span>: Searches for a given LoL champion, and displays champion information.</li>
+                            <li><span>item</span>: Searches for a given LoL item, and displays item information.</li>
+                            <li><span>stats</span>: Searches for a given LoL champion, and displays champion play statistics.</li>
+                            <li><span>top</span>: Gets the top X champions in a given role.</li>
+                            <li><span>add</span>: Adds two given integers.</li>
+                            <li><span>multiply</span>: Multiplies two given integers.</li>
+                            <li><span>roll</span>: Rolls the given dice, in <a class="ext pulse" target="_new" href="https://en.wikipedia.org/wiki/Dice_notation">die notation</a>.</li>
+                            <li><span>mean</span>: Calculates the mean average of the given dice, in die notation.</li>
+                            <li><span>choose</span>: Randomly chooses an item among the given items.</li>
+                        </ul>
                     </div>
                     
+                    <h3>Optional Arguments</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Many commands have optional arguments as well. The <span>summoner</span> command can accept an optional region argument, informing <span class="project-name"></span> which region to search the player in. By default, it searches under the NA region. The <span>champion</span> command accepts a few optional arguments: -<span>i</span>, -<span>st</span>, -<span>s</span>, -<span>t</span>, -<span>l</span>, -<span>sk</span>. These arguments tell Disco Bot to also include the champion's basic info, stats, spells, tips, lore, and skin arts, respectively.</p>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/disco-bot/disco-bot.png">
+                            <img id="i0" src="../assets/images/disco-bot/disco-bot.png">
+                        </a>
+                        <p class="caption">Basic usage. <span class="project-name"></span> returns with the splash art, champion stats, and spells.</p>
+                    </div>
+                    
+                    <h2 id="dev">Development</h2>
+                    <h3>Core System and Retrieving LoL Data</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is made with Python 2.7 with the <a class="pulse" target="_new" href="https://www.jetbrains.com/pycharm/">Pycharm</a> IDE, as well as various APIs and libraries. I use <a class="pulse" target="_new"  href="https://www.github.com/Rapptz/discord.py">Discord.py</a>, a python library that wraps Discord's API. For the LoL-specific commands, I use another wrapper library called <a class="pulse" target="_new" href="https://www.github.com/Pandamacia/LoLWatcher">lolwatcher</a> to access specific data, including player information, and game information. For LoL's static, in-game data, like champions, items, and spells, I directly grab the json files from Riot Games' <a class="pulse" target="_new"  href="https://developer.riotgames.com/static-data.html">Static Data API</a>. Disco Bot downloads necessary json files and images from the Static Data API, parses the json and resizes the images, and uploads the data neatly to the text channel.</p>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/disco-bot/disco-bot-i1.png">
+                            <img id="i1" src="../assets/images/disco-bot/disco-bot-i1.png">
+                        </a>
+                        <p class="caption">The output of a <span>champion</span> command. You can see Aurelion Sol's basic info, stats, and spells.</p>
+                    </div>
+                    
+                    <h3>Downloading and Cropping LoL Art</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> downloads and resizes the images for the champion's splash art and skin arts using <a class="pulse" target="_new" href="https://www.pythonware.com/products/pil">pil</a> and <a class="pulse" target="_new" href="https://www.pypi.python.org/pypi/python-resize-image">resizeimage</a>. <span class="project-name"></span> stores the downloaded images in an organized folder. Whenever a command requires an image to be uploaded, <span class="project-name"></span> checks the folder to see if the image is already downloaded. It also resizes the image if needed.</p>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/disco-bot/disco-bot-i2.png">
+                            <img id="i2" src="../assets/images/disco-bot/disco-bot-i2.png">
+                        </a>
+                        <p class="caption">Aurelion Sol's splash art. This image has been downloaded and cropped.</p>
+                    </div>
+                    
+                    <h3>Retrieving LoL Game Statistics</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;For play statistics, I use a library, <a class="pulse" target="_new" href="https://www.github.com/solomidnet/championgg-api-python">py_gg</a>, to access data from <a class="pulse" target="_new" href="http://champion.gg/">champion.gg</a>. This gives access to a variety of statistics, like playrate, winrate, banrate, average kda, average gold, and more.</p>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/disco-bot/disco-bot-i3.png">
+                            <img id="i3" src="../assets/images/disco-bot/disco-bot-i3.png">
+                        </a>
+                        <p class="caption">The <span>top</span> command. <span class="project-name"></span> has displayed the top 15 support champions, including their winrates, pickrates, and banrates.</p>
+                    </div>
+                    
+                    <h3>Music Capability</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;For the music portion, I simply use Discord.py. <span class="project-name"></span> keeps a linked list queue of songs queued for easy insertions and removals. The bot always plays the song at the front of the queue. </p>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/disco-bot/disco-bot-i4.png">
+                            <img id="i4" src="../assets/images/disco-bot/disco-bot-i4.png">
+                        </a>
+                        <p class="caption">The <span>play</span> or <span>queue</span> command. <span class="project-name"></span> searches for the most relvant song from the search query "something," and queues up "Something Just Like This." Since it is the first song in the list, <span class="project-name"></span> begins playing the song.</p>
+                    </div>
+                    
+                    <h2 id="future">Future</h2>
+                    <h3>Current Status</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is currently early in development; thus, it only has basic features, and little to no optimization. At the moment, it can only do these things:</p>
+                    
+                    <div class="multi-list">
+                        <ul class="fade-li">
+                            <li><span>Basic music</span>: Queue, play, pause, and skip songs from Youtube and Soundcloud.</li>
+                            <li><span>LoL player statistics</span>: Search up players, and get their winrates, rank, and match history.</li>
+                            <li><span>LoL game data</span>: Search up champions and items, and get their description, info, stats, and art.</li>
+                            <li><span>LoL game statistics</span>: Search up champions and get their in-game statistics, like winrates, playrates, and banrates.</li>
+                            <li><span>Basic math</span>: Add and multiply numbers.</li>
+                            <li><span>Basic dice</span>: Roll die and get their means.</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Planned Features</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Currently, the most important thing to do is to refactor. I made <span class="project-name"></span> while learning how to use Discord's and LoL's APIs; thus, the code is quite messy and unoptimized. Now that I know how the APIs work, I can rewrite the bot from the ground up, organize the functionality into groups, and optimize performance by caching. I am also planning on adding more LoL-specific features, and further into the future, making a text-based RPG played through Discord chat.</p>
+                    <h2 id="team">Team</h2>
+                    <div class="multi-list">
+                        <ul class="fade-li">
+                            <li><span>Me</span>: Primary designer & programmer</li>
+                            <li><span>Few friends</span>: QA testers</li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="fade-art" id="footing">
+                    <h3>Check out my other projects!</h3>
+                    <div class="fade-art" id="previous">
+                        <p class="foot-nav-text">PREVIOUS</p>
+                        <p id="previous-project"></p>
+                        <p id="previous-des"></p>
+                        <a class="button ghost-pulse fade" href="">Previous</a>
+                    </div>
+                    <div class="fade-art" id="next">
+                        <p class="foot-nav-text">NEXT</p>
+                        <p id="next-project"></p>
+                        <p id="next-des"></p>
+                        <a class="button ghost-pulse fade" href="">Next</a>
+                    </div>
                 </div>
             </div>
             <footer id="footer">
-                <a class="anchor-top" href="#">
-                    <i class="fa fa-arrow-circle-up"></i>
-                </a>
-                <div id="font-awesome-attr">
+                <div id="anchor-top">
+                    <a class="button ghost-pulse" href="">
+                        ↑ Back to Top
+                    </a>
+                </div>
+                <div id="contact-icons">
+                    <a target="_new" href="https://www.linkedin.com/in/josephpkc">
+                        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <a target="_new" href="https://www.github.com/JosephPKC">
+                        <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div id="footer-text">
                     <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
                 </div>
             </footer>

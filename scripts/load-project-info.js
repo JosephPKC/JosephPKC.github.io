@@ -14,7 +14,8 @@ jQuery(document).ready(function() {
 
 function loadProjectInfo(id, name, techs, des, tags, type, start, end, link, order, size, cache) {
     /* Grab the name */
-    jQuery('#project-name').text(name);
+//    jQuery('#project-name').text(name);
+    jQuery('.project-name').text(name);
     
     /* Grab the date range */
     var date = start['month'] + ' ' + start['year'] + ' - ';
@@ -31,12 +32,14 @@ function loadProjectInfo(id, name, techs, des, tags, type, start, end, link, ord
     jQuery('#project-tags').html(tag_text);
     
     /* Grab the techs */
-    jQuery.each(techs, function(key, value) {
-        jQuery('<li>', {
-            text: value
-        }).appendTo('#project-techs');
-    });
+//    jQuery.each(techs, function(key, value) {
+//        jQuery('<li>', {
+//            class: 'fade',
+//            text: value
+//        }).appendTo('#project-techs');
+//    });
     
+    jQuery('#project-techs').text(techs.join(', '));
     /* Grab the link */
     var url = link == null ? 'not-found' : link;
     jQuery('#sub-heading a').attr('href', url);

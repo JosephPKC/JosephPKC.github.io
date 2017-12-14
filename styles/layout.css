@@ -126,6 +126,7 @@
     grid-template-columns: 1fr;
 }
 
+/*
 .tab {
     display: grid;
     grid-gap: 0;
@@ -133,6 +134,7 @@
         "name"
         "img";
 }
+*/
 
 .proj-wrapper {
     display: grid;

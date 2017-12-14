@@ -1,115 +1,216 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Joseph Park | Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Include css stylesheets and js script sheets here -->
-        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
-        <link rel="stylesheet" type="text/css" href="../styles/main.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/project-page.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/dnd-5e-lookup.css">
-        <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-        <script src="../scripts/anchor-top.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1, maximum-scale=1">
+    <title>JP | Disco Bot</title>
+    
+    <!-- Font Imports -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <link href="../assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- CSS Styles -->
+    <link href="../styles/main.css"  type="text/css" rel="stylesheet">
+    <link href="../styles/layout.css" type="text/css" rel="stylesheet">
+    <link href="../styles/project.css" type="text/css" rel="stylesheet">
+    <link href="../styles/responsive.css" type="text/css" rel="stylesheet">
+    
+    <!-- JS Scripts -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="../scripts/anchor-top.js"></script>
+    <script src="../scripts/nav-scrolls.js"></script>
+    <script src="../scripts/load-project-info.js"></script>
+    <script src="../scripts/fade-on-scroll.js"></script>
+</head>
     <body>
-        <div class="wrapper">
+        <div class="proj-wrapper">
             <header id="header">
-                <p id="header-name">JOSEPH PARK</p>
-            </header>
-            <nav id="nav">
-                <ul>
-                    <li><a id="about" href="./../index.html">ABOUT</a></li>
-                    <li><a id="projects" class="active" href="./../projects.html">PROJECTS</a></li>
-                    <li><a id="contact" href="./../contact.html">CONTACT</a></li>
-                </ul>
+            <div id="header-icon">
+                <p>JOSEPH PARK</p>
+            </div>
+            <nav id="content-nav-bar">
+                <a class="pulse" id="nav-about" href="#about">About</a>
+                <a class="pulse" id="nav-use" href="#use">Usage</a>
+                <a class="pulse" id="nav-dev" href="#dev">Development</a>
+                <a class="pulse" id="nav-future" href="#future">Future</a>
+                <a class="pulse" id="nav-team" href="#team">Team</a>
+                <a class="pulse" id="to-projects" href="../index.html#to-projects">← More Projects</a>
             </nav>
-            <div class="body" id="body">
-                <div id="heading">
-                    <h1>DnD Lookup</h1>
-                    <p>Jul 2017 - Current</p>
+            </header>
+            <div id="content">
+                <div class="fade-art" id="heading">
+                    <h1 class="project-name"></h1>
+                    <p></p>
                 </div>
-                <div id="sub-heading">
-                    <p>Personal, Database, <strong>In Development</strong></p>
-                    <a class="button-small" id="github" href="">Github Link</a>
-                </div>
-                <div id="intro">
-                    <h1>What is DnD Lookup?</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;DnD Lookup is a database utility program that lets you search up monsters, items, spells, classes, and races for Dungeons and Dragons 5e. It is made with user experience, and information clarity in mind. It presents all relevant information for the searched topic in boxes, with all related information grouped together. It shows any related searches, and lets you filter and sort the results.</p>
-                </div>
-                <!--- content is generally where project pages diverge -->
-                <div id="content">
-                    <h1>Development</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The idea for this program came to me when playing Dungeons and Dragons, and finding it difficult to flip through the books and pdfs (even with the built-in pdf search) to find a particular spell or monster. I wanted the user interface of the program to be the most important aspect, so I decided on building it in <a href="https://www.unity3d.com">Unity3D</a> and C#.</p>
+                <div class="fade-art" id="sub-heading">
+                    <p id="project-tags"></p>
+                    <p id="project-techs"></p>
+                    <a class="button ghost-pulse fade" id="github" href="">Github Link</a>
                     <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The program stores monsters, items, spells, and other data in an sqlite3 database, using <a href="https://www.sqlitestudio.pl">SQLiteStudio</a>, and later <a href="https://www.jetbrains.com/datagrip">DataGrip</a>. In Unity, I created scripts to help insert data into the database (much easier than inserting in SQLiteStudio or DataGrip).</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The user interface was made entirely with Unity assets, and <a href="https://www.dafont.com/dalelands.font">Dalelands font</a>. The user interface consists of <strong>(1) a search bar</strong>, <strong>(2) filters</strong>, <strong>(3) results list</strong>, and <strong>(4) data display</strong>. </p>
-                    <br>
-                    <img id="i1" src="../images/dnd-5e-lookup-i1.png">
-                    <p class="caption">The interface. You can see all of the major parts of the program.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The search bar also includes a drop-down menu which lets you choose what type of data you are searching for (i.e. monster). Entering nothing will list all data of that type.</p>
-                    <br>
-                    <img id="i2" src="../images/dnd-5e-lookup-i2.png">
-                    <p class="caption">The search bar. You can select between a variety of data types.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The filters change depending on the type of data. For example, monsters can be filtered by type, size, or by their challenge rating range. On the other hand, items would be filtered by type, rarity, and value. You can select one or more filters, or you can select the all filter.</p>
-                    <br>
-                    <img id="i3" src="../images/dnd-5e-lookup-i3.png">
-                    <p class="caption">The filters. Selecting all while select all filters of that category, or de-select all.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The results list is two-part: a sort by section, and the list. The sort by lets you choose how the results are listed. Like the filters, the sorting parameters depend on the data type. The results list will display all relevant data that matches your search parameters. Depending on the data type, additional, important information is listed along with their names (useful for quick glances). Selecting on one of the items in the list will fully display that item on the right-hand side.</p>
-                    <br>
-                    <img id="i4" src="../images/dnd-5e-lookup-i4.png">
-                    <p class="caption">The result list. Above the list is the sort by section. You can see at a quick glance all important information for each item in the list. For monsters, this would be the name, type, and challenge rating.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The data display displays all information of the selected item in the result list, organized and grouped by category. </p>
-                    <br>
-                    <img id="i5" src="../images/dnd-5e-lookup-i5.png">
-                    <p class="caption">The display. You can see all information pertaining to the selected item. For mosnters, this would be the stats, features, and actions.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The program was designed with the MVC model in mind. The models (database) holds all of the data needed to function, and the controllers query the database, storing returned data into customized data structures for the views to display to the user. When a user types a query into the search bar, the program performs select queries into the database through a database controller. Then the database controller returns a data structure holding the information to another controller. That controller updates the views for the user to see.</p>
-                    <br>
-                    <h1>Current Status</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The program is nowhere near finished. At the moment, only the monster portion is implemented. However, the database retrieval and displays are fully implemented, and the only tasks required are data type-specific ones, like spell tables, spell data, spell filters, and the spell display layouts.</p>
-                    <br>
-                    <h1>Planned Features</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The following are planned, and will eventually be implemented (You can skip this part if you have no interest in DnD 5e):</p>
-                    <ul>
-                        <li><strong>Backgrounds:</strong> their description, traits, and features.</li>
-                        <li><strong>Classes:</strong> their description, features, archetypes, and builds.</li>
-                        <li><strong>Conditions:</strong> their effects.</li>
-                        <li><strong>Features:</strong> their effects, classes, and requirements.</li>
-                        <li><strong>Items:</strong> their description, effects, and rarities.</li>
-                        <li><strong>Races:</strong> their description, traits, subraces, and builds.</li>
-                        <li><strong>Spells:</strong> their description, classes, types, and stats.</li>
-                    </ul>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Almost everything from the SRD is planned to be included, as well, as the ability to create your own backgrounds, classes, items, races, etc. I also need a more creative name. Any suggestions?</p>
-                </div>
-                <div id="footing">
-                    <h1>The Team and Contributers</h1>
-                    <ul>
-                        <li><strong>Joseph Park (Me)</strong> - designer, programmer</li>
-                    </ul> 
-                    <div id="up-next">
-                        <p>NEXT</p>
-                        <p id="next-project">Greek Lexicon</p>
-                        <a class="button-small" href="./greek-lexicon.html">Next</a>
+                </div>  
+                <!-- content -->
+                <article class="fade-art" id="body">
+                    <h2 id="about">About</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is a database utility program made for searching through <a class="pulse" target="_new" href="http://dnd.wizards.com/">Dungeons and Dragons 5e</a> content. This includes <span>monsters</span>, <span>items</span>, <span>spells</span>, and more. Users can search up whatever they are looking for, and <span class="project-name"></span> will display all relevant information in a neat and organized display. Due to licensing, <span class="project-name"></span> will only include <a class="pulse" target="_new" href="http://dnd.wizards.com/articles/features/systems-reference-document-srd">SRD</a> content. Note that the images shown here include non-SRD content. That content was used primarily for testing.</p>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/dnd-5e-lookup/dnd-5e-lookup.png">
+                            <img id="i0" src="../assets/images/dnd-5e-lookup/dnd-5e-lookup.png">
+                        </a>
+                        <p class="caption">Typical usage of the <span class="project-name"></span>. A user has searched for a <span>monster</span> with the <span>Celestial</span>, <span>Dragon</span>, or <span>Fey</span> types, and <span>Large</span>, <span>Huge</span>, or <span>Gargantuan</span> sizes with a challenge rating between 10 and 30.</p>
                     </div>
                     
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/dnd-5e-lookup/dnd-5e-lookup-i1.png">
+                            <img id="i1" src="../assets/images/dnd-5e-lookup/dnd-5e-lookup-i1.png">
+                        </a>
+                        <p class="caption">The four parts of <span class="project-name"></span>: <span class="bold">(1)</span> the <span>search bar</span>, <span class="bold">(2)</span> the <span>search filters</span>, <span class="bold">(3)</span> the <span>results list</span>, and <span class="bold">(4)</span> the <span>display</span>.</p>
+                    </div>
+        
+                    <h2 id="use">Usage</h2>
+                    <h3>Search Queries</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;You can use <span class="project-name"></span> by running the program, and then entering whatever search query you wish to search for into the search bar. You can set the type of data you want to search in:</p>
+                    
+                    <div class="multi-list">
+                        <ul class="fade-li">
+                            <li><span>Background</span></li>
+                            <li><span>Class</span></li>
+                            <li><span>Condition</span></li>
+                            <li><span>Feature</span></li>
+                        </ul>
+                        <ul class="fade-li">
+                            <li><span>Item</span></li>
+                            <li><span>Monster</span></li>
+                            <li><span>Race</span></li>
+                            <li><span>Spell</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/dnd-5e-lookup/dnd-5e-lookup-i2.png">
+                            <img id="i2" src="../assets/images/dnd-5e-lookup/dnd-5e-lookup-i2.png">
+                        </a>
+                        <p class="caption">The <span>search bar</span>. You can select which data type to search in using the dropdown menu.</p>
+                    </div>
+                    
+                    <h3>Search Filters</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Once set, you can also filter out certain subtypes. Different data types have different filters. For example, <span>Monsters</span> can be filtered by type, challenge rating, and size. <span>Spells</span> can be filtered by school, what classes can cast this, and level. <span>Items</span> can be filtered by type of item, weight, value, and rarity.</p>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/dnd-5e-lookup/dnd-5e-lookup-i3.png">
+                            <img id="i3" src="../assets/images/dnd-5e-lookup/dnd-5e-lookup-i3.png">
+                        </a>
+                        <p class="caption">The <span>search filters</span>. You scan select or deselect any of these filters. Some filters are range-based, instead like the challenge rating. Finally, you can select <span>all</span> to select or deselect all filters in that category.</p>
+                    </div>
+                    
+                    <h3>Sorting Metrics</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;You can also sort how the results are displayed. Just like the filters, different data types have different sorting metrics. Monsters can be sorted by name, challenge rating, type, size, tags, and source material. Spells, on the other hand, can be sorted by name, school, class, level, and source material.</p>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/dnd-5e-lookup/dnd-5e-lookup-i4.png">
+                            <img id="i4" src="../assets/images/dnd-5e-lookup/dnd-5e-lookup-i4.png">
+                        </a>
+                        <p class="caption">The <span>results list</span>. You can sort the results by various metrics. You can also set the sorting to be ascending or descending. You can see, at a quick glance, important information for each result within the list.</p>
+                    </div>
+                    
+                    <h3>Results and Display</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Once the results come in from a search query, you can select any result to display it onto the display window. This will display all relevant information in an organized way. Monsters show their statistics, features, and actions. Spells  show their statistics, effect description, and classes. Items will show their statistics, and description.</p>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/dnd-5e-lookup/dnd-5e-lookup-i5.png">
+                            <img id="i5" src="../assets/images/dnd-5e-lookup/dnd-5e-lookup-i5.png">
+                        </a>
+                        <p class="caption">The <span>display</span>. Here, you can see all relevant information, grouped up by function. For the <span>monster</span> here, you can see the statistics grouped up in one area, and the features and actions in another.</p>
+                    </div>
+                    
+                    <h3>Real-Time Search Modifications</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Modifying the search query, or changing the filters when results are already shown will update the results in real-time.</p>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/dnd-5e-lookup/dnd-5e-lookup-g1.gif">
+                            <img id="g1" src="../assets/images/dnd-5e-lookup/dnd-5e-lookup-g1.gif">
+                        </a>
+                        <p class="caption">The <span>results list</span> automatically updates whenever you change the filters or sort metrics.</p>
+                    </div>
+                    
+                    <h2 id="dev">Development</h2>
+                    <h3>Core</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is made in <a class="pulse" target="_new" href="https://unity3d.com/">Unity3D</a> and C#. The database is made in SQLite3 via <a class="pulse" target="_new" href="https://www.sqlitestudio.pl">SQLite Studio</a> and <a class="pulse" target="_new" href="https://www.jetbrains.com/datagrip">DataGrip</a>. However, the actual insertion of data into the database is done via C# scripts that send INSERT queries to the database. The user interface is made entirely with Unity assets, and the <a class="pulse" target="_new" href="https://www.dafont.com/dalelands.font">Dalelands</a> font. <span class="project-name"></span> is made with the <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC pattern</a> in mind. The database acts as the data layer, while the several managers act as the controllers. Finally, the UI acts as the view. Custom data structures are also used to transport data between the three.</p>
+                    
+                    <h3>Database Management</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The database is managed by two database controller scripts made in C#. The first, called the <span>handler</span>, handles creating SELECT queries from the search parameters, and retrieves data from the database. The <span>handler</span> stores this data into custom data structures, which are then sent back. The second, called the <span>loader</span>, handles creating INSERT queries out of data from the Unity inspector. The insertion of data into the database is done via a custom C# script that lets me enter data through the inspector (this is much easier than manually entering the data in SQLite Studio, or manually making INSERT queries in DataGrip).</p>
+                    
+                    <h3>User Interface</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The user interface is managed by a view controller called <span>UI manager</span>, and many separate behaviour scripts. The <span>search bar</span>, <span>search filters</span>, and <span>results list</span> views provide search parameter data to the view controller. The <span>UI manager</span> will then send that data over to the <span>handler</span>, and return with data structures containing search result data. Next, the <span>UI manager</span> will send certain data to the <span>results list</span> view for it to display. Finally, when you select one of the results in the <span>results list</span>, the <span>UI manager</span> will send the appropriate data structure to the <span>display</span> view.</p>
+                    
+                    <h3>Individual UI Components</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The <span>UI manager</span> is aided in its task by several UI components. Each of these have a small, but very specific job, and they handle specific parts of the UI. For example, the <span>filter control</span> handles the <span>search filters</span>, and communicate directly with the <span>UI mananger</span> when filters are changed. It simply checks whether each of its values are toggled or not, and sets flags when a change is made. For the non-select filters, the <span>range control</span> handles them. Similar to the <span>filter control</span>, this simply checks whether the values in their fields have been modified.</p>
+                    
+                    <h2 id="future">Future</h2>
+                    <h3>Current Status</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is currently in development. This was made as a learning experience in C#, SQLite3, Unity3D, data management, and UI design. Since it is early in development, it only has a few features:</p>
+                    
+                    <div class="multi-list">
+                        <ul class="fade-li">
+                            <li><span>Different data types</span>: Ability to switch data types when searching.</li>
+                            <li><span>Data-dependent filters</span>: Filters available that change depending on the data type.</li>
+                            <li><span>Data-dependent sort metrics</span>: Sort metrics available that change depending on the data type. Can choose ascending or descending.</li>
+                            <li><span>Real-time updates on results</span>: Results are updated in real-time based on filter and sort changes.</li>
+                            <li><span>Display</span>: Displays all relevant information in an organized fashion for the selected result.</li>
+                            <li><span>In-inspector insertions</span>: Insert into the database through the Unity inspector.</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Planned Features</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;I have many features and ideas planned for <span class="project-name"></span>. The most important one is refactoring and re-organizing the code. As this was meant to be a learning experience, the code is messy and unoptimized. This leads to difficulty when trying to add new data types, adding new data into the database, and creating the filters and sort metrics. The important features planned are:</p>
+                    
+                    <div class="multi-list">
+                        <ul class="fade-li">
+                            <li><span>All SRD content</span>: Include all SRD content.</li>
+                            <li><span>More data types</span>: Include backgrounds, classes, conditions, features, items, races, spells, and more.</li>
+                            <li><span>Caching</span>: Improve performance by caching query results. Change the cache for the real-time updates, instead of making new queries.</li>
+                            <li><span>Better UI</span>: Improve UI elements and layout so that it is clearer and sharper.</li>
+                            <li><span>Custom Data</span>: Include ability to make your content.</li>
+                            <li><span>Character Creator</span>: Include ability to make a character.</li>
+                        </ul>
+                    </div>
+                    
+                    <h2 id="team">Team</h2>
+                    <ul class="fade-li">
+                        <li><span>Me</span>: Primary designer & programmer</li>
+                    </ul>
+                </article>
+                <div class="fade-art" id="footing">
+                    <h3>Check out my other projects!</h3>
+                    <div class="fade-art" id="previous">
+                        <p class="foot-nav-text">PREVIOUS</p>
+                        <p id="previous-project"></p>
+                        <p id="previous-des"></p>
+                        <a class="button ghost-pulse fade" href="">Previous</a>
+                    </div>
+                    <div class="fade-art" id="next">
+                        <p class="foot-nav-text">NEXT</p>
+                        <p id="next-project"></p>
+                        <p id="next-des"></p>
+                        <a class="button ghost-pulse fade" href="">Next</a>
+                    </div>
                 </div>
             </div>
             <footer id="footer">
-                <a class="anchor-top" href="#">
-                    <i class="fa fa-arrow-circle-up"></i>
-                </a>
-                <div id="font-awesome-attr">
+                <div id="anchor-top">
+                    <a class="button ghost-pulse" href="">
+                        ↑ Back to Top
+                    </a>
+                </div>
+                <div id="contact-icons">
+                    <a target="_new" href="https://www.linkedin.com/in/josephpkc">
+                        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <a target="_new" href="https://www.github.com/JosephPKC">
+                        <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div id="footer-text">
                     <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
                 </div>
             </footer>

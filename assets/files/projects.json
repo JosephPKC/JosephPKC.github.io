@@ -24,8 +24,11 @@
             "C#", "Sqlite3", "Unity3D"
         ],
         "des": "Database lookup for DnD 5e.",
-        "img": "images/dnd-5e.png",
-        "type": "personal",
+        "img": "dnd-5e-lookup.png",
+        "tags": [
+          "Personal", "Solo", "Database", "GUI"  
+        ],
+        "type": "In Development",
         "start": {
             "month": "Jul",
             "year": "2017"
@@ -40,8 +43,11 @@
             "Python", "Sqlite3"
         ],
         "des": "Database utility for classical greek vocabulary.",
-        "img": "images/greek-lexicon.png",
-        "type": "personal",
+        "img": "greek-lexicon.png",
+        "tags": [
+          "Personal", "Solo", "Database"  
+        ],
+        "type": "In Development",
         "start": {
             "month": "Jan",
             "year": "2017"
@@ -56,8 +62,11 @@
             "NLTK", "Python", "Sqlite3"
         ],
         "des": "Inverted indexed local search engine.",
-        "img": "images/search-engine.png",
-        "type": "school",
+        "img": "search-engine.png",
+        "tags": [
+          "School", "Team", "Search Engine", "Information Retrieval"  
+        ],
+        "type": "Completed",
         "start": {
             "month": "May",
             "year": "2017"
@@ -75,8 +84,11 @@
             "C#", "Unity3D"
         ],
         "des": "3D online-multiplayer spell-fighting game.",
-        "img": "images/ruinstone.png",
-        "type": "personal",
+        "img": "ruinstone.png",
+        "tags": [
+            "Personal", "Team", "Game", "Online"
+        ],
+        "type": "Completed",
         "start": {
             "month": "Mar",
             "year": "2017"
@@ -94,8 +106,11 @@
             "Keras", "Python", "Scikit"
         ],
         "des": "Random forests and neural networks trained on rainfall data.",
-        "img": "images/riptide.png",
-        "type": "school",
+        "img": "riptide.png",
+        "tags": [
+            "School", "Team", "Machine Learning"  
+        ],
+        "type": "Completed",
         "start": {
             "month": "Feb",
             "year": "2017"
@@ -110,11 +125,14 @@
     "math-comp": {
         "name": "Hand-Written Math",
         "techs": [
-            "Google Cloud Vision API", "Python", "Synaptics API", "Wolfram Alpha API"
+            "Google Cloud Vision", "Python", "Synaptics", "Wolfram Alpha"
         ],
         "des": "Hand-written mathematical equation calculator.",
-        "img": "images/hand-written-math.png",
-        "type": "hackathon",
+        "img": "hand-written-math.png",
+        "tags": [
+            "Personal", "Team", "Calculator", "API"  
+        ],
+        "type": "Hackathon",
         "start": {
             "month": "Feb",
             "year": "2017"
@@ -132,8 +150,11 @@
             "C#", "Unity3D"
         ],
         "des": "2D local-multiplayer brawl game.",
-        "img": "images/unfeel-tournament.png",
-        "type": "school",
+        "img": "unfeel-tournament.png",
+        "tags": [
+            "School", "Team", "Game"  
+        ],
+        "type": "Completed",
         "start": {
             "month": "Sep",
             "year": "2016"
@@ -151,8 +172,11 @@
             "C++"
         ],
         "des": "NxN sudoku solver.",
-        "img": "images/monster-sudoku.png",
-        "type": "school",
+        "img": "monster-sudoku.png",
+        "tags": [
+            "School", "Solo", "Sudoku", "AI"  
+        ],
+        "type": "Completed",
         "start": {
             "month": "Jan",
             "year": "2016"
@@ -170,8 +194,11 @@
             "C++", "Sqlite3"
         ],
         "des": "English language processor.",
-        "img": "images/ultron.png",
-        "type": "school",
+        "img": "ultron.png",
+        "tags": [
+            "School", "Team", "Database", "NLP"  
+        ],
+        "type": "Completed",
         "start": {
             "month": "Apr",
             "year": "2015"
@@ -189,8 +216,11 @@
             "Android SDK", "Java"
         ],
         "des": "Mobile picture-guessing game prototype.",
-        "img": "images/quick-charades.png",
-        "type": "school",
+        "img": "quick-charades.png",
+        "tags": [
+            "School", "Team", "Game", "Mobile"  
+        ],
+        "type": "Prototype",
         "start": {
             "month": "Nov",
             "year": "2014"
@@ -208,8 +238,11 @@
             "C++", "Qt OpenGL"
         ],
         "des": "Visualized predator-prey system.",
-        "img": "images/predator-prey.png",
-        "type": "school",
+        "img": "predator-prey.png",
+        "tags": [
+            "School", "Solo", "Simulation", "GUI"  
+        ],
+        "type": "Completed",
         "start": {
             "month": "Apr",
             "year": "2014"

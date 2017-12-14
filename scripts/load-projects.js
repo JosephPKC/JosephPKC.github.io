@@ -7,13 +7,14 @@ jQuery(document).ready(function() {
     }).fail(function(json) {
         console.log("Error grabbing json.");
     });
+    console.log("Done creating tabs");
 })
 
 
 function createTab(id, name, techs, des, img) {
     var ln_div = '#' + id + ' div';
     jQuery('<a/>', {
-        class: 'tab',
+        class: 'tab fade-tab',
         id: id,
         href: './projects/' + id + '.html'
     }).appendTo('#tab-grid');
@@ -33,4 +34,5 @@ function createTab(id, name, techs, des, img) {
         id: 'des',
         text: des
     }).appendTo(ln_div);
+    
 }
