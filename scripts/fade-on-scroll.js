@@ -11,8 +11,8 @@ jQuery(document).ready(function() {
         getElements().each(function(i) {
 //            console.log(jQuery(this));
             if(isInView(jQuery(this).offset().top + jQuery(this).outerHeight())) {
-                jQuery(this).animate({'opacity':'1'}, 500);
-//                jQuery(this).fadeTo("slow", 1);
+//                jQuery(this).animate({'opacity':'1'}, 500);
+                jQuery(this).fadeTo("slow", 1);
             }
         })
     })
