@@ -91,7 +91,7 @@
     text-align: left;
 }
 
-#body ul span, #body p .bold {
+#body ul span {
     color: #373737;
     font-weight: 750;
 }
