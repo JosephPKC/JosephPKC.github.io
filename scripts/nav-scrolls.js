@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-    var navs = {"nav-about":"about", "nav-skills":"skills", "nav-projects":"projects", "nav-contact":"contact", "nav-use":"use", "nav-dev":"dev", "nav-future":"future", "nav-team":"team"};
+    var navs = {"nav-about":"about", "nav-skills":"skills", "nav-projects":"projects", "nav-contact":"contact", "nav-use":"use", "nav-dev":"dev", "nav-future":"future", "nav-team":"team", "nav-end":"footing"};
     jQuery.each(navs, function(key, value) {
         setScroll(key, value);
     });

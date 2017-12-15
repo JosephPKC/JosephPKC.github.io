@@ -1,91 +1,176 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Joseph Park | Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Include css stylesheets and js script sheets here -->
-        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
-        <link rel="stylesheet" type="text/css" href="../styles/main.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/project-page.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/greek-lexicon.css">
-        <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-        <script src="../scripts/anchor-top.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1, maximum-scale=1">
+    <title>JP | Disco Bot</title>
+    
+    <!-- Font Imports -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <link href="../assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- CSS Styles -->
+    <link href="../styles/main.css"  type="text/css" rel="stylesheet">
+    <link href="../styles/layout.css" type="text/css" rel="stylesheet">
+    <link href="../styles/project.css" type="text/css" rel="stylesheet">
+    <link href="../styles/responsive.css" type="text/css" rel="stylesheet">
+    
+    <!-- JS Scripts -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="../scripts/anchor-top.js"></script>
+    <script src="../scripts/nav-scrolls.js"></script>
+    <script src="../scripts/load-project-info.js"></script>
+    <script src="../scripts/fade-on-scroll.js"></script>
+</head>
     <body>
-        <div class="wrapper">
+        <div class="proj-wrapper">
             <header id="header">
-                <p id="header-name">JOSEPH PARK</p>
-            </header>
-            <nav id="nav">
-                <ul>
-                    <li><a id="about" href="./../index.html">ABOUT</a></li>
-                    <li><a id="projects" class="active" href="./../projects.html">PROJECTS</a></li>
-                    <li><a id="contact" href="./../contact.html">CONTACT</a></li>
-                </ul>
+            <div id="header-icon">
+                <p>JOSEPH PARK</p>
+            </div>
+            <nav id="content-nav-bar">
+                <a class="pulse" id="nav-about" href="#about">About</a>
+                <a class="pulse" id="nav-use" href="#use">Usage</a>
+                <a class="pulse" id="nav-dev" href="#dev">Development</a>
+                <a class="pulse" id="nav-future" href="#future">Future</a>
+                <a class="pulse" id="nav-team" href="#team">Team</a>
+                <a class="pulse" id="nav-end" href="#footing">↓ End</a>
+                <a class="pulse" id="to-projects" href="../index.html#to-projects">← More Projects</a>
             </nav>
-            <div class="body" id="body">
-                <div id="heading">
-                    <h1>Greek Lexicon</h1>
-                    <p>Jan 2017 - Current</p>
+            </header>
+            <div id="content">
+                <div class="fade-art" id="heading">
+                    <h1 class="project-name"></h1>
+                    <p></p>
                 </div>
-                <div id="sub-heading">
-                    <p>Personal, Database, <strong>In Development</strong></p>
-                    <a class="button-small" id="github" href="">Github Link</a>
+                <div class="fade-art" id="sub-heading">
+                    <p id="project-tags"></p>
+                    <p id="project-techs"></p>
+                    <a class="button ghost-pulse fade" id="github" href="">Github Link</a>
+                    <br>
                 </div>
-                <div id="intro">
-                    <h1>What is Greek Lexicon?</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Greek Lexicon is a database utility program to help users find out information about some classical Greek word. Users enter a Greek word, and it will display information like definition and forms.</p>
-                </div>
-                <!--- content is generally where project pages diverge -->
-                <div id="content">
-                    <h1>Development</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;This idea began when I was having trouble looking up vocabulary words during sentence translations for class. Even after putting all of the vocabulary into Excel spreadsheets, it still took quite some time to find out what the stem for the word was, look up the definition and the form, and translate it. That's when I decided to make this program, to help me study and complete my homework. Unfortunately, I ended up finishing the Greek class before this program.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Greek Lexicon is made purely in Python 2.7, with the database in Sqlite3 via <a href="https://www.sqlitestudio.pl">SQLiteStudio</a>. I chose Sqlite3 for the database was purely for the portability.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Greek Lexicon is a command-line program, and supports a variety of commands. The most of these is the info command. This will return information on the greek word the user typed in. The info command takes a few parameters, the first being the greek word. The other parameters are optional: -v, -d, -u. The -v parameter for info makes it so that the returned information is detailed, and not just the gist. The -d parameter also forces the definition of the word to be returned as well. Finally, the -u parameter will ignore all accent and breathing marks for the words.</p>
-                    <br>
-                    <img id="i1" src="../images/greek-lexicon-i1.png">
-                    <p class="caption">The first command had all three optional parameters. Notice that it is more detailed than the second, and include the definition. Also, notice that the first Greek word was unaccented, while the second one is.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The information stored in the database is retrieved via text file. When an update command is issued to the Lexicon, the database manager script will open and read the file, and insert any words not already in the database.</p>
-                    <br>
-                    <img id="i2" src="../images/greek-lexicon-i2.png">
-                    <p class="caption">The text file that loads into the database. This is for παιδεύω, the classical Greek word for teach.</p>
-                    <br>
-                    <h1>Current Status</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Currently, Greek Lexicon can store and retrieve verbs, nouns, adjectives, pronouns, and participles. It cannot store or retrieve irregular words. At the moment, only a few words are actually stored in the database (this is the tedious part).</p>
-                    <br>
-                    <h1>Planned Features</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The biggest hurdle for Greek Lexicon's completion is the vocabulary. To help with that, I am planning on adding support for other ways of inserting into the database. This includes via Excel (since I already have a large Excel spreadsheet of most of the words), and via scraping the textbook pdf.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;I am also planning on implementing some heuristics algorithms to try to predict the endings and stems of words, in order to speed up the vocabulary insertions.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Finally, probably the most ambitious part, is the sentence translations. This will be quite difficult as order of words is not as important in Greek, but certain meanings change quite drastically based on context.</p>
-                </div>
-                <div id="footing">
-                    <h1>The Team and Contributers</h1>
-                    <ul>
-                        <li><strong>Joseph Park (Me)</strong> - designer, programmer</li>
-                    </ul> 
-                    <div id="up-next">
-                        <p>NEXT</p>
-                        <p id="next-project">Space-Time</p>
-                        <a class="button-small" href="./search-engine.html">Next</a>
+                <!-- content -->
+                <article class="fade-art" id="body">
+                    <h2 id="about">About</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is a database program to help users get information about classical Greek vocabulary. You can enter vocabulary words in Greek, and the program will search and display any and all information on that word. This information includes data like definitions and forms.</p>
+                    
+                    <h2 id="use">Usage</h2>
+                    <h3>Commands and Arguments</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is a command-line program, and supports a variety of commands:</p>
+                    
+                    <div class="multi-list">
+                        <ul class="fade-li">
+                            <li><span>info, i</span>: Get information on a given Greek word.</li>
+                            <li><span>list, li, l</span>: List all Greek words of a given type.</li>
+                            <li><span>update, up, u</span>: Update the database.</li>
+                            <li><span>help, h, ?</span>: List the commands and their uses.</li>
+                            <li><span>quit, q</span>: Exit the program.</li>
+                        </ul>
                     </div>
                     
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The <span>info</span> command also supports a few optional arguments:</p>
+                    
+                    <div class="multi-list">
+                        <ul class="fade-li">
+                            <li><span>-verbose, -v</span>: Display the entire form of the given word, instead of just a gist.</li>
+                            <li><span>-define, -def, -d</span>: Display the definitions of the given word as well.</li>
+                            <li><span>-unaccent, -u</span>: Ignore accent and breathing marks.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/greek-lexicon/greek-lexicon-i1.png">
+                            <img id="i1" src="../assets/images/greek-lexicon/greek-lexicon-i1.png">
+                        </a>
+                        <p class="caption">The <span>info</span> command, with the arguments of <span>-v</span>, <span>-d</span>, <span>-u</span>. <span class="project-name"></span> has displayed the full form info and definitions of the Greek word, 'παιδεύω.' Notice how the second command has no arguments; thus, the result is not as detailed.</p>
+                    </div>
+                    
+                    <h2 id="dev">Development</h2>
+                    <h3>Overview</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is made with Python 2.7 via <a class="pulse" target="_new" href="https://www.jetbrains.com/pycharm/">Pycharm</a>. The database is made in SQLite3, through <a class="pulse" target="_new" href="https://www.sqlitestudio.pl">SQLiteStudio</a>. You type in a command, and any arguments (usually, Greek words), and then <span class="project-name"></span> will query the database, retrieve appropriate information, and display it.</p>
+                    
+                    <h3>Processing</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> parses and accepts user input through a controller. This controller determines what command the user is looking to execute, gets any arguments, and executes that command. The controller also communicates with the database handler when it needs information.  It also retrieves any information from the handler, and displays it to console.</p>
+                    
+                    <h3>Database Management</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> stores information on Greek words in an SQLite3 database. The database handler communicates with the database, and retrieves the requested information from it. It is given a Greek word, and searches the general table for information on its part of speech. With the part of speech, the handler searches the appropriate table for more specific information. Depending on the arguments, the handler will then create a data structure to hold all of the information and return it.</p>
+                    
+                    <h3>Data Loading</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> loads new Greek words and information through the same database handler. When the <span>update</span> command is executed, the controller communicates with a text parser that opens up the lexicon text file, parses it, and returns it. The controller then communicates with the database handler to send INSERT queries to the database.</p>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/greek-lexicon/greek-lexicon-i2.png">
+                            <img id="i2" src="../assets/images/greek-lexicon/greek-lexicon-i2.png">
+                        </a>
+                        <p class="caption">This is a part of the lexicon text file. Through this file, you can insert new words into the database without having to manually create queries. This is specically for the Greek word 'παιδεύω' meaning 'teach.'</p>
+                    </div>
+                    
+                    <h2 id="future">Future</h2>
+                    <h3>Current Status</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is currently in development. This was made for use in my classical Greek courses at UCI. However, since I have graduated, I am no longer in need of this program. I am still planning on developing this, but it does not have a high priority.</p>
+                    
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Currently, <span class="project-name"></span> has these features implemented:</p>
+                    
+                    <div class="multi-list">
+                        <ul class="fade-li">
+                            <li><span>Info queries</span>: You can search for information about many Greek words.</li>
+                            <li><span>Additions via text</span>: You can insert new words via text file.</li>
+                            <li><span>Unaccented forms</span>: All Greek words can be searched for unaccented.</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Planned Features</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;There are many things that can be done to improve <span class="project-name"></span>. This includes:</p>
+                    
+                    <div class="multi-list">
+                        <ul class="fade-li">
+                            <li><span>Optimizations</span>: Caching, and other optimizations can improve performance.</li>
+                            <li><span>GUI-based insertions</span>: GUI tool to insert and modify words in the database without the use of text files.</li>
+                            <li><span>Irregular words</span>: Addition of words that do not follow the grammar rules.</li>
+                            <li><span>Word stem and ending predictors</span>: Heuristic algorithms to try and predict word stems and word endings, based on the grammar rules.</li>
+                            <li><span>Sentence translations</span>: Translation of simple Greek sentences, using searching alrogithms.</li>
+                        </ul>
+                    </div>
+                    
+                    <h2 id="team">Team</h2>
+                    <ul class="fade-li">
+                        <li><span>Me</span>: Primary designer & programmer</li>
+                    </ul>
+                    
+                </article>
+                <div class="fade-art" id="footing">
+                    <h3>Check out my other projects!</h3>
+                    <div id="foot-nav-wrapper">
+                        <div class="fade-art" id="previous">
+                            <p class="foot-nav-text">PREVIOUS</p>
+                            <p id="previous-project"></p>
+                            <p id="previous-des"></p>
+                            <a class="button ghost-pulse fade" href="">Previous</a>
+                        </div>
+                        <div class="fade-art" id="next">
+                            <p class="foot-nav-text">NEXT</p>
+                            <p id="next-project"></p>
+                            <p id="next-des"></p>
+                            <a class="button ghost-pulse fade" href="">Next</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <footer id="footer">
-                <a class="anchor-top" href="#">
-                    <i class="fa fa-arrow-circle-up"></i>
-                </a>
-                <div id="font-awesome-attr">
+                <div id="anchor-top">
+                    <a class="button ghost-pulse" href="">
+                        ↑ Back to Top
+                    </a>
+                </div>
+                <div id="contact-icons">
+                    <a target="_new" href="https://www.linkedin.com/in/josephpkc">
+                        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <a target="_new" href="https://www.github.com/JosephPKC">
+                        <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div id="footer-text">
                     <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
                 </div>
             </footer>

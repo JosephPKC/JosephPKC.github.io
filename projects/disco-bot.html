@@ -34,6 +34,7 @@
                 <a class="pulse" id="nav-dev" href="#dev">Development</a>
                 <a class="pulse" id="nav-future" href="#future">Future</a>
                 <a class="pulse" id="nav-team" href="#team">Team</a>
+                <a class="pulse" id="nav-end" href="#footing">↓ End</a>
                 <a class="pulse" id="to-projects" href="../index.html#to-projects">← More Projects</a>
             </nav>
             </header>
@@ -81,7 +82,7 @@
                     </div>
                     
                     <h3>Optional Arguments</h3>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Many commands have optional arguments as well. The <span>summoner</span> command can accept an optional region argument, informing <span class="project-name"></span> which region to search the player in. By default, it searches under the NA region. The <span>champion</span> command accepts a few optional arguments: -<span>i</span>, -<span>st</span>, -<span>s</span>, -<span>t</span>, -<span>l</span>, -<span>sk</span>. These arguments tell Disco Bot to also include the champion's basic info, stats, spells, tips, lore, and skin arts, respectively.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Many commands have optional arguments as well. The <span>summoner</span> command can accept an optional region argument, informing <span class="project-name"></span> which region to search the player in. By default, it searches under the NA region. The <span>champion</span> command accepts a few optional arguments: <span>-i</span>, <span>-st</span>, <span>-s</span>, <span>-t</span>, <span>-l</span>, <span>-sk</span>. These arguments tell Disco Bot to also include the champion's basic info, stats, spells, tips, lore, and skin arts, respectively.</p>
                     
                     <div class="img-wrapper fade-img">
                         <a target="_new" href="../assets/images/disco-bot/disco-bot.png">
@@ -91,7 +92,7 @@
                     </div>
                     
                     <h2 id="dev">Development</h2>
-                    <h3>Core System and Retrieving LoL Data</h3>
+                    <h3>Overview</h3>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is made with Python 2.7 with the <a class="pulse" target="_new" href="https://www.jetbrains.com/pycharm/">Pycharm</a> IDE, as well as various APIs and libraries. I use <a class="pulse" target="_new"  href="https://www.github.com/Rapptz/discord.py">Discord.py</a>, a python library that wraps Discord's API. For the LoL-specific commands, I use another wrapper library called <a class="pulse" target="_new" href="https://www.github.com/Pandamacia/LoLWatcher">lolwatcher</a> to access specific data, including player information, and game information. For LoL's static, in-game data, like champions, items, and spells, I directly grab the json files from Riot Games' <a class="pulse" target="_new"  href="https://developer.riotgames.com/static-data.html">Static Data API</a>. Disco Bot downloads necessary json files and images from the Static Data API, parses the json and resizes the images, and uploads the data neatly to the text channel.</p>
                     
                     <div class="img-wrapper fade-img">
@@ -101,7 +102,7 @@
                         <p class="caption">The output of a <span>champion</span> command. You can see Aurelion Sol's basic info, stats, and spells.</p>
                     </div>
                     
-                    <h3>Downloading and Cropping LoL Art</h3>
+                    <h3>LoL Art</h3>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> downloads and resizes the images for the champion's splash art and skin arts using <a class="pulse" target="_new" href="https://www.pythonware.com/products/pil">pil</a> and <a class="pulse" target="_new" href="https://www.pypi.python.org/pypi/python-resize-image">resizeimage</a>. <span class="project-name"></span> stores the downloaded images in an organized folder. Whenever a command requires an image to be uploaded, <span class="project-name"></span> checks the folder to see if the image is already downloaded. It also resizes the image if needed.</p>
                     
                     <div class="img-wrapper fade-img">
@@ -111,7 +112,7 @@
                         <p class="caption">Aurelion Sol's splash art. This image has been downloaded and cropped.</p>
                     </div>
                     
-                    <h3>Retrieving LoL Game Statistics</h3>
+                    <h3>LoL Game Statistics</h3>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;For play statistics, I use a library, <a class="pulse" target="_new" href="https://www.github.com/solomidnet/championgg-api-python">py_gg</a>, to access data from <a class="pulse" target="_new" href="http://champion.gg/">champion.gg</a>. This gives access to a variety of statistics, like playrate, winrate, banrate, average kda, average gold, and more.</p>
                     
                     <div class="img-wrapper fade-img">
@@ -121,7 +122,7 @@
                         <p class="caption">The <span>top</span> command. <span class="project-name"></span> has displayed the top 15 support champions, including their winrates, pickrates, and banrates.</p>
                     </div>
                     
-                    <h3>Music Capability</h3>
+                    <h3>Music</h3>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;For the music portion, I simply use Discord.py. <span class="project-name"></span> keeps a linked list queue of songs queued for easy insertions and removals. The bot always plays the song at the front of the queue. </p>
                     
                     <div class="img-wrapper fade-img">
@@ -158,17 +159,19 @@
                 </article>
                 <div class="fade-art" id="footing">
                     <h3>Check out my other projects!</h3>
-                    <div class="fade-art" id="previous">
-                        <p class="foot-nav-text">PREVIOUS</p>
-                        <p id="previous-project"></p>
-                        <p id="previous-des"></p>
-                        <a class="button ghost-pulse fade" href="">Previous</a>
-                    </div>
-                    <div class="fade-art" id="next">
-                        <p class="foot-nav-text">NEXT</p>
-                        <p id="next-project"></p>
-                        <p id="next-des"></p>
-                        <a class="button ghost-pulse fade" href="">Next</a>
+                    <div id="foot-nav-wrapper">
+                        <div class="fade-art" id="previous">
+                            <p class="foot-nav-text">PREVIOUS</p>
+                            <p id="previous-project"></p>
+                            <p id="previous-des"></p>
+                            <a class="button ghost-pulse fade" href="">Previous</a>
+                        </div>
+                        <div class="fade-art" id="next">
+                            <p class="foot-nav-text">NEXT</p>
+                            <p id="next-project"></p>
+                            <p id="next-des"></p>
+                            <a class="button ghost-pulse fade" href="">Next</a>
+                        </div>
                     </div>
                 </div>
             </div>

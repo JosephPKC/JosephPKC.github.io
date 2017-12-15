@@ -23,12 +23,12 @@ function loadProjectInfo(id, name, techs, des, tags, type, start, end, link, ord
         date += 'Current';
     }
     else {
-        date += end['month'] + ' ' + date['year'];
+        date += end['month'] + ' ' + end['year'];
     }
     jQuery('#heading p').text(date);
     
     /* Grab the tags */
-    var tag_text = tags.join(', ') + ', <span id=\'dev-tag\'>' + type + '</span>'; 
+    var tag_text = tags.join(' • ') + ' • <span id=\'dev-tag\'>' + type + '</span>'; 
     jQuery('#project-tags').html(tag_text);
     
     /* Grab the techs */
@@ -39,7 +39,7 @@ function loadProjectInfo(id, name, techs, des, tags, type, start, end, link, ord
 //        }).appendTo('#project-techs');
 //    });
     
-    jQuery('#project-techs').text(techs.join(', '));
+    jQuery('#project-techs').text(techs.join(' • '));
     /* Grab the link */
     var url = link == null ? 'not-found' : link;
     jQuery('#sub-heading a').attr('href', url);

@@ -1,99 +1,115 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Joseph Park | Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Include css stylesheets and js script sheets here -->
-        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
-        <link rel="stylesheet" type="text/css" href="../styles/main.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/project-page.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/math-comp.css">
-        <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-        <script src="../scripts/anchor-top.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1, maximum-scale=1">
+    <title>JP | Disco Bot</title>
+    
+    <!-- Font Imports -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <link href="../assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- CSS Styles -->
+    <link href="../styles/main.css"  type="text/css" rel="stylesheet">
+    <link href="../styles/layout.css" type="text/css" rel="stylesheet">
+    <link href="../styles/project.css" type="text/css" rel="stylesheet">
+    <link href="../styles/responsive.css" type="text/css" rel="stylesheet">
+    
+    <!-- JS Scripts -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="../scripts/anchor-top.js"></script>
+    <script src="../scripts/nav-scrolls.js"></script>
+    <script src="../scripts/load-project-info.js"></script>
+    <script src="../scripts/fade-on-scroll.js"></script>
+</head>
     <body>
-        <div class="wrapper">
+        <div class="proj-wrapper">
             <header id="header">
-                <p id="header-name">JOSEPH PARK</p>
-            </header>
-            <nav id="nav">
-                <ul>
-                    <li><a id="about" href="./../index.html">ABOUT</a></li>
-                    <li><a id="projects" class="active" href="./../projects.html">PROJECTS</a></li>
-                    <li><a id="contact" href="./../contact.html">CONTACT</a></li>
-                </ul>
+            <div id="header-icon">
+                <p>JOSEPH PARK</p>
+            </div>
+            <nav id="content-nav-bar">
+                <a class="pulse" id="nav-about" href="#about">About</a>
+                <a class="pulse" id="nav-use" href="#use">Usage</a>
+                <a class="pulse" id="nav-dev" href="#dev">Development</a>
+                <a class="pulse" id="nav-future" href="#future">Future</a>
+                <a class="pulse" id="nav-team" href="#team">Team</a>
+				<a class="pulse" id="nav-end" href="#footing">↓ End</a>
+                <a class="pulse" id="to-projects" href="../index.html#to-projects">← More Projects</a>
             </nav>
-            <div class="body" id="body">
-                <div id="heading">
-                    <h1>Hand-Written Math</h1>
-                    <p>Feb 2017 - Feb 2017</p>
+            </header>
+            <div id="content">
+                <div class="fade-art" id="heading">
+                    <h1 class="project-name"></h1>
+                    <p></p>
                 </div>
-                <div id="sub-heading">
-                    <p>Hacktech, Calculator, <strong>Completed</strong></p>
-                    <a class="button-small" href="https://devpost.com/software/handwritten-mathematical-computation">Devpost Link</a>
-                </div>
-                <div id="intro">
-                    <h1>What is Hand-Written Math?</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Hand-Written Mathematical Computation is a <a href="https://hacktech2017.devpost.com/">Hacktech 2017</a> project. It utilized various APIs in order to calculate whatever math equation you wrote onto a touchpad.</p>
-                </div>
-                <!--- content is generally where project pages diverge -->
-                <div id="content">
-                    <h1>Development</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;This project utilized many different APIs: <a href="https://www.synaptics.com/">Synaptics Touchpad</a>, <a href="https://cloud.google.com/vision/">Google Cloud Vision</a>, and <a href="https://www.wolframalpha.com/">Wolfram Alpha</a>. The program grabbed input from the touchpad as a multidimensional array, and saved an image of it. It then sent the image to Google Cloud Vision, which then used its massive neural network for image recognition to try to figure out what the numbers and symbols were. It created a string for the equation, which was then sent through Wolfram Alpha's API. Wolfram Alpha calculated the string, and return a large dictionary of data. The program sifted through the data to get the direct answer, and displays it. That is essentially what this project does and how it does it.</p>
-                    <br>
-                    <img id="i1" src="../images/hand-written-math-i1.png">
-                    <p class="caption">7 + 7 = 14</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The first phase of the project is the touchpad. We hit some roadblocks with utilizing the touchpad early on. We had trouble getting input data from the touchpad, unless we pushed on the touchpad really hard. We eventually had the touchpad replaced, and found that our previous one was defective. You still had to press firmly on the touchpad, but it was much more natural now. We used the code given to us by Synaptic to grab the data, and then used that data to create an image.</p>
-                    <br>
-                    <img id="i3" src="../images/hand-written-math-i3.png">
-                    <p class="caption">The data from the Synaptics touchpad and image creation.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;After the image was created, we sent that image through Google Cloud Vision's API via a custom wrapper we wrote. This part was our biggest headache. When we tested the equation detecting from Google Cloud Vision, we found that most of the time, it does not correctly detect the equation. When we put in 3 * 2 into the touchpad, we sometimes get weird responses. We initially thought that it was again the touchpad, but later realized that the neural network may not be optimized for numbers and equations (plus, our hand-writing was a bit poor). We wanted it to be able to detect complex equations like derivatives and integrals, but realized that it was simply out of our scope and capabilities at the moment (fun fact: some integrals did end up working). Once the neural network gave a response, we sent it to Wolfram Alpha.</p>
-                    <br>
-                    <img id="i4" src="../images/hand-written-math-i4.png">
-                    <p class="caption">Google Cloud Vision predicts that this happy face is an O.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Wolfram Alpha computed the equation and gave us all sorts of data. We looked specifically for just the answer, and displayed it.</p>
-                    <br>
-                    <img id="i2" src="../images/hand-written-math-i2.png">
-                    <p class="caption">The input data and output for Wolfram Alpha.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The UI was made using <a href="https://www.pygame.org/news">pygame</a>, and it displayed what the touchpad captured, what the image looked like, what Google Cloud Vision thought the image was, and what Wolfram Alpha though the answer was.</p>
-                    <br>
-                    <img id="i5" src="../images/hand-written-math-i5.png">
-                    <p class="caption">Hey, sin was detected!</p>
+                <div class="fade-art" id="sub-heading">
+                    <p id="project-tags"></p>
+                    <p id="project-techs"></p>
+                    <a class="button ghost-pulse fade" id="github" href="">Github Link</a>
                     <br>
                 </div>
-                <div id="footing">
-                    <h1>The Team and Contributers</h1>
-                    <ul>
-                        <li><strong>Joseph Park (Me)</strong> - programmer</li>
-                        <li><strong>Kevin Permana</strong>: <a href="https://github.com/kagekyaa">Github</a> <a href="https://www.linkedin.com/in/kpermana">Linkedin</a> - programmer</li>
-                        <li><strong>Paul Morillo</strong> - programmer</li>
-                        <li><strong>Kevin Yao</strong> - programmer</li>
-                    </ul> 
-                    <div id="up-next">
-                        <p>NEXT</p>
-                        <p id="next-project">Unfeel Tournament</p>
-                        <a class="button-small" href="./unfeel-tournament.html">Next</a>
-                    </div>
+                <!-- content -->
+                <article class="fade-art" id="body">
+                    <h2 id="about">About</h2>
+        
+                    <h2 id="use">Usage</h2>
                     
+                    <h2 id="dev">Development</h2>
+                    
+                    <h2 id="future">Future</h2>
+					
+					<h2 id="team">Team</h2>
+                    
+                </article>
+                <div class="fade-art" id="footing">
+                    <h3>Check out my other projects!</h3>
+                    <div id="foot-nav-wrapper">
+                        <div class="fade-art" id="previous">
+                            <p class="foot-nav-text">PREVIOUS</p>
+                            <p id="previous-project"></p>
+                            <p id="previous-des"></p>
+                            <a class="button ghost-pulse fade" href="">Previous</a>
+                        </div>
+                        <div class="fade-art" id="next">
+                            <p class="foot-nav-text">NEXT</p>
+                            <p id="next-project"></p>
+                            <p id="next-des"></p>
+                            <a class="button ghost-pulse fade" href="">Next</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <footer id="footer">
-                <a class="anchor-top" href="#">
-                    <i class="fa fa-arrow-circle-up"></i>
-                </a>
-                <div id="font-awesome-attr">
+                <div id="anchor-top">
+                    <a class="button ghost-pulse" href="">
+                        ↑ Back to Top
+                    </a>
+                </div>
+                <div id="contact-icons">
+                    <a target="_new" href="https://www.linkedin.com/in/josephpkc">
+                        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <a target="_new" href="https://www.github.com/JosephPKC">
+                        <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div id="footer-text">
                     <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
                 </div>
             </footer>
         </div>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

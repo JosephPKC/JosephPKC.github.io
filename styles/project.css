@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     list-style-type: none;
+    padding: 0 15px;
 }
 
 #content-nav-bar a {
@@ -44,6 +45,10 @@
 #sub-heading p {
     font-size: 14px;
     font-style: italic;
+}
+
+#sub-heading a {
+    
 }
 
 #sub-heading #dev-tag {
@@ -111,8 +116,8 @@
 }
 
 .img-wrapper img {
-
-    width: 100%;
+    max-width: 80%;
+/*    width: 80%;*/
 }
 
 .caption {
@@ -132,6 +137,11 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+#foot-nav-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 #footing .foot-nav-text {

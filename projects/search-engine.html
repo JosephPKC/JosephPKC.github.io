@@ -1,97 +1,100 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Joseph Park | Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Include css stylesheets and js script sheets here -->
-        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
-        <link rel="stylesheet" type="text/css" href="../styles/main.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/project-page.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/search-engine.css">
-        <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-        <script src="../scripts/anchor-top.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1, maximum-scale=1">
+    <title>JP | Disco Bot</title>
+    
+    <!-- Font Imports -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <link href="../assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- CSS Styles -->
+    <link href="../styles/main.css"  type="text/css" rel="stylesheet">
+    <link href="../styles/layout.css" type="text/css" rel="stylesheet">
+    <link href="../styles/project.css" type="text/css" rel="stylesheet">
+    <link href="../styles/responsive.css" type="text/css" rel="stylesheet">
+    
+    <!-- JS Scripts -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="../scripts/anchor-top.js"></script>
+    <script src="../scripts/nav-scrolls.js"></script>
+    <script src="../scripts/load-project-info.js"></script>
+    <script src="../scripts/fade-on-scroll.js"></script>
+</head>
     <body>
-        <div class="wrapper">
+        <div class="proj-wrapper">
             <header id="header">
-                <p id="header-name">JOSEPH PARK</p>
-            </header>
-            <nav id="nav">
-                <ul>
-                    <li><a id="about" href="./../index.html">ABOUT</a></li>
-                    <li><a id="projects" class="active" href="./../projects.html">PROJECTS</a></li>
-                    <li><a id="contact" href="./../contact.html">CONTACT</a></li>
-                </ul>
+            <div id="header-icon">
+                <p>JOSEPH PARK</p>
+            </div>
+            <nav id="content-nav-bar">
+                <a class="pulse" id="nav-about" href="#about">About</a>
+                <a class="pulse" id="nav-use" href="#use">Usage</a>
+                <a class="pulse" id="nav-dev" href="#dev">Development</a>
+                <a class="pulse" id="nav-future" href="#future">Future</a>
+                <a class="pulse" id="nav-team" href="#team">Team</a>
+				<a class="pulse" id="nav-end" href="#footing">↓ End</a>
+                <a class="pulse" id="to-projects" href="../index.html#to-projects">← More Projects</a>
             </nav>
-            <div class="body" id="body">
-                <div id="heading">
-                    <h1>Space-Time</h1>
-                    <p>May 2017 - Jun 2017</p>
+            </header>
+            <div id="content">
+                <div class="fade-art" id="heading">
+                    <h1 class="project-name"></h1>
+                    <p></p>
                 </div>
-                <div id="sub-heading">
-                    <p>School, Search Engine, <strong>Completed</strong></p>
-                    <a class="button-small" id="github" href="https://www.github.com/exdunn/SearchEngine">Github Link</a>
+                <div class="fade-art" id="sub-heading">
+                    <p id="project-tags"></p>
+                    <p id="project-techs"></p>
+                    <a class="button ghost-pulse fade" id="github" href="">Github Link</a>
+                    <br>
                 </div>
-                <div id="intro">
-                    <h1>What is Space-Time?</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Space-Time is a search engine developed for a course on information retrieval at UCI (COMP SCI 121) with two others. It stores document data via inverted indexing and ranks the documents for each word. It searches over the ics.uci.edu domain.</p>
-                </div>
-                <!--- content is generally where project pages diverge -->
-                <div id="content">
-                    <h1>Development</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Space-Time was made in Python 2.7, with the help of <a href="https://www.nltk.org">NLTK</a>, <a href="https://www.crummy.com/software/BeautifulSoup">BeautifulSoup</a>, and <a href="https://www.github.com/ahupp/python-magic">Python Magic</a>. The document data was stored in Sqlite3 databases, built with <a href="https://www.sqlitestudio.pl">SQLiteStudio</a>.There are four primary parts to this search engine: <strong>indexing</strong>, <strong>preloading (optional)</strong>, <strong>ranking</strong>, and <strong>searching</strong>.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The indexing is performed once, before the program is used. This consists of opening and reading every single document, parsing the html via BeautifulSoup, getting unique words and their frequencies, and finally storing those counts along with any extra data into a database. The indexer uses <a href="https://www.en.wikipedia.org/wiki/Inverted_index">inverted indexing</a>, and ignores <a href="https://www.en.wikipedia.org/wiki/Stop_words">stop words</a>, and other unwanted strings (hex, numbers, or different languages) with the help of regular expressions and NLTK. NLTK is also used to <a href="https://www.en.wikipedia.org/wiki/Stemming">stem</a> words, so that words like "computer" and "computers" are considered the same. The indexer also ignores certain file types like audio, video, and images with the help of Python Magic. Finally, the indexer gives higher weight to terms in the strong tag, or in headers and titles.</p>
-                    <br>
-                    <img id="i1" src="../images/search-engine-i1.png">
-                    <p class="caption">This is a part of the inverted index database. Some of the terms are cut off, via stemming, and are mapped toa  folder and file- the documents. Alss stored are the frequencies, strong frequencies (how often the term appears in strong tags or headers), and finally the normalized weights.</p>
-                    <br>
-                    <img id="i2" src="../images/search-engine-i2.png">
-                    <p class="caption">This is another part of the inverted index database. Here, the terms are mapped to their document frequencies, or how many documents this term appears in.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Once the indexing is complete, you can run the search engine and perform searches, OR you can choose to preload some data. Preloading data will calculate some necessary data before running searches, to improve performance at the cost of extra space usage. This includes calculating document frequencies, and the <a href="https://www.en.wikipedia.org/wiki/Tf-idf">tf-idf weights</a>.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The next two parts go hand-in-hand. To search for a term, the user simply types in whatever search terms into the command line. The search engine parses the search query, and again ignores stop words via NLTK. Then, the engine passes the parsed query to the ranker, which will rank the query and its terms against every document in the database. It calculates a normalized tf-idf weight for query, and compares it to every document via <a href="https://www.en.wikipedia.org/wiki/Cosine_similarity">Cosine similarity</a>. It finally returns the top K documents.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The search engine returns a list of url links, along with their scores. It also shows how many relevant documents there were, and how many strongly-relevant (i.e. if the score was higher than some threshold). Finally, it also shows how long it took to get the documents. The final part is especially important, as the time elapsed and relevancy of the top K results were used to determine how effective the search engine was.</p>
-                    <br>
-                    <img id="i3" src="../images/search-engine-i3.png">
-                    <p class="caption">Searching "computers." You can see the top 20 out of 11,526 documents, and that the search took around 2.6 seconds. You can see the scores on the left-hand side, all of which are 1.0- which makes sense as the documents are all computer related in the ics.uci.edu domain.</p>
-                    <br>
-                    <img id="i4" src="../images/search-engine-i4.png">
-                    <p class="caption">These are the results for the query "geometric sequences." Here, you can see a variety in scores.</p>
-                    <br>
-                    <img id="i5" src="../images/search-engine-i5.png">
-                    <p class="caption">Results for the query "dogs in park." The results have a very low score. Clearly, the documents in the ics.uci.edu domain don't really talk about dogs in parks.</p>
-                    <br>
-                    <h1>Closing Thoughts</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;As you can see from the images, this search engine isn't perfect. There is still much room to grow and improve on. There are numerous, more complex algorithms and theories that can be utilized to improve the relevancy of the top K results. However, for the purposes and scope of the course, this search engine worked perfectly well. It was able to (most of the time) get very relevant results for queries, and in a reasonable time. All in all, I'm quite happy with how it turned out.</p>
-                </div>
-                <div id="footing">
-                    <h1>Team Members</h1>
-                    <ul>
-                        <li><strong>Joseph Park (Me)</strong> - programmer</li>
-                        <li><strong>Alex Dunn</strong>: <a href="https://github.com/exdunn">Github</a> <a href="https://www.linkedin.com/in/alex-dunn-46766554">Linkedin</a> - programmer</li>
-                        <li><strong>Arlene Lim</strong>: <a href="https://www.linkedin.com/in/arlene-lim-13635a141">Linkedin</a> - programmer</li>
-                    </ul>
-                    <div id="up-next">
-                        <p>NEXT</p>
-                        <p id="next-project">Ruinstone</p>
-                        <a class="button-small" href="./ruinstone.html">Next</a>
-                    </div>
+                <!-- content -->
+                <article class="fade-art" id="body">
+                    <h2 id="about">About</h2>
+        
+                    <h2 id="use">Usage</h2>
                     
+                    <h2 id="dev">Development</h2>
+                    
+                    <h2 id="future">Future</h2>
+					
+					<h2 id="team">Team</h2>
+                    
+                </article>
+                <div class="fade-art" id="footing">
+                    <h3>Check out my other projects!</h3>
+                    <div id="foot-nav-wrapper">
+                        <div class="fade-art" id="previous">
+                            <p class="foot-nav-text">PREVIOUS</p>
+                            <p id="previous-project"></p>
+                            <p id="previous-des"></p>
+                            <a class="button ghost-pulse fade" href="">Previous</a>
+                        </div>
+                        <div class="fade-art" id="next">
+                            <p class="foot-nav-text">NEXT</p>
+                            <p id="next-project"></p>
+                            <p id="next-des"></p>
+                            <a class="button ghost-pulse fade" href="">Next</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <footer id="footer">
-                <a class="anchor-top" href="#">
-                    <i class="fa fa-arrow-circle-up"></i>
-                </a>
-                <div id="font-awesome-attr">
+                <div id="anchor-top">
+                    <a class="button ghost-pulse" href="">
+                        ↑ Back to Top
+                    </a>
+                </div>
+                <div id="contact-icons">
+                    <a target="_new" href="https://www.linkedin.com/in/josephpkc">
+                        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <a target="_new" href="https://www.github.com/JosephPKC">
+                        <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div id="footer-text">
                     <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
                 </div>
             </footer>

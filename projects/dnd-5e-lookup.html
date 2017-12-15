@@ -34,6 +34,7 @@
                 <a class="pulse" id="nav-dev" href="#dev">Development</a>
                 <a class="pulse" id="nav-future" href="#future">Future</a>
                 <a class="pulse" id="nav-team" href="#team">Team</a>
+                <a class="pulse" id="nav-end" href="#footing">↓ End</a>
                 <a class="pulse" id="to-projects" href="../index.html#to-projects">← More Projects</a>
             </nav>
             </header>
@@ -68,7 +69,7 @@
                     </div>
         
                     <h2 id="use">Usage</h2>
-                    <h3>Search Queries</h3>
+                    <h3>Search Bar</h3>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;You can use <span class="project-name"></span> by running the program, and then entering whatever search query you wish to search for into the search bar. You can set the type of data you want to search in:</p>
                     
                     <div class="multi-list">
@@ -134,7 +135,7 @@
                     </div>
                     
                     <h2 id="dev">Development</h2>
-                    <h3>Core</h3>
+                    <h3>Overview</h3>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is made in <a class="pulse" target="_new" href="https://unity3d.com/">Unity3D</a> and C#. The database is made in SQLite3 via <a class="pulse" target="_new" href="https://www.sqlitestudio.pl">SQLite Studio</a> and <a class="pulse" target="_new" href="https://www.jetbrains.com/datagrip">DataGrip</a>. However, the actual insertion of data into the database is done via C# scripts that send INSERT queries to the database. The user interface is made entirely with Unity assets, and the <a class="pulse" target="_new" href="https://www.dafont.com/dalelands.font">Dalelands</a> font. <span class="project-name"></span> is made with the <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC pattern</a> in mind. The database acts as the data layer, while the several managers act as the controllers. Finally, the UI acts as the view. Custom data structures are also used to transport data between the three.</p>
                     
                     <h3>Database Management</h3>
@@ -182,17 +183,19 @@
                 </article>
                 <div class="fade-art" id="footing">
                     <h3>Check out my other projects!</h3>
-                    <div class="fade-art" id="previous">
-                        <p class="foot-nav-text">PREVIOUS</p>
-                        <p id="previous-project"></p>
-                        <p id="previous-des"></p>
-                        <a class="button ghost-pulse fade" href="">Previous</a>
-                    </div>
-                    <div class="fade-art" id="next">
-                        <p class="foot-nav-text">NEXT</p>
-                        <p id="next-project"></p>
-                        <p id="next-des"></p>
-                        <a class="button ghost-pulse fade" href="">Next</a>
+                    <div id="foot-nav-wrapper">
+                        <div class="fade-art" id="previous">
+                            <p class="foot-nav-text">PREVIOUS</p>
+                            <p id="previous-project"></p>
+                            <p id="previous-des"></p>
+                            <a class="button ghost-pulse fade" href="">Previous</a>
+                        </div>
+                        <div class="fade-art" id="next">
+                            <p class="foot-nav-text">NEXT</p>
+                            <p id="next-project"></p>
+                            <p id="next-des"></p>
+                            <a class="button ghost-pulse fade" href="">Next</a>
+                        </div>
                     </div>
                 </div>
             </div>
