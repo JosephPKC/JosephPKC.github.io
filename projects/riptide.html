@@ -1,86 +1,120 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Joseph Park | Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Include css stylesheets and js script sheets here -->
-        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
-        <link rel="stylesheet" type="text/css" href="../styles/main.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/project-page.css">
-<!--        <link rel="stylesheet" type="text/css" href="../styles/projects/riptide.css">-->
-        <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-        <script src="../scripts/anchor-top.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1, maximum-scale=1">
+    <title></title>
+    
+    <!-- Font Imports -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <link href="../assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- CSS Styles -->
+    <link href="../styles/main.css"  type="text/css" rel="stylesheet">
+    <link href="../styles/layout.css" type="text/css" rel="stylesheet">
+    <link href="../styles/project.css" type="text/css" rel="stylesheet">
+    <link href="../styles/responsive.css" type="text/css" rel="stylesheet">
+    
+    <!-- JS Scripts -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="../scripts/anchor-top.js"></script>
+    <script src="../scripts/nav-scrolls.js"></script>
+    <script src="../scripts/load-project-info.js"></script>
+    <script src="../scripts/fade-on-scroll.js"></script>
+</head>
     <body>
-        <div class="wrapper">
+        <div class="proj-wrapper">
             <header id="header">
-                <p id="header-name">JOSEPH PARK</p>
-            </header>
-            <nav id="nav">
-                <ul>
-                    <li><a id="about" href="./../index.html">ABOUT</a></li>
-                    <li><a id="projects" class="active" href="./../projects.html">PROJECTS</a></li>
-                    <li><a id="contact" href="./../contact.html">CONTACT</a></li>
-                </ul>
+            <div id="header-icon">
+                <p>JOSEPH PARK</p>
+            </div>
+            <nav id="content-nav-bar">
+                <a class="pulse" id="nav-about" href="#about">About</a>
+                <a class="pulse" id="nav-use" href="#use">Usage</a>
+                <a class="pulse" id="nav-dev" href="#dev">Development</a>
+                <a class="pulse" id="nav-future" href="#future">Future</a>
+                <a class="pulse" id="nav-team" href="#team">Team</a>
+				<a class="pulse" id="nav-end" href="#footing">↓ End</a>
+                <a class="pulse" id="to-projects" href="../index.html#to-projects">← More Projects</a>
             </nav>
-            <div class="body" id="body">
-                <div id="heading">
-                    <h1>Riptide</h1>
-                    <p>Feb 2017 - Mar 2017</p>
+            </header>
+            <div id="content">
+                <div class="fade-art" id="heading">
+                    <h1 class="project-name"></h1>
+                    <p></p>
                 </div>
-                <div id="sub-heading">
-                    <p>School, Machine Learning, <strong>Completed</strong></p>
-                    <a class="button-small" id="github" href="https://github.com/PermanaRiptide">Github Link</a>
+                <div class="fade-art" id="sub-heading">
+                    <p id="project-tags"></p>
+                    <p id="project-techs"></p>
+                    <a class="button ghost-pulse fade" id="github" target="_new" href="">Github</a>
+                    <br>
                 </div>
-                <div id="intro">
-                    <h1>What is Riptide?</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Riptide is a machine learning project for a course on data mining/machine learnining in UCI (COMP SCI 178), with the ultimate goal of placing as high as possible in a class competition on <a href="https://www.kaggle.com/c/uc-irvine-2017w-cs178">Kaggle</a>. Riptide consists of three things: a <strong>neural network</strong>, a <strong>gradient-boosted random forest</strong>, and an <strong>ensemble of the two</strong>.</p>
-                </div>
-                <!--- content is generally where project pages diverge -->
-                <div id="content">
-                    <h1>Development</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Riptide was made in Python 2.7, with a basic learner provided by the instructor. My team and I utilized various different libraries, including <a href="https://keras.io/">keras</a>, <a href="http://www.numpy.org/">numpy</a>, <a href="https://matplotlib.org/">matplotlib</a>, <a href="http://scikit-learn.org/stable/">scikit-learn</a>, and <a href="https://docs.python.org/2/library/collections.html">collections</a> to help build and train the learners.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;We messed with the parameters of the learners constantly, changing it up, re-training, testing and evaluating, and recording the scores. We tried to squeeze out every bit of performance it can give us. This constant re-training led to long hours of waiting for the learners to train and test, just so we can see if our slight changes made any improvements. On top of that, while reconfiguring the parameters, we also had to make sure our model wasn't too simple nor too complex.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The <a href="https://en.wikipedia.org/wiki/Artificial_neural_network">neural network</a> was created and trained with keras, and evaluated with scikit-learn. The network was trained on a set of rainfall data. It began with 1 hidden layer, a few nodes, and no other optimizations. Compared to the random forests, the neural network performed quite poorly, which we attributed to <a href="https://en.wikipedia.org/wiki/Overfitting">overfitting</a> (model is too complex, so the learner could not make accurate general predictions). We later tried more complex models- more hidden layers, having the number of nodes equal to the square root of the product of input and output nodes, and implementing <a href="https://en.wikipedia.org/wiki/Dropout_(neural_networks)">dropout</a>. After trying out several more complex models, we came to the conclusion that our network was actually underfitting (model was too simple, so the learner could not accurately predict anything). We implemented a few more optimizations, like having uniformly random input numbers, and having our <a href="https://en.wikipedia.org/wiki/Activation_function">activation function</a> be the <a href="https://en.wikipedia.org/wiki/Sigmoid_function">sigmoid function</a>. We also configured the network to try to minimize the <a href="https://en.wikipedia.org/wiki/Cross_entropy">binary cross-entropy loss</a>. We ended up with a decent model with the training and test accuracies fairly close to each other, and a fairly high <a href="https://en.wikipedia.org/wiki/Receiver_operating_characteristic">ROC curve</a> (at least compared to the other learners from other teams). </p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The <a href="https://en.wikipedia.org/wiki/Random_forest">random forest</a> was made from the base learner provided to us by the instructor. We boosted each tree in the random forest via <a href="https://en.wikipedia.org/wiki/Gradient_boosting">gradient boosting</a>, and lowered the number of features for the trees. Almost immediately, the random forests performed spectacularly, especially compared to the neural network. We still constantly re-trained the random forest- changing the maximum height allowed, minimum number of leaves allowed, and the number of trees in the forest. Because of its performance, there wasn't much to try to improve for the random forest, so we spent most of our time on the network.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The <a href="https://en.wikipedia.org/wiki/Ensemble_learning">ensemble</a> of learners was built from the neural network and the random forest. The ensemble would have both learners train on the data, and predict on some input data. It would then choose whatever the majority prediction from the two learners was as its prediction. This was the simplest part of the three, as most of the hard work was already finished.</p>
-                    <br>
-                    <h1>Evaluation and Conclusion</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The project required us to submit our learners onto Kaggle for placement. Kaggle had its own set of hidden data, separate from our training and test sets. It used that hidden data to evaluate our learners and compare our learners to all of the other teams. Our team, named "Fizzington Bisland the III," placed 28 out of 212 with a score of 0.76893. The number 1 team had a score of 0.78668, which is quite ahead. On the other hand, the last place team had a score of 0.49811, which meant that there was some error when training their model.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;If you want to check out the competition page, click <a href="https://www.kaggle.com/c/uc-irvine-2017w-cs178">here</a>.</p>
-                </div>
-                <div id="footing">
-                    <h1>The Team and Contributers</h1>
-                    <ul>
-                        <li><strong>Joseph Park (Me)</strong> - programmer</li>
-                        <li><strong>Kevin Permana</strong>: <a href="https://github.com/kagekyaa">Github</a> <a href="https://www.linkedin.com/in/kpermana">Linkedin</a> - programmer</li>
-                    </ul>
-                    <div id="up-next">
-                        <p>NEXT</p>
-                        <p id="next-project">Hand-Written Math</p>
-                        <a class="button-small" href="./math-comp.html">Next</a>
-                    </div>
+                <!-- content -->
+                <article class="fade-art" id="body">
+                    <h2 id="about">About</h2>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span></p>
+        
+                    <h2 id="use">Usage</h2>
                     
+                    <h2 id="dev">Development</h2>
+                    
+                    <h2 id="future">Future</h2>
+					
+					<h2 id="team">Team</h2>
+                    <div class="multi-list">
+						<ul class="fade-li">
+							<li><span></span></li>
+						</ul>
+					</div>
+                </article>
+                <div class="fade-art" id="footing">
+                    <h3>Check out my other projects!</h3>
+                    <div id="foot-nav-wrapper">
+                        <div class="fade-art" id="previous">
+                            <p class="foot-nav-text">PREVIOUS</p>
+                            <p id="previous-project"></p>
+                            <p id="previous-des"></p>
+                            <a class="button ghost-pulse fade" href="">Previous</a>
+                        </div>
+                        <div class="fade-art" id="next">
+                            <p class="foot-nav-text">NEXT</p>
+                            <p id="next-project"></p>
+                            <p id="next-des"></p>
+                            <a class="button ghost-pulse fade" href="">Next</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <footer id="footer">
-                <a class="anchor-top" href="#">
-                    <i class="fa fa-arrow-circle-up"></i>
-                </a>
-                <div id="font-awesome-attr">
+                <div id="anchor-top">
+                    <a class="button ghost-pulse" href="">
+                        ↑ Back to Top
+                    </a>
+                </div>
+                <div id="contact-icons">
+                    <a target="_new" href="https://www.linkedin.com/in/josephpkc">
+                        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <a target="_new" href="https://www.github.com/JosephPKC">
+                        <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div id="footer-text">
                     <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
                 </div>
             </footer>
         </div>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

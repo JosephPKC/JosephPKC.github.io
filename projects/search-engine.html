@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial=scale=1, maximum-scale=1">
-    <title>JP | Disco Bot</title>
+    <title></title>
     
     <!-- Font Imports -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
@@ -46,7 +46,7 @@
                 <div class="fade-art" id="sub-heading">
                     <p id="project-tags"></p>
                     <p id="project-techs"></p>
-                    <a class="button ghost-pulse fade" id="github" target="_new" href="">Github Link</a>
+                    <a class="button ghost-pulse fade" id="github" target="_new" href="">Github</a>
                     <br>
                 </div>
                 <!-- content -->
@@ -58,23 +58,17 @@
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;You can use <span class="project-name"></span> by running it, and typing in a search query. It will then display the top K documents for your search query as url links. It will also inform you how many documents were found, and how long it took. When running the program, you can choose to set K, and decide whether you want to preload data or not. Preloading data will take some time initially, but will speed up all subsequent queries at the cost of extra space usage.</p>
                     
                     <div class="img-wrapper fade-img">
-                        <a target="_new" href="../assets/images/search-engine/search-engine-i3.png">
-                            <img id="i3" src="../assets/images/search-engine/search-engine-i3.png">
-                        </a>
+                        <img id="i3" src="../assets/images/search-engine/search-engine-i3.png">
                         <p class="caption">Searching <span>computers</span>. Seeing as how the documents are on the information and computer science domain of UCI, it makes sense that there are 11,526 relevant documents, and the top 20 all have a score of 1.0.</p>
                     </div>
                     
                     <div class="img-wrapper fade-img">
-                        <a target="_new" href="../assets/images/search-engine/search-engine-i4.png">
-                            <img id="i4" src="../assets/images/search-engine/search-engine-i4.png">
-                        </a>
+                        <img id="i4" src="../assets/images/search-engine/search-engine-i4.png">
                         <p class="caption">Searching <span>geometric sequences</span>. Now, none of the documents have a score of 1.0, and it seems to fall off after 0.7. Also, there are much less relevant documents- about 1,425.</p>
                     </div>
                     
                     <div class="img-wrapper fade-img">
-                        <a target="_new" href="../assets/images/search-engine/search-engine-i5.png">
-                            <img id="i5" src="../assets/images/search-engine/search-engine-i5.png">
-                        </a>
+                        <img id="i5" src="../assets/images/search-engine/search-engine-i5.png">
                         <p class="caption">Searching <span>dogs in park</span>. Now, the most relevant document has a score of 0.17, and there are only 252 relevant documents.</p>
                     </div>
                     
@@ -94,16 +88,12 @@
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;When a search query arrives, <span class="project-name"></span> ranks both the query and every document. It first calculates the tf-idf weight for the query, and then normalizes all of the weights. Finally, it ranks the query against every document via the <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Vector_space_model">vector-space model</a> and <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Cosine_similarity">cosine similarity</a>. Once the ranking is complete, <span class="project-name"></span> can create SELECT queries to the database to get a sorted list of documents.</p>
                     
                     <div class="img-wrapper fade-img">
-                        <a target="_new" href="../assets/images/search-engine/search-engine-i1.png">
-                            <img id="i1" src="../assets/images/search-engine/search-engine-i1.png">
-                        </a>
+                        <img id="i1" src="../assets/images/search-engine/search-engine-i1.png">
                         <p class="caption">A part of the database. Here you see the term, the folder and file (document), frequency, strong frequency (header frequency), and normalized tf-idf weight.</p>
                     </div>
                     
                     <div class="img-wrapper fade-img">
-                        <a target="_new" href="../assets/images/search-engine/search-engine-i2.png">
-                            <img id="i2" src="../assets/images/search-engine/search-engine-i2.png">
-                        </a>
+                        <img id="i2" src="../assets/images/search-engine/search-engine-i2.png">
                         <p class="caption">A part of the database. Here you see the terms, and the document frequencies.</p>
                     </div>
 
@@ -113,8 +103,8 @@
 					<h2 id="team">Team</h2>
                     <div class="multi-list">
                         <ul class="fade-li">
-                            <li><span>Me</span>: programmer</li>
-                            <li><span>Alex Dunn</span>: programmer | <a class="pulse" target="_new" href="https://github.com/exdunn">Github</a> | <a class="pulse" target="_new" href="https://www.linkedin.com/in/alex-dunn-46766554">Linkedin</a></li>
+                            <li><span>Me</span>: programmer • research</li>
+                            <li><span>Alex Dunn</span>: programmer | <a class="pulse" target="_new" href="https://github.com/exdunn">Github</a> • <a class="pulse" target="_new" href="https://www.linkedin.com/in/alex-dunn-46766554">Linkedin</a></li>
                             <li><span>Arlene Lim</span>: programmer | <a class="pulse" target="_new" href="https://www.linkedin.com/in/arlene-lim-13635a141">Linkedin</a></li>
                         </ul>
                     </div>

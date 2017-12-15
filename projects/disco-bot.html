@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial=scale=1, maximum-scale=1">
-    <title>JP | Disco Bot</title>
+    <title></title>
     
     <!-- Font Imports -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
@@ -46,7 +46,7 @@
                 <div class="fade-art" id="sub-heading">
                     <p id="project-tags"></p>
                     <p id="project-techs"></p>
-                    <a class="button ghost-pulse fade" id="github" target="_new" href="">Github Link</a>
+                    <a class="button ghost-pulse fade" id="github" target="_new" href="">Github</a>
                     <br>
                 </div>
                 <!-- content -->
@@ -85,9 +85,7 @@
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;Many commands have optional arguments as well. The <span>summoner</span> command can accept an optional region argument, informing <span class="project-name"></span> which region to search the player in. By default, it searches under the NA region. The <span>champion</span> command accepts a few optional arguments: <span>-i</span>, <span>-st</span>, <span>-s</span>, <span>-t</span>, <span>-l</span>, <span>-sk</span>. These arguments tell Disco Bot to also include the champion's basic info, stats, spells, tips, lore, and skin arts, respectively.</p>
                     
                     <div class="img-wrapper fade-img">
-                        <a target="_new" href="../assets/images/disco-bot/disco-bot.png">
-                            <img id="i0" src="../assets/images/disco-bot/disco-bot.png">
-                        </a>
+                        <img id="i0" src="../assets/images/disco-bot/disco-bot.png">
                         <p class="caption">Basic usage. <span class="project-name"></span> returns with the splash art, champion stats, and spells.</p>
                     </div>
                     
@@ -96,9 +94,7 @@
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is made with Python 2.7 with the <a class="pulse" target="_new" href="https://www.jetbrains.com/pycharm/">Pycharm</a> IDE, as well as various APIs and libraries. I use <a class="pulse" target="_new"  href="https://www.github.com/Rapptz/discord.py">Discord.py</a>, a python library that wraps Discord's API. For the LoL-specific commands, I use another wrapper library called <a class="pulse" target="_new" href="https://www.github.com/Pandamacia/LoLWatcher">lolwatcher</a> to access specific data, including player information, and game information. For LoL's static, in-game data, like champions, items, and spells, I directly grab the json files from Riot Games' <a class="pulse" target="_new"  href="https://developer.riotgames.com/static-data.html">Static Data API</a>. Disco Bot downloads necessary json files and images from the Static Data API, parses the json and resizes the images, and uploads the data neatly to the text channel.</p>
                     
                     <div class="img-wrapper fade-img">
-                        <a target="_new" href="../assets/images/disco-bot/disco-bot-i1.png">
-                            <img id="i1" src="../assets/images/disco-bot/disco-bot-i1.png">
-                        </a>
+                        <img id="i1" src="../assets/images/disco-bot/disco-bot-i1.png">
                         <p class="caption">The output of a <span>champion</span> command. You can see Aurelion Sol's basic info, stats, and spells.</p>
                     </div>
                     
@@ -106,9 +102,7 @@
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> downloads and resizes the images for the champion's splash art and skin arts using <a class="pulse" target="_new" href="https://www.pythonware.com/products/pil">pil</a> and <a class="pulse" target="_new" href="https://www.pypi.python.org/pypi/python-resize-image">resizeimage</a>. <span class="project-name"></span> stores the downloaded images in an organized folder. Whenever a command requires an image to be uploaded, <span class="project-name"></span> checks the folder to see if the image is already downloaded. It also resizes the image if needed.</p>
                     
                     <div class="img-wrapper fade-img">
-                        <a target="_new" href="../assets/images/disco-bot/disco-bot-i2.png">
-                            <img id="i2" src="../assets/images/disco-bot/disco-bot-i2.png">
-                        </a>
+                        <img id="i2" src="../assets/images/disco-bot/disco-bot-i2.png">
                         <p class="caption">Aurelion Sol's splash art. This image has been downloaded and cropped.</p>
                     </div>
                     
@@ -116,9 +110,7 @@
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;For play statistics, I use a library, <a class="pulse" target="_new" href="https://www.github.com/solomidnet/championgg-api-python">py_gg</a>, to access data from <a class="pulse" target="_new" href="http://champion.gg/">champion.gg</a>. This gives access to a variety of statistics, like playrate, winrate, banrate, average kda, average gold, and more.</p>
                     
                     <div class="img-wrapper fade-img">
-                        <a target="_new" href="../assets/images/disco-bot/disco-bot-i3.png">
-                            <img id="i3" src="../assets/images/disco-bot/disco-bot-i3.png">
-                        </a>
+                        <img id="i3" src="../assets/images/disco-bot/disco-bot-i3.png">
                         <p class="caption">The <span>top</span> command. <span class="project-name"></span> has displayed the top 15 support champions, including their winrates, pickrates, and banrates.</p>
                     </div>
                     
@@ -126,9 +118,7 @@
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;For the music portion, I simply use Discord.py. <span class="project-name"></span> keeps a linked list queue of songs queued for easy insertions and removals. The bot always plays the song at the front of the queue. </p>
                     
                     <div class="img-wrapper fade-img">
-                        <a target="_new" href="../assets/images/disco-bot/disco-bot-i4.png">
-                            <img id="i4" src="../assets/images/disco-bot/disco-bot-i4.png">
-                        </a>
+                        <img id="i4" src="../assets/images/disco-bot/disco-bot-i4.png">
                         <p class="caption">The <span>play</span> or <span>queue</span> command. <span class="project-name"></span> searches for the most relvant song from the search query "something," and queues up "Something Just Like This." Since it is the first song in the list, <span class="project-name"></span> begins playing the song.</p>
                     </div>
                     
@@ -152,8 +142,8 @@
                     <h2 id="team">Team</h2>
                     <div class="multi-list">
                         <ul class="fade-li">
-                            <li><span>Me</span>: Primary designer & programmer</li>
-                            <li><span>Few friends</span>: QA testers</li>
+                            <li><span>Me</span>: designer • programmer</li>
+                            <li><span>Few friends</span>: QA</li>
                         </ul>
                     </div>
                 </article>

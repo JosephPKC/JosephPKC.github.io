@@ -14,6 +14,8 @@ jQuery(document).ready(function() {
 
 function loadProjectInfo(id, name, techs, des, tags, type, start, end, link, order, size, cache) {
     /* Grab the name */
+    
+    jQuery('title').text('JP | ' + name);
 //    jQuery('#project-name').text(name);
     jQuery('.project-name').text(name);
     

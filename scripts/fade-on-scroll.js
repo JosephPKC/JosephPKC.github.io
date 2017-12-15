@@ -23,7 +23,7 @@ jQuery(document).ready(function() {
 
 
 function getElements() {
-    return jQuery('.fade, .fade-li > li, .fade-art > h1, .fade-art > h2, .fade-art > h3, .fade-art > p, .tab, .fade-img > a, .fade-img > p');
+    return jQuery('.fade, .fade-li > li, .fade-art > h1, .fade-art > h2, .fade-art > h3, .fade-art > p, .tab, .fade-img > img, .fade-img > p');
 }
 
 

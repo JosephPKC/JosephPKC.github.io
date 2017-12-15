@@ -123,6 +123,10 @@ nav a:hover {
     text-align: left;
 }
 
+#interests {
+    text-align: left;
+}
+
 #skills div {
     margin: 0 auto;
 }
@@ -137,7 +141,7 @@ nav a:hover {
     justify-content: center;
 }
 
-#content #about #uci-wrapper, #content #about #pcc-wrapper {
+#content #about #uci-wrapper, #content #about #pcc-wrapper, #content #about #interests-wrapper {
     align-items: center;
     display: flex;
     flex-direction: column;
