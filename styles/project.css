@@ -123,7 +123,7 @@
 .caption {
     font-size: 12px;
     font-style: italic;
-    text-align: center;
+    text-align: center !important;
     width: inherit;
 }
 

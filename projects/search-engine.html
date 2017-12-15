@@ -52,14 +52,72 @@
                 <!-- content -->
                 <article class="fade-art" id="body">
                     <h2 id="about">About</h2>
-        
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is a local search engine developed for a course on information retrieval at UCI (COMPSCI 121). It stores document data in an <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Inverted_index">inverted index</a>, and ranks these documents against a user query. These documents were provided to us by the teaching staff, and consist of web pages in the <a class="pulse" target="_new" href="http://www.ics.uci.edu/">ics.uci.edu</a> domain.</p>
+                    
                     <h2 id="use">Usage</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;You can use <span class="project-name"></span> by running it, and typing in a search query. It will then display the top K documents for your search query as url links. It will also inform you how many documents were found, and how long it took. When running the program, you can choose to set K, and decide whether you want to preload data or not. Preloading data will take some time initially, but will speed up all subsequent queries at the cost of extra space usage.</p>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/search-engine/search-engine-i3.png">
+                            <img id="i3" src="../assets/images/search-engine/search-engine-i3.png">
+                        </a>
+                        <p class="caption">Searching <span>computers</span>. Seeing as how the documents are on the information and computer science domain of UCI, it makes sense that there are 11,526 relevant documents, and the top 20 all have a score of 1.0.</p>
+                    </div>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/search-engine/search-engine-i4.png">
+                            <img id="i4" src="../assets/images/search-engine/search-engine-i4.png">
+                        </a>
+                        <p class="caption">Searching <span>geometric sequences</span>. Now, none of the documents have a score of 1.0, and it seems to fall off after 0.7. Also, there are much less relevant documents- about 1,425.</p>
+                    </div>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/search-engine/search-engine-i5.png">
+                            <img id="i5" src="../assets/images/search-engine/search-engine-i5.png">
+                        </a>
+                        <p class="caption">Searching <span>dogs in park</span>. Now, the most relevant document has a score of 0.17, and there are only 252 relevant documents.</p>
+                    </div>
                     
                     <h2 id="dev">Development</h2>
+                    <h3>Overview</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> was made in Python 2.7 with <a class="pulse" target="_new" href="https://www.jetbrains.com/pycharm/">Pycharm</a>. I also used a few libraries: <a class="pulse" target="_new" href="https://www.nltk.org">NLTK</a>, <a class="pulse" target="_new" href="https://www.crummy.com/software/BeautifulSoup">BeautifulSoup</a>, and <a class="pulse" target="_new" href="https://www.github.com/ahupp/python-magic">Python Magic</a>. The databases were built in SQLite3 using <a class="pulse" target="_new" href="https://www.sqlitestudio.pl">SQLiteStudio</a>. The program stores data on each document in the database, calculates a few parameters, and then ranks each document against a user query to determine relevance.</p>
                     
+                    <h3>Inverted Index</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> uses inverted indexing to create a database filled with document data. This maps words to documents and their frequencies in that document. This inverted index is preprocessed before through an indexing script. The saved database is then used by the program.</p>
+                    
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;During the indexing, <span class="project-name"></span> parses every html document via BeautifulSoup, ignoring certain files such as images and videos with Python Magic. Once the document is parsed, the program uses NLTK to tokenize the document into words. It ignores <a class="pulse" target="_new" href="https://www.en.wikipedia.org/wiki/Stop_words">stop words</a> and other unwanted strings via NLTK and regex, and then <a class="pulse" target="_new" href="https://www.en.wikipedia.org/wiki/Stemming">stems</a> the words. Once the documents are tokenized, it stores the words, the document, and their frequencies.</p>
+                    
+                    <h3>Weight Calculations</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Once all of the documents are indexed, <span class="project-name"></span> calculates their <a class="pulse" target="_new" href="https://www.en.wikipedia.org/wiki/Tf-idf">tf-idf weights</a>. To do this, it also needs every word's document frequencies. This can be done during a search, or if preloaded, before a search begins. If preloaded, the document frequencies and the tf-idf weights are stored in a separate database.</p>
+                    
+                    <h3>Ranking</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;When a search query arrives, <span class="project-name"></span> ranks both the query and every document. It first calculates the tf-idf weight for the query, and then normalizes all of the weights. Finally, it ranks the query against every document via the <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Vector_space_model">vector-space model</a> and <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Cosine_similarity">cosine similarity</a>. Once the ranking is complete, <span class="project-name"></span> can create SELECT queries to the database to get a sorted list of documents.</p>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/search-engine/search-engine-i1.png">
+                            <img id="i1" src="../assets/images/search-engine/search-engine-i1.png">
+                        </a>
+                        <p class="caption">A part of the database. Here you see the term, the folder and file (document), frequency, strong frequency (header frequency), and normalized tf-idf weight.</p>
+                    </div>
+                    
+                    <div class="img-wrapper fade-img">
+                        <a target="_new" href="../assets/images/search-engine/search-engine-i2.png">
+                            <img id="i2" src="../assets/images/search-engine/search-engine-i2.png">
+                        </a>
+                        <p class="caption">A part of the database. Here you see the terms, and the document frequencies.</p>
+                    </div>
+
                     <h2 id="future">Future</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is a completed project. It was made for a course at UCI, and it does everything it is supposed to do. However, that does not mean there cannot be any improvements. Lowering the space cost of the databases, and the time cost of searching can also be useful especially in a search engine. More complex algorithms for scoring and ranking documents against a query can improve the <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Precision_and_recall">precision</a> of the search engine (which is much more important than recall).</p>
 					
 					<h2 id="team">Team</h2>
+                    <div class="multi-list">
+                        <ul class="fade-li">
+                            <li><span>Me</span>: programmer</li>
+                            <li><span>Alex Dunn</span>: programmer | <a class="pulse" target="_new" href="https://github.com/exdunn">Github</a> | <a class="pulse" target="_new" href="https://www.linkedin.com/in/alex-dunn-46766554">Linkedin</a></li>
+                            <li><span>Arlene Lim</span>: programmer | <a class="pulse" target="_new" href="https://www.linkedin.com/in/arlene-lim-13635a141">Linkedin</a></li>
+                        </ul>
+                    </div>
                     
                 </article>
                 <div class="fade-art" id="footing">
