@@ -105,7 +105,7 @@
         "techs": [
             "Keras", "Python", "Scikit"
         ],
-        "des": "Random forests and neural networks trained on rainfall data.",
+        "des": "Learners trained on rainfall data.",
         "img": "riptide.png",
         "tags": [
             "School", "Team", "Machine Learning"  
