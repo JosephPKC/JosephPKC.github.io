@@ -39,6 +39,10 @@
         width: 100%;
     }
     
+    #header-icon {
+        justify-content: flex-start;   
+    }
+    
     #nav-bar {
         align-items: flex-end;
     }
@@ -216,6 +220,20 @@
         0% {
             color: #565656;
         }
+        100% {
+            color: #3CC47C;
+        }
+    }
+    
+    .pulse:hover h1 {
+        animation: pulse-h1 1s ease 0s alternate infinite none running;
+    }
+    
+    @keyframes pulse-h1 {
+        0% {
+            color: #062F4F;
+        }
+        
         100% {
             color: #3CC47C;
         }
