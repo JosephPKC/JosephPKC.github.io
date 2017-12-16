@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial=scale=1, maximum-scale=1">
     <title></title>
     
-    <link rel="icon" href="../assets/images/logo-small-transparent.png">
-    
+	<link rel="icon" href="../assets/images/logo-small-transparent.png">
+	
     <!-- Font Imports -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
     <link href="../assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
         <div class="proj-wrapper">
             <header id="header">
             <div id="header-icon">
-                <a class="pulse" href="../index.html">
+				<a class="pulse" href="../index.html">
                     <img src="../assets/images/logo-small.png">
                 </a>
                 <h1>JOSEPH PARK</h1>
@@ -51,21 +51,66 @@
                 <div class="fade-art" id="sub-heading">
                     <p id="project-tags"></p>
                     <p id="project-techs"></p>
-                    <a class="button ghost-pulse fade" id="github" href="">Github Link</a>
+                    <a class="button ghost-pulse fade" id="devpost" target="_new" href="https://devpost.com/software/handwritten-mathematical-computation">Devpost</a>
+                    <a class="button ghost-pulse fade" id="github" target="_new" href="">Github</a>
                     <br>
                 </div>
                 <!-- content -->
                 <article class="fade-art" id="body">
                     <h2 id="about">About</h2>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is a <a class="pulse" target="_new" href="https://hacktech2017.devpost.com/">Hacktech 2017</a> project. We utilize various APIs in order to calculate mathematical equations written on a touchpad: the <a class="pulse" target="_new" href="https://www.synaptics.com/">Synaptics Touchpad</a> API to read in sensor data from the touchpad, the <a class="pulse" target="_new" href="https://cloud.google.com/vision/">Google Cloud Vision</a> API for image recognition to determine what was written onto the touchpad, and the <a class="pulse" target="_new" href="https://www.wolframalpha.com/">Wolfram Alpha</a> API to calculate the mathematical equation.</p>
         
                     <h2 id="use">Usage</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;To use <span class="project-name"></span>, you run the image script. Connect a Synaptics touchpad, and begin writing whatever equation onto it. Once you stop writing, the program will capture the writing as an image and display it.</p>
+                    
+                    <div class="img-wrapper fade-img">
+                        <img id="i1" src="../assets/images/math-comp/hand-written-math-i1.png">
+                        <p class="caption">Writing out 7 + 7 into the touchpad. It recognizes the equation correctly, and gives the correct answer.</p>
+                    </div>
+                    
+                    <div class="img-wrapper fade-img">
+                        <img id="i4" src="../assets/images/math-comp/hand-written-math-i4.png">
+                        <p class="caption">Writing out a smiley face. Unfortunately, it did not recognize it as a smiley face.</p>
+                    </div>
+                    
+                    <div class="img-wrapper fade-img">
+                        <img id="i5" src="../assets/images/math-comp/hand-written-math-i5.png">
+                        <p class="caption">Writing out sin 7/2. At least it got the sine part right.</p>
+                    </div>
+                    
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Once the image is saved, run the main script, and it will send the image through Google Clouda Vision's learner, and spit out a math equation string. The string is then taken through Wolfram Alpha, and an answer is displayed.</p>
                     
                     <h2 id="dev">Development</h2>
+                    <h3>Overview</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> was made in Python 2.7. There were several components to this project: the touchpad interface, the image recognition, the calculation, and the user interface.</p>
+                    
+                    <h3>Touchpad Input</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The input from the Synaptics touchpad was given as a 2d array. The code for this was given to us by Synaptics with the touchpad, so all we had to do was create an interface for the code. We eventually made the interface grab the 2d array, and create an image file of it and save it.</p>
+                    
+                    <h3>Image Recognition</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The creation of the image was due to how the image recognition worked. It required an image, so that it can try and predict what it was saying. Once the image was saved, it was passed into the Google Cloud Vision interface. It tried to figure what the equation was, and sent it back as a string.</p>
+                    
+                    <h3>Calculation</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;After the string is given by Google Cloud Vision, the interface sends that string to Wolfram Alpha. It then calculates it and sends back a dictionary of answers- all sorts of different answers. This could be just the direct answer, a graph showing how the equation grew, or even limits. We decided that we just wanted to most straightforward answer, and chose specific ones for different types of equations- the direct answer for simple equations, variable assignments for multi-variable equations, etc.</p>
+                    
+                    <h3>User Interface</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;All of this was displayed to the user via a user interface created in <a class="pulse" target="_new" href="https://www.pygame.org/news">pygame</a>. The user interface showed the image that was captured from the touchpad, what Google Cloud Vision thought the image was saying, and what Wolfram Alpha thought the answer was.</p>
                     
                     <h2 id="future">Future</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is a completed project. At Hacktech, we were trying to figure out the best way to incorporate as many APIs as possible. The best we could think of in a short amount of time was a calculator that took input in the form of hand-writing on a touchpad.</p>
+                    
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;There are many improvements that can be made for<span class="project-name"></span>. The most glaring issue we found was that it just simply did not recognize equations well. We later realized that at the time, the image recognition API we were using was not optimized for numbers or equations. Thus, a big improvement would be to either use a different image recognition API that is more optimized for numbers, or train our own model. Another big improvement would be fitting the entire program into a single executable. Currently, you must run two diffferent ones- one for the image capture, and one for the calculation. Finally, the user interface could use a lot of work.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Despite all of the shortcomings of <span class="project-name"></span>, I am still proud of the work my team and I had done keeping in mind that we only had 3 days to learn the APIs and create this project. While we didn't win any prizes (as there were many projects that were very good and much better than ours), I believe we still made something we can be proud of.</p>
 					
 					<h2 id="team">Team</h2>
-                    
+                    <div class="multi-list">
+						<ul class="fade-li">
+							<li><span>Me</span>: programmer</li>
+                            <li><span>Paul Morillo</span>: programmer</li>
+                            <li><span>Kevin Permana</span>: programmer | <a class="pulse" target="_new" href="https://github.com/kagekyaa">Github</a> • <a class="pulse" target="_new" href="https://www.linkedin.com/in/kpermana">Linkedin</a></li>
+                            <li><span>Kevin Yao</span>: programmer</li>
+						</ul>
+					</div>
                 </article>
                 <div class="fade-art" id="footing">
                     <h3>Check out my other projects!</h3>
