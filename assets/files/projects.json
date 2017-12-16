@@ -4,7 +4,7 @@
         "techs": [
             "Discord API", "LoL API", "Python"
         ],
-        "des": "Discord LoL chat bot.",
+        "des": "Discord chat bot for LoL and music.",
         "img": "disco-bot.png",
         "tags": [
             "Personal", "Solo", "Bot"
@@ -23,7 +23,7 @@
         "techs": [
             "C#", "Sqlite3", "Unity3D"
         ],
-        "des": "Database lookup for DnD 5e.",
+        "des": "Database uility for DnD 5e content.",
         "img": "dnd-5e-lookup.png",
         "tags": [
           "Personal", "Solo", "Database", "GUI"  
@@ -83,7 +83,7 @@
         "techs": [
             "C#", "Unity3D"
         ],
-        "des": "3D online-multiplayer spell-fighting game.",
+        "des": "3D multiplayer spell-fighting game.",
         "img": "ruinstone.png",
         "tags": [
             "Personal", "Team", "Game", "Online"
@@ -127,7 +127,7 @@
         "techs": [
             "Google Cloud Vision", "Python", "Synaptics", "Wolfram Alpha"
         ],
-        "des": "Hand-written mathematical equation calculator.",
+        "des": "Touchpad-based math equation calculator.",
         "img": "hand-written-math.png",
         "tags": [
             "Personal", "Team", "Calculator", "API"  
@@ -149,7 +149,7 @@
         "techs": [
             "C#", "Unity3D"
         ],
-        "des": "2D local-multiplayer brawl game.",
+        "des": "2D multiplayer brawling game.",
         "img": "unfeel-tournament.png",
         "tags": [
             "School", "Team", "Game"  
