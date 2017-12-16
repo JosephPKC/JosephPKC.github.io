@@ -52,18 +52,40 @@
                 <!-- content -->
                 <article class="fade-art" id="body">
                     <h2 id="about">About</h2>
-					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span></p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is a machine learning project for a course in data mining and machine learning at UCI (COMPSCI 178). The goal of this project was to place as high as possible in a class competition on <a class="pulse" target="_new" href="https://www.kaggle.com/c/uc-irvine-2017w-cs178">Kaggle</a>. The placement is dependent on the score your learner receives as it tries to predict data; the higher the score, the better.</p>
+                    
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> got a score of 0.78668, and placed 28 out of 212 teams. The first place team had a score of 0.76893, which I believe they managed through lots of optimization in learning parameters.</p>
         
                     <h2 id="use">Usage</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> has several different components: a <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Artificial_neural_network">neural network</a>, a <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Random_forest">random forest</a>, and an <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Ensemble_learning">ensemble</a> of the two. Each one is trained on rainfall location data, based on processed infrared satellite image information.</p>
+                    
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;To use <span class="project-name"></span>, you simply run any of the three scripts pertaining to the three learners. Make sure you have data of some kind available for it to train on. You can then give it separate test data, and it will attempt to predict based on its model. It will be given scores based on how well it predicted the data.</p>
                     
                     <h2 id="dev">Development</h2>
+                    <h3>Overview</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> was made in Python 2.7. A basic, generic learner was provided by the teaching staff. We utilized many different python libaries to train and evaluate our models: <a class="pulse" target="_new" href="https://keras.io/">keras</a>, <a class="pulse" target="_new" href="http://scikit-learn.org/stable/">scikit-learn</a>, <a class="pulse" target="_new" href="http://www.numpy.org/">numpy</a>, <a class="pulse" target="_new" href="https://matplotlib.org/">matplotlib</a>, and <a class="pulse" target="_new" href="https://docs.python.org/2/library/collections.html">collections</a>.</p>
+                    
+                    <h3>Neural Network</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The <span>neural network</span> was created and trained with keras, and evaluated with scikit-learn. <span>Neural networks</span> are a series of layers, each of which consists of nodes. At the end of each layer is an activation function that transforms the data of that layer for the next layer. Essentially, a <span>neural network</span> is a series of many linear equations, where each set of linear equations transforms their outputs as weights for the next set. There are three types of layers: input, hidden, and output. The input layer begins initialized at random, all 0's, or by some other initializer. The output layer creates a single, or more outputs. The hidden layers transform the data from the input to the output.</p>
+                    
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Our <span>neural network</span> began with a single hidden layer. I tried to make the <span>neural network</span> simple- having only a single hidden layer, and a few nodes. The network ended up performing extremely poorly, around 0.5 to 0.6. I then made it much more complex, adding more layers and many more nodes- around 50 nodes. The <span>neural network</span> performed much better, but still poorly relative to the other learners. We initially attributed this poor performance to <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Overfitting">overfitting</a> (a learner being too complex so that it cannot make general predictions accurately), but later found that the network was actually underfitting (a learner being too simple so that it cannot make any accurate predictions). I increased the number of hidden layers and nodes, and added some optimizations, such as initializing the input layer with uniformly random numbers, setting the <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Activation_function">activation function</a> to be the <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Rectifier_(neural_networks)">rectifier function</a> for the hidden layers and the <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Sigmoid_function">sigmoid function</a> for the final layer, and setting the <span>neural network</span> to minimize the <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Cross_entropy">binary cross-entropy loss</a>. It ended up performing about as well as the other learners.</p>
+                    
+                    <h3>Random Forest</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Our <span>random forest</span> was created from the base learner. A <span>random forest</span> is simply a group of decision trees. Each tree is trained with a random subset of the data or features, and each tree makes its own prediction. The <span>random forest</span> then decides on the actual prediction by taking some kind of majority vote.</p>
+                    
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;For our <span>random forest</span>, we also <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Gradient_boosting">gradient boosted</a> every single decision tree. We lowered the number of features selected, and provided parameters for the maximum tree height allowed, minimum number of leaves for each tree, and the total number of trees in the forest. We constantly changed those parameters as we were training and testing the learner, to see which combination performed the best. In the end, these changes did not contribute too much to the overall score, and the <span>random forest</span> ended up performing much better than the <span>neural network</span>.</p>
+                    
+                    <h3>Ensemble</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The <span>ensemble</span> was built directly from the <span>neural network</span> and <span>random forest</span> scripts. Each learner was trained on the same data, and would make their own predictions. The <span>ensemble</span> would then choose the majority prediction.</p>
                     
                     <h2 id="future">Future</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is a completed project made for a course. There are no plans to improve it or revive it, but I do have plans on entering some other competitions on Kaggle.</p>
 					
 					<h2 id="team">Team</h2>
                     <div class="multi-list">
 						<ul class="fade-li">
-							<li><span></span></li>
+							<li><span>Me</span>: programmer</li>
+                            <li><span>Kevin Permana</span>: programmer | <a class="pulse" target="_new" href="https://github.com/kagekyaa">Github</a> • <a class="pulse" target="_new" href="https://www.linkedin.com/in/kpermana">Linkedin</a></li>
 						</ul>
 					</div>
                 </article>
