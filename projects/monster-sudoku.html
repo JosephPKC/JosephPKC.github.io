@@ -1,92 +1,157 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Joseph Park | Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Include css stylesheets and js script sheets here -->
-        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
-        <link rel="stylesheet" type="text/css" href="../styles/main.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/project-page.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/monster-sudoku.css">
-        <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-        <script src="../scripts/anchor-top.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1, maximum-scale=1">
+    <title></title>
+    
+	<link rel="icon" href="../assets/images/logo-small-transparent.png">
+	
+    <!-- Font Imports -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <link href="../assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- CSS Styles -->
+    <link href="../styles/main.css"  type="text/css" rel="stylesheet">
+    <link href="../styles/layout.css" type="text/css" rel="stylesheet">
+    <link href="../styles/project.css" type="text/css" rel="stylesheet">
+    <link href="../styles/responsive.css" type="text/css" rel="stylesheet">
+    
+    <!-- JS Scripts -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="../scripts/anchor-top.js"></script>
+    <script src="../scripts/nav-scrolls.js"></script>
+    <script src="../scripts/load-project-info.js"></script>
+    <script src="../scripts/fade-on-scroll.js"></script>
+</head>
     <body>
-        <div class="wrapper">
+        <div class="proj-wrapper">
             <header id="header">
-                <p id="header-name">JOSEPH PARK</p>
-            </header>
-            <nav id="nav">
-                <ul>
-                    <li><a id="about" href="./../index.html">ABOUT</a></li>
-                    <li><a id="projects" class="active" href="./../projects.html">PROJECTS</a></li>
-                    <li><a id="contact" href="./../contact.html">CONTACT</a></li>
-                </ul>
+            <div id="header-icon">
+				<a class="pulse" href="../index.html">
+                    <img src="../assets/images/logo-small.png">
+                </a>
+                <h1>JOSEPH PARK</h1>
+            </div>
+            <nav id="content-nav-bar">
+                <a class="pulse" id="nav-about" href="#about">About</a>
+                <a class="pulse" id="nav-use" href="#use">Usage</a>
+                <a class="pulse" id="nav-dev" href="#dev">Development</a>
+                <a class="pulse" id="nav-future" href="#future">Future</a>
+                <a class="pulse" id="nav-team" href="#team">Team</a>
+				<a class="pulse" id="nav-end" href="#footing">↓ End</a>
+                <a class="pulse" id="to-projects" href="../index.html#to-projects">← More Projects</a>
             </nav>
-            <div class="body" id="body">
-                <div id="heading">
-                    <h1>Monster Sudoku</h1>
-                    <p>Jan 2016 - Mar 2016</p>
+            </header>
+            <div id="content">
+                <div class="fade-art" id="heading">
+                    <h1 class="project-name"></h1>
+                    <p></p>
                 </div>
-                <div id="sub-heading">
-                    <p>School, Sudoku Solver, <strong>Completed</strong></p>
-                    <a class="button-small" id="github" href="https://github.com/JosephPKC/MonsterSudoku">Github Link</a>
+                <div class="fade-art" id="sub-heading">
+                    <p id="project-tags"></p>
+                    <p id="project-techs"></p>
+                    <a class="button ghost-pulse fade" id="github" target="_new" href="">Github</a>
+                    <br>
                 </div>
-                <div id="intro">
-                    <h1>What is Monster Sudoku?</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Monster Sudoku is an NxN sudoku solver made for an artificial intelligence course at UCI (COMP SCI 171). The solver uses a variety search heuristics to improve performance (especially on larger puzzles), and employs <a href="https://en.wikipedia.org/wiki/Backtracking">backtracking search</a> to solve.</p>
-                </div>
-                <!--- content is generally where project pages diverge -->
-                <div id="content">
-                    <h1>Development</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Monster Sudoku was created in C++ using <a href="http://doc.qt.io/qtcreator/">Qt Creator</a>. It can generate random puzzles based on size and number of pre-filled cells, or accept puzzles from file input. It will then try to solve the puzzles, using backtracking search, until it either finds a solution, or decides there is no solution.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The solver stores the puzzle in a custom data structure that encapsulates a 2d array. The solver then works through the puzzle, via backtracking search. The solver also utilizes many different heuristics to improve performance. This includes:</p>
-                    <br>
-                    <ul>
-                        <li><strong>Minimum Remaining Values</strong> - Helps decide which cell to try to solve next. The cell with the smallest domain, or the minimum remaining values has a higher chance of choosing the correct value, and can remove impossible values early on.</li>
-                        <li><strong>Least Constraining Value</strong> - Helps decide which value to choose for a cell. If this value constrains the least number of cells by being chosen, then it is less likely to fail and cause a backtrack.</li>
-                        <li><strong>Degrees Heuristic</strong> - Again helps decide which cell to solve next. Choosing the cell that has the highest number of constraints on other unassigned cells helps reduce the domains of those cells.</li>
-                        <li><strong>Arc Consistency</strong> - Ensures that impossible or illegal values are removed from cells before trying to solve another cell. </li>
-                        <li><strong>Forward Checking</strong> - Determine the effect of a value assignment to a cell by checkings its neighbors and constraints.</li>
-                    </ul>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The solver first checks and maintains arc consistency when given a puzzle. Puzzles begin with some of the cells already solved. This means that the solver can reduce domains of the solved cells neighbors to reduce the search space. Afterwards, it decides on a cell to try and solve using the Minimum Remaining Values heuristic. If there is more than one cell that has the smallest domain, the ties are broken via the Degrees heuristic. If there are still ties, then the first one is chosen.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;If the chosen cell has a domain size of 1, then the answer is simple: choose the remaining value. However, if there is more than one value in the domain (most likely case), then the solver decides on which one to try using the Least Constraining Value heuristic.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Once a value is chosen, the solver records this action and that depth its in, and maintains arc consistency by propagating through the cell's neighbors, and ensuring that there are no illegal values in their domains. For each value that needs to be removed, the solver records that action as well. Once finished, the solver chooses another cell to solve. If there are no other cells left, then the solver checks to make sure each cell has an assigned value. If each cell does have an assigned value, the solver has found a solution and ends. however, if at least one cell does not have a value, then the solver must backtrack.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;To backtrack, the solver goes through each recorded action in that depth, and inverts the action. The solver then marks the chosen value for the cell as illegal, and chooses the next best value following the heuristics. If the solver cannot backtrack any further, the solver ends with no solution.</p>
-                    <br>
-                    <h1>Closing Thoughts</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The solve algorithm could have definitely been better. For larger puzzles, where n >= 12, the solver potentially took hours to solve. Inefficient and slow algorithms for the heuristics and search are to blame. One of the more obvious improvements that could have been made was to pre-process the degrees of each cell, and simply modify them as needed, instead of calculating them at every iteration.</p>
-                </div>
-                <div id="footing">
-                    <h1>The Team and Contributers</h1>
-                    <ul>
-                        <li><strong>Joseph Park (Me)</strong> - designer, programmer</li>
-                    </ul>
-                    <div id="up-next">
-                        <p>NEXT</p>
-                        <p id="next-project">Ultron</p>
-                        <a class="button-small" href="./ultron.html">Next</a>
+                <!-- content -->
+                <article class="fade-art" id="body">
+                    <h2 id="about">About</h2>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is an NxN sudoku generator and solver. This was made for an artificial intelligence course at UCI (COMPSCI 171). <span class="project-name"></span> can generate random puzzles of different sizes, and solve them. It can also accept puzzles from text files.</p>
+        
+                    <h2 id="use">Usage</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp; To use <span class="project-name"></span>, you can either give it a text file containing a puzzle or generate a random puzzle instead. Once a puzzle is generated, the solver will attempt to solve the puzzle. If it finds a solution, it will display the completed puzzle. If not, then it will state that there is no solution.</p>
+                    
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> also keeps track of many different things. The most notable one is time elapsed. It keeps track of time for many different parts of the searching algorithm.</p>
+                    
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Finally, <span class="project-name"></span> also has various heuristic flags that can be enabled. This will tell <span class="project-name"></span> to use that heuristic in the search algorithm. The heuristics are as follows:</p>
+                    
+                    <div class="multi-list">
+                        <ul class="fade-li">
+                            <li><span>Minimum remaining values (MRV)</span>: Determine which variable (or cell in this case) to try and solve next by looking at their domains. Variables with smaller domains are more likely to have the correct value chosen than ones with larger domains.</li>
+                            <li><span>Least constraining value (LCV)</span>: Determine which value to assign to a variable by choosing the value that will affect the least number of constraints. A value that affects a smaller number of constraints is less likely to cause a failure.</li>
+                            <li><span>Degrees heuristic (DH)</span>: Determine which variable to solve next by choosing the variable with the highest number of constraints to unassigned variables. This helps reduce as many domains as possible.</li>
+                            <li><span>Arc consistency</span>: Ensure that impossible or illegal values are removed from variables before trying to solve another variable. This ensures consistency, and reduces the likelihood of choosing a failing value.</li>
+                            <li><span>Forward checking</span>: Determine how a value assignment will affect the variable's neighbors before assigning it.</li>
+                        </ul>
+                    </div>
+                    
+                    <h2 id="dev">Development</h2>
+                    <h3>Overview</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> was made in C++ using <a class="pulse" target="_new" href="http://doc.qt.io/qtcreator/">Qt Creator</a>. The solver uses <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Backtracking">backtracking search</a> with the help of some heuristic algorithms to solve random puzzles. The solver will either find a solution for a given puzzle, determine that there is no solution, or time out.</p>
+                    
+                    <h3>Constraint Satisfaction Problem</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Sudoku puzzles can be modelled as <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Constraint_satisfaction_problem">constraint satisfaction problems</a>, which are mathematical problems that have a set of constraints that need to be satisfied. This can be represented by a set of variables, each with a domain of possible values, and a set of rules or constraints relating the variables together. For a sudoku puzzle, the variables are each of the cells, the domains would be the numbers 1 - 9 (or higher for larger puzzles), and the constraints would be that each number must appear exactly once per row, column, and box.</p>
+                    
+                    <h3>Searching</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> uses backtracking search to solve puzzles. Essentially, it goes through every single cell, and assigns it a value. If at any time, <span class="project-name"></span> cannot assign a value to an empty cell, it backtracks. If the solver cannot backtrack anymore, it considers the puzzle unsolvable.</p>
+                    
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> uses the heuristics listed above (if enabled), to aid and speed up the search. Before choosing a cell to solve, the solver performs a check across each constraint to maintain <span>arc consistency</span>. Afterwards, the solver chooses a cell via the <span>DH</span> and <span>MRV</span> heuristics. Finally, it decides on a value for that cell via the <span>LCV</span> and <span>forward check</span> heuristics. If any of these heuristics are disabled, then it simply skips those steps. If none of these heuristics are enabled, then it simply chooses a random cell, and a random value for it.</p>
+                    
+                    <h3>Backtracking</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;When <span class="project-name"></span> finds that it cannot assign a value to an unassigned cell, it backtracks. To do this, the solver keeps track in a bookkeeping data structure of each assignment and each domain reduction, and groups them by step. When the solver needs to backtrack, it simply undos the most recent step of actions. The solver knows when it can no longer backtrack by seeing that the bookkeeping is empty.</p>
+                    
+                    <h3>Time Keeping</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> also keeps track of time. It keeps track of time spent per heuristic, the total time, and bookkeeping time. This is used to analyze the heuristics, different combinations of heuristics, and the parameters for the puzzle.</p>
+                    
+                    <h2 id="future">Future</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is not exactly a strong solver. It has trouble solving 12+ size puzzles due to inefficient algorithms. A few optimizations can greatly speed up the searching process. The most notable one is the <span>degrees heuristic</span>. Currently, the solver only searches for the neighbors when it needs to. This means that at every step, it must calculate the neighbors of every single cell to determine which cell to choose. Instead, this can be pre-computed and stored in the data structure. Whenever a cell is assigned, that cell's neighbors will have their degrees modified.</p>
+					
+					<h2 id="team">Team</h2>
+                    <div class="multi-list">
+						<ul class="fade-li">
+							<li><span>Me</span>: programmer</li>
+						</ul>
+					</div>
+                </article>
+                <div class="fade-art" id="footing">
+                    <h3>Check out my other projects!</h3>
+                    <div id="foot-nav-wrapper">
+                        <div class="fade-art" id="previous">
+                            <p class="foot-nav-text">PREVIOUS</p>
+                            <p id="previous-project"></p>
+                            <p id="previous-des"></p>
+                            <a class="button ghost-pulse fade" href="">Previous</a>
+                        </div>
+                        <div class="fade-art" id="next">
+                            <p class="foot-nav-text">NEXT</p>
+                            <p id="next-project"></p>
+                            <p id="next-des"></p>
+                            <a class="button ghost-pulse fade" href="">Next</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <footer id="footer">
-                <a class="anchor-top" href="#">
-                    <i class="fa fa-arrow-circle-up"></i>
-                </a>
-                <div id="font-awesome-attr">
+                <div id="anchor-top">
+                    <a class="button ghost-pulse" href="">
+                        ↑ Back to Top
+                    </a>
+                </div>
+                <div id="contact-icons">
+                    <a target="_new" href="https://www.linkedin.com/in/josephpkc">
+                        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <a target="_new" href="https://www.github.com/JosephPKC">
+                        <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div id="footer-text">
                     <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
                 </div>
             </footer>
         </div>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
