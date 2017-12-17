@@ -1,0 +1,30 @@
+<div id="intro">
+                    <h1>What is Ultron?</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Ultron is an English language processor made for a data structures course at PCC (CS 8). Ultron accepts English sentences, parses and analyzes them, stores meaningful words and their context in a database. Then, when asked a question, Ultron will query the database to see if it knows the answer to the question.</p>
+                </div>
+                <!--- content is generally where project pages diverge -->
+                <div id="content">
+                    <h1>Development</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Ultron was created for the final project on data structures. We had to come up with some idea that utilized data structures we have learned in a meaningful way. This included: linked lists, stacks, queues, heaps, trees, and graphs. My team and I decided to try our hands at <a href="https://en.wikipedia.org/wiki/Natural_language_processing">natural language processing</a>.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Ultron was developed in C++, and its database in Sqlite3. Ultron has a secondary database, called the ontology. Here, most of the common English words, their definitions, and parts of speech are stored. Ultron queries this database to analyze user sentences.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;When a user types in a sentence, Ultron first tokenizes it, and assigns each word with a list of possible parts of speech by querying the ontology database. Once each token is given a domain of parts of speech, Ultron begins parsing the tokens, to determine which parts of speech combination is the most likely.</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Ultron parses the tokens via <a href="https://en.wikipedia.org/wiki/Recursive_descent_parser">recursive descent parsing</a>. Ultron follows a set of <a href="https://en.wikipedia.org/wiki/Context-free_grammar">context-free grammar</a> rules, given by a multi-map, and follows the rules on the tokens to create <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">syntax trees</a>. It follows the rules, checks if the current token can work with the rules, assigns an appropriate part of speech, and repeats. If at any time, a token cannot follow the rules, it backtracks and tries another possibility. If the parser decides that this sentence cannot follow the rules at all, the parser rejects it. Otherwise, it stores each non-stop word and its assigned part of speech in a database.</p>
+                    <br>
+                    <img id="i1" src="../images/ultron-i1.png">
+                    <p class="caption">An example context-free grammar and syntax tree. Courtesy of http://www.cs.uccs.edu/~jkalita/work/cs589/2010/12Grammars.pdf</p>
+                    <br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;When Ultron is asked a question instead of a sentence, it will perform the same tokenizing and parsing. However, instead of storing the tokens, it will check specific tokens and look for specific words in the database. If those words are found, it will answer the question.</p>
+                    <br>
+                    <img id="i2" src="../images/ultron-i2.png">
+                    <p class="caption">We tell Ultron that "John throws the ball," and then ask him "What did John throw?" Ultron answers with "ball."</p>
+                    <br>
+                </div>
+                <div id="footing">
+                    <h1>The Team</h1>
+                    <ul>
+                        <li><strong>Joseph Park (Me)</strong> - designer, programmer</li>
+                        <li><strong>Tony Lim</strong>: <a href="https://github.com/atomic">Github</a> <a href="https://www.linkedin.com/in/atomictheorist">Linkedin</a> - designer, programmer</li>
+                    </ul> 
