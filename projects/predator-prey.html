@@ -1,101 +1,171 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Joseph Park | Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Include css stylesheets and js script sheets here -->
-        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
-        <link rel="stylesheet" type="text/css" href="../styles/main.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/project-page.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/predator-prey.css">
-        <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-        <script src="../scripts/anchor-top.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1, maximum-scale=1">
+    <title></title>
+    
+	<link rel="icon" href="../assets/images/logo-small-transparent.png">
+	
+    <!-- Font Imports -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <link href="../assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- CSS Styles -->
+    <link href="../styles/main.css"  type="text/css" rel="stylesheet">
+    <link href="../styles/layout.css" type="text/css" rel="stylesheet">
+    <link href="../styles/project.css" type="text/css" rel="stylesheet">
+    <link href="../styles/responsive.css" type="text/css" rel="stylesheet">
+    
+    <!-- JS Scripts -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="../scripts/anchor-top.js"></script>
+    <script src="../scripts/nav-scrolls.js"></script>
+    <script src="../scripts/load-project-info.js"></script>
+    <script src="../scripts/fade-on-scroll.js"></script>
+</head>
     <body>
-        <div class="wrapper">
+        <div class="proj-wrapper">
             <header id="header">
-                <p id="header-name">JOSEPH PARK</p>
-            </header>
-            <nav id="nav">
-                <ul>
-                    <li><a id="about" href="./../index.html">ABOUT</a></li>
-                    <li><a id="projects" class="active" href="./../projects.html">PROJECTS</a></li>
-                    <li><a id="contact" href="./../contact.html">CONTACT</a></li>
-                </ul>
+            <div id="header-icon">
+				<a class="pulse" href="../index.html">
+                    <img src="../assets/images/logo-small.png">
+                </a>
+                <h1>JOSEPH PARK</h1>
+            </div>
+            <nav id="content-nav-bar">
+                <a class="pulse" id="nav-about" href="#about">About</a>
+                <a class="pulse" id="nav-use" href="#use">Usage</a>
+                <a class="pulse" id="nav-dev" href="#dev">Development</a>
+                <a class="pulse" id="nav-future" href="#future">Future</a>
+                <a class="pulse" id="nav-team" href="#team">Team</a>
+				<a class="pulse" id="nav-end" href="#footing">↓ End</a>
+                <a class="pulse" id="to-projects" href="../index.html#to-projects">← More Projects</a>
             </nav>
-            <div class="body" id="body">
-                <div id="heading">
-                    <h1>Predator-Prey</h1>
-                    <p>Apr 2014 - May 2014</p>
+            </header>
+            <div id="content">
+                <div class="fade-art" id="heading">
+                    <h1 class="project-name"></h1>
+                    <p></p>
                 </div>
-                <div id="sub-heading">
-                    <p>School, Simulation, <strong>Completed</strong></p>
-                    <a class="button-small" id="github" href="https://github.com/JosephPKC/PredatorPreySystem">Github Link</a>
-                </div>
-                <div id="intro">
-                    <h1>What is Predator-Prey?</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Predator-Prey is a GUI simulation of a made-up predator-prey environment. This was made as the final project for a C++ course at PCC (CS 3A). The Predator-Prey world comprises of several different creatures, and simply displays the creatures as they follow their own rules of living and interacting.</p>
-                </div>
-                <!--- content is generally where project pages diverge -->
-                <div id="content">
-                    <h1>Development</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Predator-Prey was made in C++ using <a href="http://doc.qt.io/qtcreator/">Qt Creator</a> and <a href="http://doc.qt.io/qt-5/qtopengl-index.html"> Qt OpenGL</a>. This project's world is inhabited by many different creatures:</p>
-                    <br>
-                    <ul>
-                        <li><strong>Prey</strong> - Generic creatures that do not hunt other creatures. They are instead the basis of all life in this world. They simply eat grass from the ground when they are hungry, and breed regularly.</li>
-                        <li><strong>Predator</strong> - Generic predator that hunts prey creatures. Whenever they are hungry, they kill a nearby prey creature.</li>
-                        <li><strong>Hunter</strong> - An apex predator. They hunt all creatures, even their own kind. Just like predators, they kill a nearby creature when hungry.</li>
-                        <li><strong>Infected</strong> - A special creature that has its own rules. They do not hunger nor breed. Instead, they infect other creatures and assimilate them into their own kind. As a result, they tend to spread quite rapidly, only kept in check by Hunters.</li>
-                    </ul>
-                    <br>
-                    <img id="i1" src="../images/predator-prey-i1.png">
-                    <p class="caption">The world without infection. Green creatures are prey, red are preadtors, and blue are hunters. Notice how hunters are the lowest of the three in terms of population. This is primarily due to the fact that they are just as willing to kill each other as they are any other creature.</p>
-                    <br>
-                    <img id="i2" src="../images/predator-prey-i2.png">
-                    <p class="caption">The world with infection (infected are in grey). Infections start out small, but grow rapidly until it peaks and stabilizes.</p>
-                    <br>
-                    <img id="i3" src="../images/predator-prey-i3.png">
-                    <p class="caption">The infection is beginning to spread, more than 8x its initial size in just over 200 steps.</p>
-                    <br>
-                    <img id="i4" src="../images/predator-prey-i4.png">
-                    <p class="caption">The peak of infection. More than 20x its initial size in about 600 steps.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Predator-Prey keeps track of the states of each creature in a specialized class that wraps a 2d array. At each step, it tells each creature that a time step has passed, and each creature performs its duties of move, eat, breed, and die.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Predator-Prey also keeps some useful stats, such as the number of each creature, as well as, the percentage of each creature population. It also lets you toggle on/off infections at any moment.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;One of the more interesting parts of this project was balancing the inherent stats of each creature. This includes the time it takes to eat, breed, die, and their initial populations. Having one creature be too strong leads to them dominating the world, and if that creature was a predator of some kind, eventually leads to the collapse of the environment, as all of the prey die out. Thus, having a strong prey population is essential to the survival of the ecosystem. Also, ensuring that the infection rate isn't too high is essential. When you do achieve a balance, you end up with this wave-like pattern as the prey population shrinks and then expands, with the predator shrink and expansion just out of sync.</p>
-                    <br>
-                    <img id="g1" src="../images/predator-prey-g1.gif">
-                    <p class="caption">A typical scenario in the Predator-Prey world. Notice that as the predator population increases, the prey population decreases. Then when the prey population reaches a low, the predator population decreases. This results in an increase in the prey population. Note: Forgive the low quality. The capture software I used was having issues.</p>
+                <div class="fade-art" id="sub-heading">
+                    <p id="project-tags"></p>
+                    <p id="project-techs"></p>
+                    <a class="button ghost-pulse fade" id="github" target="_new" href="">Github</a>
                     <br>
                 </div>
-                <div id="footing">
-                    <h1>The Team</h1>
-                    <ul>
-                        <li><strong>Joseph Park (Me)</strong> - designer, programmer</li>
-                    </ul>
-                    <div id="up-next">
-                        <p>NEXT</p>
-                        <p id="next-project">Predator-Prey</p>
-                        <a class="button-small" href="./predator-prey.html">Next</a>
+                <!-- content -->
+                <article class="fade-art" id="body">
+                    <h2 id="about">About</h2>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is a GUI simulation of a fictional predator-prey environment. This is loosely related to the <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations">Lotka-Volterra equations</a>, or the predator-prey equations. The world comprises of several creatures, each with their own methods of eating and breeding. This was made for a course in intermediate C++ at PCC (CS 3A)</p>
+        
+                    <h2 id="use">Usage</h2>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;Using <span class="project-name"></span> is easy: just press start. The world will be initialized randomly, with set initial population numbers. Once set, every creature just goes about their lives: moving, eating, breeding, and dying. This simply continues until you stop or exit.</p>
+                    
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;There are many creatures that inhabit the world of <span class="project-name"></span>:</p>
+                    
+                    <div class="multi-list">
+                        <ul class="fade-li">
+                            <li><span>Prey</span>: Generic creatures that do not hunt other creatures. They are instead the basis of all life in this world, just eating grass from the ground when hungry.</li>
+                            <li><span>Predator</span>: Generic predator that hunts prey creatures. Whenever they are hungry, they kill a nearby prey creature.</li>
+                            <li><span>Hunter</span>: An apex predator. They hunt all creatures, even their own kind. Just like predators, they kill a nearby creature when hungry.</li>
+                            <li><span>Infected</span>: A special creature that has its own rules. They do not hunger nor breed. Instead, they infect other creatures and assimilate them into their own kind.</li>
+                        </ul>
                     </div>
                     
+                    <div class="img-wrapper fade-img">
+                        <img id="i1" src="../assets/images/predator-prey/predator-prey-i1.png">
+                        <p class="caption">A world with no infection. The green are <span>preys</span>, the red are <span>predators</span>, and the blue are <span>hunters</span>.</p>
+                    </div>
+                    
+                    <div class="img-wrapper fade-img">
+                        <img id="i2" src="../assets/images/predator-prey/predator-prey-i2.png">
+                        <p class="caption">A world with infection. Initially, the infection is small.</p>
+                    </div>
+                    
+                    <div class="img-wrapper fade-img">
+                        <img id="i3" src="../assets/images/predator-prey/predator-prey-i3.png">
+                        <p class="caption">The infection grows. At about 250 more steps, the infection has grown more than 8x its initial size. </p>
+                    </div>
+                    
+                    <div class="img-wrapper fade-img">
+                        <img id="i4" src="../assets/images/predator-prey/predator-prey-i4.png">
+                        <p class="caption">At around 600 more steps, the infection is more than 20x is initial size.</p>
+                    </div>
+                    
+                    <div class="img-wrapper fade-img">
+                        <img id="g1" src="../assets/images/predator-prey/predator-prey-g1.gif">
+                        <p class="caption">The world in action. Excuse the low quality.</p>
+                    </div>
+                    
+                    <h2 id="dev">Development</h2>
+                    <h3>Overview</h3>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> was made in C++ via <a class="pulse" target="_new" href="http://doc.qt.io/qtcreator/">Qt Creator</a>. It ensures that every creature gets to do something in the world, and updates the GUI accordingly. The program was made to display to the console first, and then the GUI was attached on top.</p>
+                    
+                    <h3>Creatures</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> has the state of every creature stored in a 2d array data structure. The creatures themselves all inherit from a base creature, so via polymorphism, the world is able to iterate through each creature and have them perform their own unique move, eat, breed, and die actions.</p>
+                    
+                    <h3>GUI</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The GUI of <span class="project-name"></span> was created via <a class="pulse" target="_new" href="http://doc.qt.io/qt-5/qtopengl-index.html">Qt OpenGL</a>. It features a start/stop button, reset button, and exit. It also has a checkbox for enabling infections. Finally, it lists a few stats for each creature: their population, and percentage of total.</p>
+                    
+                    <h2 id="future">Future</h2>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is a completed course project. This was meant to be a learning experience and practice for C++, and a dip into GUI programming. T here are currently no plans to improve or renovate the project.</p>
+					
+					<h2 id="team">Team</h2>
+                    <div class="multi-list">
+						<ul class="fade-li">
+							<li><span>Me</span>: designer • programmer</li>
+						</ul>
+					</div>
+                </article>
+                <div class="fade-art" id="footing">
+                    <h3>Check out my other projects!</h3>
+                    <div id="foot-nav-wrapper">
+                        <div class="fade-art" id="previous">
+                            <p class="foot-nav-text">PREVIOUS</p>
+                            <p id="previous-project"></p>
+                            <p id="previous-des"></p>
+                            <a class="button ghost-pulse fade" href="">Previous</a>
+                        </div>
+                        <div class="fade-art" id="next">
+                            <p class="foot-nav-text">NEXT</p>
+                            <p id="next-project"></p>
+                            <p id="next-des"></p>
+                            <a class="button ghost-pulse fade" href="">Next</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <footer id="footer">
-                <a class="anchor-top" href="#">
-                    <i class="fa fa-arrow-circle-up"></i>
-                </a>
-                <div id="font-awesome-attr">
+                <div id="anchor-top">
+                    <a class="button ghost-pulse" href="">
+                        ↑ Back to Top
+                    </a>
+                </div>
+                <div id="contact-icons">
+                    <a target="_new" href="https://www.linkedin.com/in/josephpkc">
+                        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <a target="_new" href="https://www.github.com/JosephPKC">
+                        <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div id="footer-text">
                     <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
                 </div>
             </footer>
         </div>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

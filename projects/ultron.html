@@ -57,18 +57,44 @@
                 <!-- content -->
                 <article class="fade-art" id="body">
                     <h2 id="about">About</h2>
-					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span></p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is an English language processor made for a data structures course at PCC (CS 8). <span class="project-name"></span> accepts English sentences from the user, and answers any questions about what it has been told. This project is a very simple application of the very complex topic of <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Natural_language_processing">natural language processing</a>.</p>
         
                     <h2 id="use">Usage</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> requires English sentences as inputs. In the beginning, it knows nothing. These inputs provide a knowledge base for <span class="project-name"></span>. These sentences must follow the provided grammar rules. Currently, only one such set of rules are allowed. This leads to extremely simple sentences with transitive verbs, like "John kicked the ball." </p>
+                    
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;You can also ask <span class="project-name"></span> simple questions about what it knows- questions like, "What did John kick?" <span class="project-name"></span> will look for an answer in its knowledge base, and give you an answer.</p>
+                    
+                    <div class="img-wrapper fade-img">
+                        <img id="i2" src="../assets/images/ultron/ultron-i2.png">
+                        <p class="caption">User types "John throws the ball." The user then asks "What did John throw?" <span class="project-name"></span> responds with "ball."</p>
+                    </div>
                     
                     <h2 id="dev">Development</h2>
+                    <h3>Overview</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> was made in C++ via <a class="pulse" target="_new" href="http://doc.qt.io/qtcreator/">Qt Creator</a>. When the user inputs a sentence or question, <span class="project-name"></span> tokenizes the input, tags each individual word with a domain of parts of speech, then parses it into <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">syntax trees</a>, and finally stores it into its knowledge base or queries its knowledge base for an answer.</p>
+                    
+                    <h3>Tokenizing and Tagging</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> first tokenizes the input string into individual tokens or words. Then, for each word, it queries its ontological database for the word and its possible parts of speech. It tags that as the token's domain. It then sends the tokens and their domains to a parser to determine which assignments (token + part of speech) is the most likely.</p>
+                    
+                    <h3>Parsing</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> parses the tokens using <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Recursive_descent_parser">recursive descent parsing</a>. Essentially, it follows a set of <a class="pulse" target="_new" href="https://en.wikipedia.org/wiki/Context-free_grammar">context-free grammar</a> rules. The parser begins at the first token, and checks each part of speech in its domain against the first grammar rule. If there is not match, it moves onto the next set of grammar rules. If there is a match, it creates a syntax tree with the grammar rule as its root. Then, it moves onto the next token, and the next rule that follows from the matching grammar rule. It continuously builds up the syntax tree, until every token has a matching and legal part of speech. If at any point, it cannot continue building the tree, it backtracks until there are no more options./p>
+                        
+                    <div class="img-wrapper fade-img">
+                        <img id="i1" src="../assets/images/ultron/ultron-i1.png">
+                        <p class="caption">An example context-free grammar and syntax tree. Courtesy of http://www.cs.uccs.edu/~jkalita/work/cs589/2010/12Grammars.pdf</p>
+                    </div>
+                    
+                    <h3>Database Management</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> has two databases: one for the English words, and one for the knowledge base. Both were made using SQLite. The ontological database stores the most common words and their parts of speech. <span class="project-name"></span> uses this to determine what parts of speech each word in an input sentence is. The second database stores words provided to it by the user. This is used when <span class="project-name"></span> is asked a question.</p>
                     
                     <h2 id="future">Future</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is a completed project for a course. We were hoping to use predicate calculus and AI searching algorithms so that it can extrapolate logically from input sentences, and also to use probability to more accurately determine the parts of speech. However, when researching about this topic, we realized we were in way over our heads. We decided to do the best we could, and ended up with this simple processor.</p>
 					
 					<h2 id="team">Team</h2>
                     <div class="multi-list">
 						<ul class="fade-li">
-							<li><span></span></li>
+							<li><span>Me</span>: designer • programmer • researcher</li>
+                            <li><span>Tony Lim</span>: designer • programmer • researcher | <a class="pulse" target="-new" href="https://github.com/atomic">Github</a> • <a class="pulse" target="_new" href="https://www.linkedin.com/in/atomictheorist">Linkedin</a></li>
 						</ul>
 					</div>
                 </article>

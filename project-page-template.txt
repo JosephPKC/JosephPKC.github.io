@@ -60,15 +60,18 @@
 					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span></p>
         
                     <h2 id="use">Usage</h2>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span></p>
                     
                     <h2 id="dev">Development</h2>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span></p>
                     
                     <h2 id="future">Future</h2>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span></p>
 					
 					<h2 id="team">Team</h2>
                     <div class="multi-list">
 						<ul class="fade-li">
-							<li><span></span></li>
+							<li><span>Me</span>:</li>
 						</ul>
 					</div>
                 </article>

@@ -1,90 +1,159 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Joseph Park | Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Include css stylesheets and js script sheets here -->
-        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
-        <link rel="stylesheet" type="text/css" href="../styles/main.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/project-page.css">
-        <link rel="stylesheet" type="text/css" href="../styles/projects/quick-charades.css">
-        <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" >
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-        <script src="../scripts/anchor-top.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1, maximum-scale=1">
+    <title></title>
+    
+	<link rel="icon" href="../assets/images/logo-small-transparent.png">
+	
+    <!-- Font Imports -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <link href="../assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- CSS Styles -->
+    <link href="../styles/main.css"  type="text/css" rel="stylesheet">
+    <link href="../styles/layout.css" type="text/css" rel="stylesheet">
+    <link href="../styles/project.css" type="text/css" rel="stylesheet">
+    <link href="../styles/responsive.css" type="text/css" rel="stylesheet">
+    
+    <!-- JS Scripts -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="../scripts/anchor-top.js"></script>
+    <script src="../scripts/nav-scrolls.js"></script>
+    <script src="../scripts/load-project-info.js"></script>
+    <script src="../scripts/fade-on-scroll.js"></script>
+</head>
     <body>
-        <div class="wrapper">
+        <div class="proj-wrapper">
             <header id="header">
-                <p id="header-name">JOSEPH PARK</p>
-            </header>
-            <nav id="nav">
-                <ul>
-                    <li><a id="about" href="./../index.html">ABOUT</a></li>
-                    <li><a id="projects" class="active" href="./../projects.html">PROJECTS</a></li>
-                    <li><a id="contact" href="./../contact.html">CONTACT</a></li>
-                </ul>
+            <div id="header-icon">
+				<a class="pulse" href="../index.html">
+                    <img src="../assets/images/logo-small.png">
+                </a>
+                <h1>JOSEPH PARK</h1>
+            </div>
+            <nav id="content-nav-bar">
+                <a class="pulse" id="nav-about" href="#about">About</a>
+                <a class="pulse" id="nav-use" href="#use">Usage</a>
+                <a class="pulse" id="nav-dev" href="#dev">Development</a>
+                <a class="pulse" id="nav-future" href="#future">Future</a>
+                <a class="pulse" id="nav-team" href="#team">Team</a>
+				<a class="pulse" id="nav-end" href="#footing">↓ End</a>
+                <a class="pulse" id="to-projects" href="../index.html#to-projects">← More Projects</a>
             </nav>
-            <div class="body" id="body">
-                <div id="heading">
-                    <h1>Quick Charades</h1>
-                    <p>Nov 2014 - Jan 2015</p>
+            </header>
+            <div id="content">
+                <div class="fade-art" id="heading">
+                    <h1 class="project-name"></h1>
+                    <p></p>
                 </div>
-                <div id="sub-heading">
-                    <p>School, Game, Mobile, <strong>Prototype</strong></p>
-                    <a class="button-small" id="github" href="https://github.com/Josue3205/QuickCharades">Github Link</a>
+                <div class="fade-art" id="sub-heading">
+                    <p id="project-tags"></p>
+                    <p id="project-techs"></p>
+                    <a class="button ghost-pulse fade" id="github" target="_new" href="">Github</a>
+                    <br>
                 </div>
-                <div id="intro">
-                    <h1>What is Quick Charades?</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Quick Charades is a small game for Android, where you pit yourself against a friend or random challenger to see who can guess what the pictures are the fastest. This game was made for a java course at PCC (CS 3B).</p>
-                </div>
-                <!--- content is generally where project pages diverge -->
-                <div id="content">
-                    <h1>Development</h1>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Quick Charades was thought up by Josue Segura when he wanted to make a small, but fun mobile game. Since this was for a java course, we decided to make it for Android. Quick Charades was made in Java, and developed in <a href="https://developer.android.com/studio/index.html">Android Studio</a>. We also used <a href="https://www.genymotion.com/">Genymotion</a> to help test out builds.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Our first few weeks were spent working on the design. We thought up ideas and features, and created a design document. <a href="../assets/quick-charades-design-document.pdf" target="_blank">Here</a> is the design document, if you want to check it out.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The game itself is fairly simple: You are given a series of random images, and you must try to guess what the image is within a time limit. The images are random, but grouped by category. The idea was that you would match up with an opponent, and both players would decide on a category. Once the category is chosen, a series of 10 images (depending on the game settings) would be chosen at random. These images would be obscured in some way, and would slowly reveal themselves. Along with the images were a series of random letters, a subset of which spelled out the answer. You would choose the correct letters in order. You can choose to skip an image, if you cannot figure it out so that you can save time. Once the timer runs out, or once someone finishes, the game ends. Both players are scored on their performance, and the player with the higher score wins.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Of course much of that didn't happen. We were slowly running out of time, as we spent a lot of it designing, planning, and learning how to make an Android game. We ended up creating a prototype, with a small set of images. You simply only played against the clock, and not versus another player.</p>
-                    <br>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Another major feature we were planning on adding was the leaderboard and friends. You were to be able to add friends, and challenge them directly. You were to also be able to check out global and local leaderboards to see how you rank.</p>
-                    <br>
-                    <img id="i1" src="../images/quick-charades-i1.png">
-                    <p class="caption">How we planned the in-game UI too look like. You can see the image in the center, the timer at the very top. You can also see the streak counter, and the current score. On the bottom half, you can see icons pertaining to power-ups and the letters you chose from.</p>
-                    <br>
-                    <img id="i2" src="../images/quick-charades-i2.png">
-                    <p class="caption">The main menu as planned. There would be a tutorial button to give an overview of how the game works. There would also be leaderboards and friends.</p>
-                </div>
-                <div id="footing">
-                    <h1>The Team</h1>
-                    <ul>
-                        <li><strong>Joseph Park (Me)</strong> - programmer</li>
-                        <li><strong>Tony Lim</strong>: <a href="https://github.com/atomic">Github</a> <a href="https://www.linkedin.com/in/atomictheorist">Linkedin</a> - programmer</li>
-                        <li><strong>Christian Sydow</strong>: <a href="https://github.com/swert7662">Github</a> <a href="https://www.linkedin.com/in/christian-sydow-38334050">Linkedin</a> - programmer</li>
-                        <li><strong>Josue Segura</strong>: <a href="https://github.com/Josue3205">Github</a> <a href="https://www.linkedin.com/in/josue-segura-849345b8">Linkedin</a> - designer, artist</li>
-                        <li><strong>Andrew Martinez</strong> - designer</li>
-                    </ul> 
-                    <div id="up-next">
-                        <p>NEXT</p>
-                        <p id="next-project">Predator-Prey</p>
-                        <a class="button-small" href="./predator-prey.html">Next</a>
+                <!-- content -->
+                <article class="fade-art" id="body">
+                    <h2 id="about">About</h2>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is a small game for Android, where you pit yourself against another to see who can guess a series of pictures the fastest. The idea was thought up by Josue Segurra, our lead designer. This was made four a Java course at PCC (CS 3B).</p>
+        
+                    <h2 id="use">Usage</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Currently, <span class="project-name"></span> is simply just a prototype. You play against the clock instead of against another, and you are given a randomized series of pictures (there is only a small number of pictures). You must guess what each picture is before the time runs out. You can choose to skip a picture, if you are having trouble.</p>
+                    
+                    <h2 id="dev">Development</h2>
+                    <h3>Overview</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> was made in Java, using <a class="pulse" target="_new" href="https://developer.android.com/studio/index.html">Android Studio</a>. We also used <a class="pulse" target="_new" href="https://www.genymotion.com/">Genymotion</a> to simulate an Android device to aid in testing. The game simply randomizes a list of images and their names, randomly adds letters to the letter set, randomizes it, and presents it to the player. It then sets the timer and has it count down. Once the player reaches the end or the timer runs out, the game calculates the player's scores.</p>
+                    
+                    <h3>Design Document</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;The project also required for us to create a full <a class="pulse" target="_new" href="../assets/files/quick-charades-design-document.pdf">design document</a>.</p>
+                    
+                    <h2 id="future">Future</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="project-name"></span> is currently a prototype. When we were creating this game, we spent most of our time learning Android development, database management, and networking. As such, there are many features that we had hoped to implement, but are currently missing. This includes:</p>
+                    
+                    <div class="multi-list">
+                        <ul class="fade-li">
+                            <li><span>Account management</span>: Create an account to add friends and save progress.</li>
+                            <li><span>Head to head challenges</span>: Play against other people; whoever scores the best wins.</li>
+                            <li><span>Leaderboards</span>: Your scores will be saved and ranked in a leaderboard with other people and your friends/</li>
+                            <li><span>Friends</span>: Add friends, and challenge them.</li>
+                            <li><span>Categories</span>: Different categories have different sets of images.</li>
+                            <li><span>Image obscuration</span>: The images presented are obscured and stylized in some way.</li>
+                            <li><span>Power ups</span>: Collect power ups for doing well in games, and use them to help you in a game or hinder your opponent.</li>
+                            <li><span>Endless mode</span>: Keep guessing images until you make the incorrect choice.</li>
+                        </ul>
                     </div>
                     
+                    <div class="img-wrapper fade-img">
+                        <img id="i1" src="../assets/images/quick-charades/quick-charades-i1.png">
+                        <p class="caption">The ideal look of a game. There is a streak counter, your current score, a skip button, and a list of power ups.</p>
+                    </div>
+                    
+                    <div class="img-wrapper fade-img">
+                        <img id="i2" src="../assets/images/quick-charades/quick-charades-i2.png">
+                        <p class="caption">The ideal look of the main menu. You have leaderboards, friends, and even a tutorial.</p>
+                    </div>
+					
+					<h2 id="team">Team</h2>
+                    <div class="multi-list">
+						<ul class="fade-li">
+							<li><span>Me</span>: programmer</li>
+                            <li><span>Tony Lim</span>: programmer | <a class="pulse" target="-new" href="https://github.com/atomic">Github</a> • <a class="pulse" target="_new" href="https://www.linkedin.com/in/atomictheorist">Linkedin</a></li>
+                            <li><span>Andrew Martinez</span>: designer</li>
+                            <li><span>Josue Segura</span>: lead designer | <a class="pulse" target="-new" href="https://github.com/Josue3205">Github</a> • <a class="pulse" target="_new" href="https://www.linkedin.com/in/josue-segura-849345b8">Linkedin</a></li>
+                            <li><span>Christian Sydow</span>: gameplay programmer | <a class="pulse" target="-new" href="https://github.com/swert7662">Github</a> • <a class="pulse" target="_new" href="https://www.linkedin.com/in/christian-sydow-38334050">Linkedin</a></li>
+						</ul>
+					</div>
+                </article>
+                <div class="fade-art" id="footing">
+                    <h3>Check out my other projects!</h3>
+                    <div id="foot-nav-wrapper">
+                        <div class="fade-art" id="previous">
+                            <p class="foot-nav-text">PREVIOUS</p>
+                            <p id="previous-project"></p>
+                            <p id="previous-des"></p>
+                            <a class="button ghost-pulse fade" href="">Previous</a>
+                        </div>
+                        <div class="fade-art" id="next">
+                            <p class="foot-nav-text">NEXT</p>
+                            <p id="next-project"></p>
+                            <p id="next-des"></p>
+                            <a class="button ghost-pulse fade" href="">Next</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <footer id="footer">
-                <a class="anchor-top" href="#">
-                    <i class="fa fa-arrow-circle-up"></i>
-                </a>
-                <div id="font-awesome-attr">
+                <div id="anchor-top">
+                    <a class="button ghost-pulse" href="">
+                        ↑ Back to Top
+                    </a>
+                </div>
+                <div id="contact-icons">
+                    <a target="_new" href="https://www.linkedin.com/in/josephpkc">
+                        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <a target="_new" href="https://www.github.com/JosephPKC">
+                        <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div id="footer-text">
                     <p>Font Awesome by Dave Gandy - http://fontawesome.io</p>
                 </div>
             </footer>
         </div>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
