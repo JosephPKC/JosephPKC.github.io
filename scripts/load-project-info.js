@@ -44,7 +44,7 @@ function loadProjectInfo(id, name, techs, des, tags, type, start, end, link, ord
     jQuery('#project-techs').text(techs.join(' • '));
     /* Grab the link */
     var url = link == null ? 'not-found' : link;
-    jQuery('#sub-heading a').attr('href', url);
+    jQuery('#sub-heading #github').attr('href', url);
     
     /* Determine previous/next */
     var i = order == 1 ? cache.length - 1 : order - 2;

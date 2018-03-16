@@ -9,10 +9,12 @@ h1 {
 
 h2 {
     color: #1E392A;
+    padding-top: 10px;
 }
 
 h3 {
     color: #3CC47C;
+    padding: 10px 0;
 }
 
 p, a, li {
@@ -21,6 +23,17 @@ p, a, li {
 
 p, li {
     color: #696969;
+}
+
+p {
+    padding: 15px 0;
+}
+
+ul {
+    list-style-type: disc;
+}
+li {
+    padding: 2px 0;
 }
 
 a {
@@ -100,14 +113,28 @@ nav a:hover {
 #title-card {
     display: flex;
     flex-direction: column;
+    height: 100vh;
     justify-content: center;
     padding: 5px;
     text-align: center;
 }
 
+#title-card h1 {
+    font-size: 40px !important;
+}
+
 #title-card span {
     color: #373737;
+    font-size: 25px !important;
     font-weight: 750;
+}
+
+#title-card #name {
+    padding-top: 20px;
+}
+
+#title-card p {
+    font-size: 20px !important;
 }
 
 #blank {
@@ -171,7 +198,7 @@ nav a:hover {
 }
 
 .tab {
-    border-radius: 20px;
+/*    border-radius: 20px;*/
     text-decoration: none;
 }
 
@@ -208,8 +235,8 @@ nav a:hover {
 }
 
 .tab:hover {
-    border: 1px solid #3CC47C;
-    transition: all 0.5s ease;
+/*    border: 1px solid #3CC47C;*/
+/*    transition: all 0.5s ease;*/
 }
 
 .tab:hover p {
@@ -260,14 +287,6 @@ nav a:hover {
 #contact-icons i:hover {
     color: #3CC47C;
     transition: all 0.7s ease;
-}
-
-.beginner {
-    color: #E37222;
-}
-
-.intermediate {
-    color: #3CC47C;
 }
 
 .bold {

@@ -21,6 +21,22 @@
     #content-nav-bar #to-projects {
         width: 200%;
     }
+    
+    #title-card {
+        height: 80vh;
+    }
+    
+    #title-card h1 {
+        font-size: 35px !important;
+    }
+    
+    #title-card p {
+        font-size: 20px !important;
+    }
+    
+    #title-card span {
+        font-size: 25px !important;
+    }
 }
 
 @media screen and (min-width: 641px) {
@@ -48,11 +64,15 @@
     }
     
     #title-card h1 {
-        font-size: 35px;
+        font-size: 50px !important;
     }
     
     #title-card p {
-        font-size: 22px;
+        font-size: 30px !important;
+    }
+    
+    #title-card span {
+        font-size: 35px !important;
     }
     
     #content {
@@ -177,6 +197,7 @@
         }
     }
     
+/*
     @keyframes tab-pulse {
         0% {
             box-shadow: 0 0 40px 10px #3CC47C;
@@ -186,12 +207,15 @@
             box-shadow: 0 0 40px 10px #1E392A;
         }
     }
+*/
 
+/*
     .tab:hover {
         animation: tab-pulse 1s ease 0s alternate infinite none running;
         border: 3px inset #1E392A;
         transition: all 0.3s ease;
     }
+*/
 
     .tab:hover #name {
         color: #1E392A;
